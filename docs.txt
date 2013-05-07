@@ -48,6 +48,8 @@ Criar contas de email para envio OK
 
 Criar banco de dados OK
 
+Criar repositório GIT OK
+
 Instalar Email Marketing
 
 Envio de email
