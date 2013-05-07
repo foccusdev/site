@@ -1,0 +1,61 @@
+
+Github:
+Host: www.github.com
+User: foccusdev
+Pass: f0Ccu5d3V
+
+
+Email para desenvolvedores:
+Host: www.gmail.com
+User: foccusdev@gmail.com 
+Pass: f0Ccu5d3V
+
+
+Painel da Hospedagem:
+Host: www.locaweb.com.br
+user: foccusfisio
+pass: f@cc@s
+
+
+Wordpress:
+
+(Administrador Geral - Desenvolvedor)
+Host: [endereço-do-site]/wp-admin
+User: admin
+Pass: foccusadmin
+
+(Editor - Usuário comum)
+Host: [endereço-do-site]/wp-admin
+User: editor
+Pass: foccuseditor
+
+
+FTP:
+Host: ftp.site1367448928.provisorio.ws
+User: site1367448928
+Pass: f0ccu5FTp 
+
+
+Envio de email:
+Host: smtp.site1367448928.provisorio.ws
+User: nao_responda@site1367448928.provisorio.ws
+Pass: f0ccu5M@a1l
+
+
+TO DO:
+
+Criar contas de email para envio OK
+
+Criar banco de dados OK
+
+Instalar Email Marketing
+
+Envio de email
+
+Cadastro na newsletter
+
+Estudar envio de newsletters
+
+Estudar comentários do facebook
+
+Estudar google analitcs

@@ -1,0 +1,13 @@
+/* 
+    Document   : style
+    Created on : 29/04/2013, 21:06:49
+    Author     : joao
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+  display: block;
+}
+
+.admin-welcome-wrap { background: #ccc}
