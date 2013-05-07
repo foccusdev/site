@@ -42,6 +42,26 @@ User: nao_responda@site1367448928.provisorio.ws
 Pass: f0ccu5M@a1l
 
 
+Email-Marketing (Newsletter):
+ID da conta: 51859fe336e1d9f69f002998
+Chave de acesso: UEKZ13j57Pp1Js8siYop2gRkUUzq8UdqkTYTyYt3P6Qr
+Endereço de URL: https://emailmarketing.locaweb.com.br/api/v1
+Ajuda: http://wiki.locaweb.com.br/pt-br/API_Novo_Email_Marketing
+
+
+Banco de Dados:
+Host: mysql01.site1367448928.hospedagemdesites.ws  (186.202.152.38) 
+User: site1367448928
+Pass: f0Ccu5dB
+Base: site1367448928
+
+
+
+
+
+
+
+
 TO DO:
 
 Criar contas de email para envio OK
@@ -61,3 +81,5 @@ Estudar envio de newsletters
 Estudar comentários do facebook
 
 Estudar google analitcs
+
+Estudar como habilitar o domínio www.foccusfisio.com.br ou algo mais amigável
