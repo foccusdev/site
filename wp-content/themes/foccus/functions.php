@@ -124,62 +124,57 @@ if (!current_user_can('manage_options')) {
     if (isset($_GET['cat']) || isset($_GET['post'])) {
 
       // Traz o nome da categoria
-      if (isset($_GET['cat'])){
+      if (isset($_GET['cat'])) {
         $categoriaNome = get_the_category_by_ID($_GET['cat']);
         $categoriaId = $_GET['cat'];
-      }else{
+      } else {
         $categoria = get_the_category();
         $categoriaNome = $categoria[0]->name;
         $categoriaId = $categoria[0]->term_id;
       }
-       
-      
+
+
       // Substitui o nome Posts no alto de cada tela pelo nome da categoria sendo alterada
       $customUIScript .= 'var conteudoH2 = "' . $categoriaNome . ' ";';
 
-      // Se não for Institucional, exibe também o link "Adicionar Novo Conteúdo"
-      if ($_GET['cat'] != _INSTITUCIONAL)
-        $customUIScript .= 'conteudoH2 += "<a href=\'' . get_bloginfo('url') . '/wp-admin/post-new.php?cat=' . $categoriaId . '\' class=\'add-new-h2\' >Adicionar Novo Conteúdo</a>";';
 
       $customUIScript .= '
         $("h2:first").html(conteudoH2);
         
         // Pre-seleciona a categoria 
         if ($("#categorychecklist").length>0)
-          $("#in-category-' . $categoriaId. '").attr("checked", "checked");     
+          $("#in-category-' . $categoriaId . '").attr("checked", "checked");     
       ';
     }
 
-    
+
     // Esconde o botão excluir da listagem, se for institucional
     if (isset($_GET['cat']) && $_GET['cat'] == _INSTITUCIONAL) {
       $customUIScript .= '$(".trash").remove();';
     }
 
-    
+
     // Se estiver na index.php, exibe uma mensagem de boas vindas
     if (strpos($_SERVER['PHP_SELF'], '/index.php') !== FALSE) {
-      $handle = fopen(__DIR__.'/adminWelcome.php', 'r');
-      $adminWelcome = fread($handle, filesize(__DIR__.'/adminWelcome.php'));
+      $handle = fopen(dirname(__FILE__). '/adminWelcome.php', 'r');
+      $adminWelcome = fread($handle, filesize(dirname(__FILE__) . '/adminWelcome.php'));
       $adminWelcome = str_replace("\n", '', $adminWelcome);
-      $customUIScript.='$("#dashboard-widgets").html(\''.$adminWelcome.'\');';
+      $customUIScript.='$("#dashboard-widgets").html(\'' . $adminWelcome . '\');';
     }
 
-    
+
     // Esconde a edição do link permanente
     $customUIScript .= '
       if ($("#edit-slug-box").length>0)
           $("#edit-slug-box").hide();   
     ';
-    
-    
+
+
     $customUIScript .= '
     
         });
       </script>
       ';
-
-
 
     echo $customUIScript;
   }
@@ -187,6 +182,14 @@ if (!current_user_can('manage_options')) {
   add_action('admin_print_scripts', 'customInterface');
 
 
-  // Se estiver na index.php exibe um alert de boas-vindas
+  // Esconde Opções de Tela e Ajuda
+  add_action('admin_head', 'mytheme_remove_help_tabs');
+
+  function mytheme_remove_help_tabs() {
+    $screen = get_current_screen();
+    $screen->remove_help_tabs();
+  }
+
+  add_filter('screen_options_show_screen', '__return_false');
 }
 ?>
