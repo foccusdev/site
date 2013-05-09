@@ -121,24 +121,32 @@ if (!current_user_can('manage_options')) {
       $customUIScript .= '$(".deletion").hide();';
     }
 
-    if (isset($_GET['cat'])) {
+    if (isset($_GET['cat']) || isset($_GET['post'])) {
 
       // Traz o nome da categoria
-      $categoria = get_the_category_by_ID($_GET['cat']);
+      if (isset($_GET['cat'])){
+        $categoriaNome = get_the_category_by_ID($_GET['cat']);
+        $categoriaId = $_GET['cat'];
+      }else{
+        $categoria = get_the_category();
+        $categoriaNome = $categoria[0]->name;
+        $categoriaId = $categoria[0]->term_id;
+      }
+       
       
       // Substitui o nome Posts no alto de cada tela pelo nome da categoria sendo alterada
-      $customUIScript .= 'var conteudoH2 = "' . $categoria . ' ";';
+      $customUIScript .= 'var conteudoH2 = "' . $categoriaNome . ' ";';
 
       // Se não for Institucional, exibe também o link "Adicionar Novo Conteúdo"
       if ($_GET['cat'] != _INSTITUCIONAL)
-        $customUIScript .= 'conteudoH2 += "<a href=\'' . get_bloginfo('url') . '/wp-admin/post-new.php?cat=' . $_GET['cat'] . '\' class=\'add-new-h2\' >Adicionar Novo Conteúdo</a>";';
+        $customUIScript .= 'conteudoH2 += "<a href=\'' . get_bloginfo('url') . '/wp-admin/post-new.php?cat=' . $categoriaId . '\' class=\'add-new-h2\' >Adicionar Novo Conteúdo</a>";';
 
       $customUIScript .= '
         $("h2:first").html(conteudoH2);
         
         // Pre-seleciona a categoria 
         if ($("#categorychecklist").length>0)
-          $("#in-category-' . $_GET['cat'] . '").attr("checked", "checked");     
+          $("#in-category-' . $categoriaId. '").attr("checked", "checked");     
       ';
     }
 
@@ -162,7 +170,7 @@ if (!current_user_can('manage_options')) {
     $customUIScript .= '
       if ($("#edit-slug-box").length>0)
           $("#edit-slug-box").hide();   
-';
+    ';
     
     
     $customUIScript .= '
