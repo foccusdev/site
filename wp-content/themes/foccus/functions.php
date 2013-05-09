@@ -156,7 +156,7 @@ if (!current_user_can('manage_options')) {
 
     // Se estiver na index.php, exibe uma mensagem de boas vindas
     if (strpos($_SERVER['PHP_SELF'], '/index.php') !== FALSE) {
-      $handle = fopen(dirname(__FILE__). '/adminWelcome.php', 'r');
+      $handle = fopen(dirname(__FILE__) . '/adminWelcome.php', 'r');
       $adminWelcome = fread($handle, filesize(dirname(__FILE__) . '/adminWelcome.php'));
       $adminWelcome = str_replace("\n", '', $adminWelcome);
       $customUIScript.='$("#dashboard-widgets").html(\'' . $adminWelcome . '\');';
@@ -192,4 +192,13 @@ if (!current_user_can('manage_options')) {
 
   add_filter('screen_options_show_screen', '__return_false');
 }
+
+//Altera o logo do login 
+function custom_login_logo() {
+  echo '<style type="text/css">' .
+  'h1 a { background-image:url(' . get_bloginfo('template_directory') . '/imgs/logo.jpeg) !important; width: 319px !important; padding-bottom: 131px !important; background-size: auto !important; border: 1px solid #ccc}' .
+  '</style>';
+}
+
+add_action('login_head', 'custom_login_logo');
 ?>
