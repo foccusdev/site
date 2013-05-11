@@ -63,7 +63,7 @@ if (!current_user_can('manage_options')) {
     add_menu_page('Institucional', 'Institucional', 'edit_posts', 'edit.php?cat=' . _INSTITUCIONAL, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Equipe', 'Equipe', 'edit_posts', 'edit.php?cat=' . _EQUIPE, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Ambiente', 'Ambiente', 'edit_posts', 'edit.php?cat=' . _AMBIENTE, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
-
+    add_menu_page('Depoimentos', 'Depoimentos', 'edit_posts', 'edit.php?cat=' . _DEPOIMENTOS, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Contato', 'Contato', 'edit_posts', 'post.php?post=45&action=edit', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
 
 
@@ -72,6 +72,8 @@ if (!current_user_can('manage_options')) {
     add_submenu_page('edit.php?cat=' . _ARTIGOS, 'Artigos', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _ARTIGOS);
     add_submenu_page('edit.php?cat=' . _EQUIPE, 'Equipe', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _EQUIPE);
     add_submenu_page('edit.php?cat=' . _AMBIENTE, 'Ambiente', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _AMBIENTE);
+    add_submenu_page('edit.php?cat=' . _DEPOIMENTOS, 'Depoimentos', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _DEPOIMENTOS);
+    
   }
 
   add_action('admin_menu', 'customizeAdminLeftMenu');
@@ -153,6 +155,10 @@ if (!current_user_can('manage_options')) {
       $customUIScript .= '$(".trash").remove();';
     }
 
+    
+    // Esconde o link "edição rápida" da listagem (para evitar que se configure categorias)
+    $customUIScript .= '$(".inline").remove();';
+    
 
     // Se estiver na index.php, exibe uma mensagem de boas vindas
     if (strpos($_SERVER['PHP_SELF'], '/index.php') !== FALSE) {

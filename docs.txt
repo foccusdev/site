@@ -25,7 +25,7 @@ User: admin
 Pass: foccusadmin
 
 (Editor - Usuário comum)
-Host: [endereço-do-site]/wp-admin
+Host: [endereço-do-site]/wp-adminÞ
 User: editor
 Pass: foccuseditor
 
