@@ -65,7 +65,7 @@ Criar banco de dados OK
 
 Criar repositório GIT OK
 
-Instalar Email Marketing
+Instalar Email Marketing OK
 
 Envio de email
 
