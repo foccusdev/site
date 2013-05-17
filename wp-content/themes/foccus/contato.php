@@ -24,11 +24,11 @@ require_once ('contato.codigo.php');
     <label for="assunto">Assunto:</label>
     <select name="assunto" id="assunto" >      
       <option value="">Selecione uma opção</option>
-      <option value="0">Dúvidas</option>
-      <option value="1">Elogios</option>
-      <option value="2">Críticas</option>
-      <option value="3">Depoimentos</option>
-      <option value="4">Envio de Currículo</option>
+      <option value="Dúvidas">Dúvidas</option>
+      <option value="Elogios">Elogios</option>
+      <option value="Críticas">Críticas</option>
+      <option value="Depoimentos">Depoimentos</option>
+      <option value="Envio de Currículo">Envio de Currículo</option>
     </select>
   </div>
 
@@ -39,7 +39,7 @@ require_once ('contato.codigo.php');
 
   <div>
     <label for="msg">Mensagem:</label><br />
-    <textarea cols="80" rows="5"></textarea>
+    <textarea cols="80" rows="5" name="msg" id="msg"></textarea>
   </div>
 
   <input type="submit" value="Enviar" />
