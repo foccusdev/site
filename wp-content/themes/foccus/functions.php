@@ -58,9 +58,10 @@ if (!current_user_can('manage_options')) {
     $primeiroItem = 37;
 
     add_menu_page('Slides', 'Slides', 'edit_posts', 'edit.php?post_type=slide', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
+    add_menu_page('Parceiros', 'Parceiros', 'edit_posts', 'edit.php?cat=' . _PARCEIROS, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Notícias', 'Notícias', 'edit_posts', 'edit.php?cat=' . _NOTICIAS, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Artigos', 'Artigos', 'edit_posts', 'edit.php?cat=' . _ARTIGOS, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
-    add_menu_page('Institucional', 'Institucional', 'edit_posts', 'edit.php?cat=' . _INSTITUCIONAL, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
+    add_menu_page('Conceito', 'Conceito', 'edit_posts', 'edit.php?cat=' . _CONCEITO, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Equipe', 'Equipe', 'edit_posts', 'edit.php?cat=' . _EQUIPE, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Ambiente', 'Ambiente', 'edit_posts', 'edit.php?cat=' . _AMBIENTE, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Depoimentos', 'Depoimentos', 'edit_posts', 'edit.php?cat=' . _DEPOIMENTOS, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
@@ -68,6 +69,7 @@ if (!current_user_can('manage_options')) {
 
 
 
+    add_submenu_page('edit.php?cat=' . _PARCEIROS, 'Parceiros', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _PARCEIROS);
     add_submenu_page('edit.php?cat=' . _NOTICIAS, 'Notícias', 'Adicionar Nova', 'edit_posts', 'post-new.php?cat=' . _NOTICIAS);
     add_submenu_page('edit.php?cat=' . _ARTIGOS, 'Artigos', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _ARTIGOS);
     add_submenu_page('edit.php?cat=' . _EQUIPE, 'Equipe', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _EQUIPE);
@@ -98,7 +100,8 @@ if (!current_user_can('manage_options')) {
       .tablenav.top .alignleft.actions select#cat,
       .tablenav.top .alignleft.actions input#post-query-submit,
       .tablenav.top .view-switch,
-      .subsubsub { 
+      .subsubsub,
+      #message p a{ 
           display: none; 
       }
     </style>
@@ -119,7 +122,7 @@ if (!current_user_can('manage_options')) {
     ';
 
     // Edição de conteúdo
-    if (isset($_GET['post']) && isset($_GET['cat']) && $_GET['cat'] == _INSTITUCIONAL) {
+    if (isset($_GET['post']) && isset($_GET['cat']) && $_GET['cat'] == _CONCEITO) {
       $customUIScript .= '$(".deletion").hide();';
     }
 
@@ -151,7 +154,7 @@ if (!current_user_can('manage_options')) {
 
 
     // Esconde o botão excluir da listagem, se for institucional
-    if (isset($_GET['cat']) && $_GET['cat'] == _INSTITUCIONAL) {
+    if (isset($_GET['cat']) && $_GET['cat'] == _CONCEITO) {
       $customUIScript .= '$(".trash").remove();';
     }
 
@@ -176,11 +179,17 @@ if (!current_user_can('manage_options')) {
     ';
 
 
+    // Esconde o link "Ver post" depois da mensagem 
     $customUIScript .= '
+      if ($("#message").length>0)
+          $("#message p a").hide();
+      ';
     
+    
+    $customUIScript .= '
         });
       </script>
-      ';
+    ';
 
     echo $customUIScript;
   }

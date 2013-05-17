@@ -1,6 +1,7 @@
 <?php
 /* Template Name: Contato */
-require_once('contato.codigo.php');
+require_once ('incs/head.php');
+require_once ('contato.codigo.php');
 ?>
 <form action="" method="post" enctype="multipart/form-data">
 
