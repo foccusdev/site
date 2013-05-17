@@ -34,7 +34,7 @@ if (isset($_POST) && !empty($_POST)) {
   var_dump($_POST);
   var_dump($_FILES);
 
-  $mensagem = '
+  $mensagem = 'Þ
   <p><strong>Nome:</strong> ' . strip_tags($_POST['nome']) . '</p>
   <p><strong>Email:</strong> ' . strip_tags($_POST['email']) . '</p>
   <p><strong>Telefone:</strong> ' . strip_tags($_POST['tel']) . '</p>
