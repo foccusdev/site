@@ -11,4 +11,9 @@ define('_PARCEIROS', 11);
 
 
 define('_CONTATO', 45);
+
+
+if ($_SERVER['HTTP_HOST'] == 'localhost') {
+  define('_EMAILS', 107);
+}
 ?>

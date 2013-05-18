@@ -47,4 +47,24 @@ require_once ('contato.codigo.php');
 </form>
 
 
-<? require_once ('incs/footer.php') ?>
+<? 
+require_once ('incs/footer.php');
+if (isset($_GET['msg'])){
+  
+  switch ($_GET['msg']){
+    
+    case 1:
+      $msg = 'Email enviado com sucesso!';
+      break;
+    
+    case 2:
+      $msg = 'Lamentamos informar que houve um erro no envio de email! \nPor favor, tente mais tarde ou entre em contato conosco por outro meio.\nAjude-nos a oferecer um serviço cada vez melhor e informe-nos sobre este erro.';
+      break;
+    
+  }
+  
+  echo '<script type="text/javascript">alert("'.$msg.'")</script>';
+  
+  
+}
+?>

@@ -38,9 +38,6 @@ if (isset($_POST) && !empty($_POST)) {
   <p><strong>Mensagem:</strong> ' . strip_tags($_POST['msg']) . '</p>
   ' . $mensagemArquivo;
 
-  var_dump($mensagem);
-
-
   // Envia a mensagem
   require_once ('class.phpmailer.php');
 
@@ -52,22 +49,28 @@ if (isset($_POST) && !empty($_POST)) {
   $phpMailer->FromName = strip_tags($_POST['nome']);
   $phpMailer->Body = $mensagem;
   $phpMailer->IsSMTP();
-  
+
   $phpMailer->SMTPAuth = true;
   $phpMailer->Host = 'smtp.site1367448928.provisorio.ws';
   $phpMailer->Username = 'nao_responda@site1367448928.provisorio.ws';
   $phpMailer->Password = 'f0ccu5M@a1l';
   $phpMailer->Port = 587;
-  
-  $phpMailer->AddAddress('joaogabrielv@gmail.com');
-  
-  $enviou = $phpMailer->Send();
-  
-  var_dump($enviou);
-  
-  if ($enviou)
-    echo $phpMailer->ErrorInfo;
-  else
-    echo 'OK';
+
+
+  // Traz os emails dos destinatários
+  $wp_query = new WP_Query('page_id=' . _EMAILS);
+  $emails = $wp_query->posts[0]->post_content;
+
+  $emailsArray = explode(',', $emails);
+
+  foreach ($emailsArray as $emailDestinatario) {
+    $phpMailer->AddAddress(trim($emailDestinatario));
+  }
+
+  if (!$phpMailer->Send()) {
+    //$phpMailer->ErrorInfo;
+    die(header('Location: ' . get_bloginfo('url') . '/contato/?msg=2'));
+  }else
+    die(header('Location: ' . get_bloginfo('url') . '/contato/?msg=1'));
 }
 ?>
