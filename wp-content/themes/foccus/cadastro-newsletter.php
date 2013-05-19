@@ -43,7 +43,7 @@ if (!empty($_POST['email_news'])){
 
 
 
-
+Þ
 <div class="box-tp2">
 <div class="pd-all-default">
   <h3>NEWSLETTER</h3>
