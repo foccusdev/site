@@ -48,6 +48,7 @@ if (isset($_POST) && !empty($_POST)) {
   $phpMailer->Subject = strip_tags($_POST['assunto']);
   $phpMailer->From = 'nao_responda@site1367448928.provisorio.ws';
   $phpMailer->FromName = strip_tags($_POST['nome']);
+  $phpMailer->AddReplyTo(strip_tags($_POST['email']));
   $phpMailer->Body = $mensagem;
   $phpMailer->IsSMTP();
 
@@ -64,9 +65,12 @@ if (isset($_POST) && !empty($_POST)) {
 
   $emailsArray = explode(',', $emails);
 
-  foreach ($emailsArray as $emailDestinatario) {
-    $phpMailer->AddAddress(trim($emailDestinatario));
+  $phpMailer->AddAddress(trim($emailsArray[0]));
+
+  for ($i = 1; $i < count($emailsArray); $i++) {
+    $phpMailer->AddCC(trim($emailsArray[$i]));
   }
+
 
   if (!$phpMailer->Send()) {
     //$phpMailer->ErrorInfo;

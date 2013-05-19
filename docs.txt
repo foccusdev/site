@@ -55,7 +55,9 @@ User: site1367448928
 Pass: f0Ccu5dB
 Base: site1367448928
 
-
+Facebook:
+foccusdev@gmail.com
+f0ccu5f@c3
 
 TO DO:
 
@@ -75,9 +77,9 @@ Estudar envio de newsletters OK
 
 Estudar google analitcs OK
 
-Cadastro na newsletter
+Cadastro na newsletter OK
 
-Estudar comentários do facebook 
+Estudar comentários do facebook OK
 
 
 
