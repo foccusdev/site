@@ -24,10 +24,11 @@ if (isset($_POST) && !empty($_POST)) {
       $mensagemArquivo = '<p><a href="' . get_bloginfo('template_url') . '/curriculos/' . $nomeArquivo . '" target="_blank">Clique aqui para visualizar/baixar o currículo</a></p>';
     } else {
 
-      die(header('Location: ' . get_bloginfo('url') . '/contato/?msg=1'));
+      die(header('Location: ' . get_bloginfo('url') . '/contato/?msg=3'));
     }
   } else {
 
+    // O assunto não é Envio de Currículo
     $mensagemArquivo = '';
   }
 

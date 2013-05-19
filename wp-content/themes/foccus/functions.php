@@ -66,7 +66,7 @@ if (!current_user_can('manage_options')) {
     add_menu_page('Ambiente', 'Ambiente', 'edit_posts', 'edit.php?cat=' . _AMBIENTE, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Depoimentos', 'Depoimentos', 'edit_posts', 'edit.php?cat=' . _DEPOIMENTOS, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Contato', 'Contato', 'edit_posts', 'post.php?post=45&action=edit', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
-    add_menu_page('Emails', 'Emails', 'edit_posts', 'post.php?post=107&action=edit', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
+    add_menu_page('Emails', 'Emails', 'edit_posts', 'post.php?post='._EMAILS.'&action=edit', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
 
 
     add_submenu_page('edit.php?cat=' . _PARCEIROS, 'Parceiros', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _PARCEIROS);

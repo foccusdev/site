@@ -3,25 +3,27 @@
 require_once ('incs/head.php');
 require_once ('contato.codigo.php');
 ?>
-<form action="" method="post" enctype="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data" id="form-contato">
 
   <div>
-    <label for="nome">Nome:</label>
+    <label for="nome">* Nome:</label>
     <input type="text" name="nome" id="nome" />
+    <span class="erro">Digite um nome com mais de 3 caracteres.</span>
   </div>
 
   <div>
-    <label for="email">Email:</label>
+    <label for="email">* Email:</label>
     <input type="text" name="email" id="email" />
+    <span class="erro">Digite um email válido.</span>
   </div>
-
+  
   <div>
     <label for="tel">Telefone:</label>
     <input type="text" name="tel" id="tel" />
   </div>
 
   <div>
-    <label for="assunto">Assunto:</label>
+    <label for="assunto">* Assunto:</label>
     <select name="assunto" id="assunto" >      
       <option value="">Selecione uma opção</option>
       <option value="Dúvidas">Dúvidas</option>
@@ -30,6 +32,7 @@ require_once ('contato.codigo.php');
       <option value="Depoimentos">Depoimentos</option>
       <option value="Envio de Currículo">Envio de Currículo</option>
     </select>
+    <span class="erro">Selecione um assunto.</span>
   </div>
 
   <div id="arquivoUpload" style="display: none">
@@ -38,12 +41,15 @@ require_once ('contato.codigo.php');
   </div>
 
   <div>
-    <label for="msg">Mensagem:</label><br />
+    <label for="msg">* Mensagem:</label><br />
     <textarea cols="80" rows="5" name="msg" id="msg"></textarea>
+    <span class="erro"><br />Digite uma mensagem.</span>
   </div>
 
   <input type="submit" value="Enviar" />
 
+  <small>* Campos obrigatórios.</small>
+  
 </form>
 
 
@@ -59,6 +65,10 @@ if (isset($_GET['msg'])){
     
     case 2:
       $msg = 'Lamentamos informar que houve um erro no envio de email! \nPor favor, tente mais tarde ou entre em contato conosco por outro meio.\nAjude-nos a oferecer um serviço cada vez melhor e informe-nos sobre este erro.';
+      break;
+    
+    case 3:
+      $msg = 'O tipo do arquivo enviado não é permitido.\nPor favor, envie apenas arquivos com as extensões .doc .docx ou .pdf!';
       break;
     
   }

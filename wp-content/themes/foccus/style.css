@@ -11,3 +11,7 @@ root {
 }
 
 .admin-welcome-wrap { background: #ccc}
+
+.erro { display: none; color: #d00; }
+
+.clear { clear: both}

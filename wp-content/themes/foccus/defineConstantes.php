@@ -15,5 +15,7 @@ define('_CONTATO', 45);
 
 if ($_SERVER['HTTP_HOST'] == 'localhost') {
   define('_EMAILS', 107);
+}else{
+  define('_EMAILS', 114);
 }
 ?>
