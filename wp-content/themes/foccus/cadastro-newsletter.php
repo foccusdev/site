@@ -11,7 +11,7 @@ if (!empty($_POST['email_news'])){
    {
      "list" : {
        "contacts" : [
-         {"email": "'.$email.'", "custom_fields": {"nome": "'.$nome.'"} }
+         {"email": "'.$email.'", "custom_fields": {"nome": "'.utf8_encode($nome).'"} }
        ],
        "overwriteattributes" : true
      }
