@@ -36,7 +36,7 @@ if (isset($_POST) && !empty($_POST)) {
   <p><strong>Nome:</strong> ' . strip_tags($_POST['nome']) . '</p>
   <p><strong>Email:</strong> ' . strip_tags($_POST['email']) . '</p>
   <p><strong>Telefone:</strong> ' . strip_tags($_POST['tel']) . '</p>
-  <p><strong>Mensagem:</strong> ' . strip_tags($_POST['msg']) . '</p>
+  <p><strong>Mensagem:</strong> ' . nl2br(strip_tags($_POST['msg'])) . '</p>
   ' . $mensagemArquivo;
 
   // Envia a mensagem
@@ -77,5 +77,6 @@ if (isset($_POST) && !empty($_POST)) {
     die(header('Location: ' . get_bloginfo('url') . '/contato/?msg=2'));
   }else
     die(header('Location: ' . get_bloginfo('url') . '/contato/?msg=1'));
+
 }
 ?>
