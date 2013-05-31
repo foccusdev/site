@@ -45,7 +45,7 @@ a { text-decoration: none; color: inherit}
 
 .social-topo {width: 83px; height: 70px; background: #0074a2 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 697px) {
   .menu-mobile { display: none }
   .menu-desktop ul {float: right;}
   .menu-desktop ul li { display: block; float: left; width: 77px; height: 31px; list-style-type: none; padding-top: 46px; text-align: center; font-size: 12px; color: #fff }
@@ -59,7 +59,7 @@ a { text-decoration: none; color: inherit}
   .menu-item-foccus .down-arrow { border-top: 6px solid #2B91B3; }
   .menu-item-noticias .down-arrow { border-top: 6px solid #F3C819; }
   
-  .submenu { background: #fff; width: 732px; height: 67px;  padding: 14px 0px 0px 20px}
+  .submenu { background: #fff; width: 75%; height: 67px;  padding: 14px 0px 0px 20px}
   .submenu span { color: #A4A8AB; font-size: 14px}
   .submenu ul li { display: block; float: left;  list-style-type: none; margin: 10px}
   
@@ -68,7 +68,13 @@ a { text-decoration: none; color: inherit}
   
 }
 
-@media screen and (max-width: 639px) {
+
+/* Para o submenu funcionar em resoluções entre 695px e 690px de largura */
+@media screen and (min-width: 697px) and  (max-width: 960px) {
+  .submenu { background: #fff; width: 69%; height: 67px;  padding: 14px 0px 0px 20px}
+}
+
+@media screen and (max-width: 696px) {
   .menu-mobile { }
   .menu-desktop { display: none}
 }

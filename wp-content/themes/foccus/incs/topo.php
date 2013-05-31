@@ -20,7 +20,9 @@
 
     </div>
 
-    <div class="submenu float-right display-none" id="submenu-foccus">
+    
+    
+    <div class="submenu float-right" id="submenu-foccus">
       <span>Conheça nosso trabalho</span>
       <ul>
         <li><a href="#">Conceito</a></li>
