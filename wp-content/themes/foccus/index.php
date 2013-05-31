@@ -1,8 +1,13 @@
-<?php
+<? get_template_part('incs/head') ?>
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-?>
-Domínio Reservado
+  <? get_template_part('incs/topo') ?>
+
+  <div class="conteudo">
+
+    <div class="slideshow">
+
+    </div>   
+
+  </div>
+
+  <? get_template_part('incs/footer') ?>
