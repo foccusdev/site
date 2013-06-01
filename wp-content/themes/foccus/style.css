@@ -13,31 +13,18 @@ root {   display: block; }
 
 .admin-welcome-wrap { background: #ccc; }
 
-
-/*font faces
-@font-face {
-    font-family: "Sansation Light";
-    src: url("../fonts/sansation_light.ttf");
-}
-
-@font-face {
-    font-family: "Sansation Regular";
-    src: url("../fonts/sansation_regular.ttf");
-}
-*/
-
 @font-face {
     font-family: 'Sony Sketch EF';
     src: url('fonts/Sony_Sketch_EF.ttf');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: regular;
+    font-style: regular;
 
 }
 
 
 /* Classes para elementos HTML */
 
-body {  font-family: Sony Sketch EF; font-size: 14px}
+body {  font-family: Sony Sketch EF; font-size: 14px; color: #666}
 
 a { text-decoration: none; color: inherit}
 
@@ -53,6 +40,10 @@ a { text-decoration: none; color: inherit}
 .clear { clear: both; }
 
 .display-none { display: none}
+
+.no-mg-right { margin-right: 0px}
+
+.fonte-textos { font-size: 11px; font-family: verdana; font-weight: normal; color: #666}
 
 /* Fim de Classes de uso geral */
 
@@ -106,21 +97,31 @@ a { text-decoration: none; color: inherit}
 
 .newsletter { height: 64px; padding-top: 24px; padding-left: 30px }
 
-.newsletter span { font-size: 17px; color: #2C90B7}
+.newsletter span { font-size: 20px; color: #2C90B7}
 
 .newsletter label { color: #909195; margin-right: 15px}
 
 .newsletter input[type="text"] { border: 1px #909195 solid; margin-right: 32px; width: 200px; height: 20px}
 
-.newsletter input[type="submit"] { border: 0px; border-radius: 4px; width: 60px; height:20px; color: #fff; padding-bottom: 4px; background: url('imgs/news_btn_bg.png') repeat-x; }
+.newsletter input[type="submit"] { border: 0px; border-radius: 4px; width: 60px; height:20px; color: #fff; padding-bottom: 4px; background: url('imgs/news_btn_bg.png') repeat-x; position: relative; bottom: 3px;}
 
-.ultimas-noticias { background: url('imgs/arco.png') no-repeat top left; padding-left: 40px; height: 266px}
+.linha-boxes { background: url('imgs/arco.png') no-repeat top left; padding-left: 40px; height: 266px}
 
-.ultimas-noticias .nome-secao { font-size: 20px; color: #666; background: #fff; position: relative; z-index: 2; padding-right: 20px }
+.linha-boxes .nome-secao { font-size: 24px; color: #666; background: #fff; position: relative; z-index: 2; padding-right: 20px;  }
 
-.linha-azul { border-top-style: solid; border-top-width: 1px; border-top-color: #2B91B3; margin-top: 4px; width: 100%; height: 4px; display: block; position: relative; top: -16px;}
+.linha-azul { border-top-style: solid; border-top-width: 1px; border-top-color: #2B91B3; margin-top: 4px; width: 100%; height: 4px; display: block; position: relative; bottom: 16px;}
 
-.box {height: 220px; width: 184px;}
+.box {height: 210px; width: 184px;  float: left; margin-top: 10px}
+
+.mg-box-right { margin-right: 60px; }
+
+.box img { width: 183px; height: 125px; border-top: 12px solid #2B91B3;}
+
+.box h2 { background: url('imgs/seta_azul.png') no-repeat top left; padding-left: 16px; padding-top: 0px; margin-top: 10px; }
+
+.box a:hover h2, .box a:hover p {text-decoration: underline}
+
+.box h3  { background: url('imgs/aspas.png') no-repeat top left; padding-left: 30px; padding-top: 0px; font-size: 13px; color: #DE0060; margin-top: 10px; height: 25px; font-weight: normal }
 
 .erro { display: none; color: #d00; }
 
