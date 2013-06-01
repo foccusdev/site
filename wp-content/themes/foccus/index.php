@@ -20,7 +20,7 @@
   </div>
 
   <div class="linha-boxes">
-    
+
     <span class="nome-secao">Últimas Notícias</span>
     <span class="linha-azul"></span>
 
@@ -30,21 +30,21 @@
         <h2 class="fonte-textos">Foccus abre nova unidade no Leblon - Confira</h2>
       </a>
     </div>
-    
+
     <div class="box mg-box-right">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
         <h2 class="fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2 class="fonte-textos" >
       </a>
     </div>
-    
+
     <div class="box mg-box-right">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
         <h2 class="fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2 class="fonte-textos" >
       </a>
     </div>
-    
+
     <div class="no-mg-right box ">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
@@ -53,10 +53,11 @@
     </div>    
 
   </div>
-  
-  
+
+  <div class="clear"></div>
+
   <div class="linha-boxes">
-    
+
     <span class="nome-secao">Artigos</span>
     <span class="linha-azul"></span>
 
@@ -66,21 +67,21 @@
         <h2 class="fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2 class="fonte-textos" >
       </a>
     </div>
-    
+
     <div class="box mg-box-right">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
         <h2 class="fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2 class="fonte-textos" >
       </a>
     </div>
-    
+
     <div class="box mg-box-right">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
         <h2 class="fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2 class="fonte-textos" >
       </a>
     </div>
-    
+
     <div class="no-mg-right box ">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
@@ -90,8 +91,10 @@
 
   </div>  
 
+  <div class="clear"></div>
+
   <div class="linha-boxes">
-    
+
     <span class="nome-secao">Depoimentos</span>
     <span class="linha-azul"></span>
 
@@ -101,21 +104,21 @@
         <p class="fonte-textos">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
       </a>
     </div>
-    
+
     <div class="box mg-box-right">
       <a href="#">
         <h3>Letícia Freitas de Souza</h3>
         <p class="fonte-textos">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
       </a>
     </div>
-    
+
     <div class="box mg-box-right">
       <a href="#">
         <h3>Letícia Freitas de Souza</h3>
         <p class="fonte-textos">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
       </a>
     </div>
-    
+
     <div class="box no-mg-right">
       <a href="#">
         <h3>Letícia Freitas de Souza</h3>
@@ -124,7 +127,7 @@
     </div>    
 
   </div>    
-  
+
 
 </div>
 
