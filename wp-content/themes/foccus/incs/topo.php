@@ -2,7 +2,7 @@
 
   <div class="topo">
 
-    <div class="logo float-left"><a href="<?= get_bloginfo('url') . '/' ?>">Logo</a></div>
+    <div class="logo float-left"><a href="<?= get_bloginfo('url') . '/' ?>"></a></div>
 
     <div class="social-topo float-left">Redes Sociais</div>
 
@@ -22,7 +22,7 @@
 
     
     
-    <div class="submenu float-right" id="submenu-foccus">
+    <div class="submenu float-right display-none" id="submenu-foccus">
       <span>Conheça nosso trabalho</span>
       <ul>
         <li><a href="#">Conceito</a></li>
