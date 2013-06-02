@@ -91,7 +91,7 @@ a { text-decoration: none; color: inherit}
   .menu-item-foccus .down-arrow { border-top: 6px solid #2B91B3; }
   .menu-item-noticias .down-arrow { border-top: 6px solid #F3C819; }
 
-  .submenu { background: #fff; width: 75%; height: 50px;  padding: 14px 0px 0px 20px}
+  .submenu { background: #fff; width: 75%; height: 54px; padding: 10px 0px 0px 20px;}
   .submenu span { color: #A4A8AB; font-size: 20px}
   .submenu ul li { display: block; float: left;  list-style-type: none; margin: 6px 27px 0px 0px }
   .submenu ul li a {font-size: 12px; color: #A4A8AB; display: block; height: 18px; padding-top: 1px}

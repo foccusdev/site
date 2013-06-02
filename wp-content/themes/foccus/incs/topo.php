@@ -29,7 +29,7 @@
 
     
     
-    <div class="submenu float-right display-none" id="submenu-foccus">
+    <div class="submenu float-right " id="submenu-foccus">
       <span>Conheça nosso trabalho</span>
       <ul>
         <li><a href="#" class="fonte-textos seta-azul">Conceito</a></li>
