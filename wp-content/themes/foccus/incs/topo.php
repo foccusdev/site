@@ -4,7 +4,14 @@
 
     <div class="logo float-left"><a href="<?= get_bloginfo('url') . '/' ?>"></a></div>
 
-    <div class="social-topo float-left">Redes Sociais</div>
+    <div class="social-topo float-left">
+      
+      <div class="icon-topo face float-left"><a href="#"></a></div>
+      <div class="icon-topo inst float-left"><a href="#"></a></div>
+      <div class="icon-topo twitter float-left"><a href="#"></a></div>
+      
+      
+    </div>
 
     <div class="menu-desktop float-right">
 
@@ -25,17 +32,17 @@
     <div class="submenu float-right display-none" id="submenu-foccus">
       <span>Conheça nosso trabalho</span>
       <ul>
-        <li><a href="#">Conceito</a></li>
-        <li><a href="#">Equipe</a></li>
-        <li><a href="#">Depoimentos</a></li>
+        <li><a href="#" class="fonte-textos seta-azul">Conceito</a></li>
+        <li><a href="#" class="fonte-textos seta-azul">Equipe</a></li>
+        <li><a href="#" class="fonte-textos seta-azul">Depoimentos</a></li>
       </ul>
     </div>
 
     <div class="submenu float-right display-none" id="submenu-noticias">
       <span>Fique Informado</span>
       <ul>
-        <li><a href="#">Últimas Notícias</a></li>
-        <li><a href="#">Artigos</a></li>
+        <li><a href="#" class="fonte-textos seta-amarela">Últimas Notícias</a></li>
+        <li><a href="#" class="fonte-textos seta-amarela">Artigos</a></li>
       </ul>
     </div>
 

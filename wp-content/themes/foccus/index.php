@@ -27,30 +27,33 @@
     <div class="box mg-box-right">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-        <h2 class="fonte-textos">Foccus abre nova unidade no Leblon - Confira</h2>
+        <h2 class="seta-azul fonte-textos">Foccus abre nova unidade no Leblon - Confira</h2>
       </a>
     </div>
 
     <div class="box mg-box-right">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-        <h2 class="fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2 class="fonte-textos" >
+        <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
       </a>
     </div>
 
     <div class="box mg-box-right">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-        <h2 class="fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2 class="fonte-textos" >
+        <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
       </a>
     </div>
 
     <div class="no-mg-right box ">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-        <h2 class="fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2 class="fonte-textos" >
+        <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
       </a>
     </div>    
+
+
+    <div class="clear"></div>
 
   </div>
 
@@ -64,30 +67,32 @@
     <div class="box mg-box-right">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-        <h2 class="fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2 class="fonte-textos" >
+        <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
       </a>
     </div>
 
     <div class="box mg-box-right">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-        <h2 class="fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2 class="fonte-textos" >
+        <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
       </a>
     </div>
 
     <div class="box mg-box-right">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-        <h2 class="fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2 class="fonte-textos" >
+        <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
       </a>
     </div>
 
     <div class="no-mg-right box ">
       <a href="#">
         <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-        <h2 class="fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2 class="fonte-textos" >
+        <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
       </a>
     </div>    
+
+    <div class="clear"></div>
 
   </div>  
 
@@ -125,6 +130,8 @@
         <p class="fonte-textos">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
       </a>
     </div>    
+
+    <div class="clear"></div>
 
   </div>    
 
@@ -175,8 +182,8 @@
   <div class="menu-rodape">
 
     <div class="bd-menu-right" >
-      <h3 class="laranja">Foccus</h3>
-      <ul>
+      <h3 class="azul">Foccus</h3>
+      <ul class="fonte-textos">
         <li><a href="#">Conceito</a></li>
         <li><a href="#">Equipe</a></li>
         <li><a href="#">Depoimentos</a></li>
@@ -184,25 +191,40 @@
     </div>
 
     <div class="bd-menu-right" >
-      <h3 class="azul">Notícias</h3>
-      <ul>
+      <h3 class="amarelo">Notícias</h3>
+      <ul class="fonte-textos">
         <li><a href="#">Últimas Notícias</a></li>
         <li><a href="#">Artigos</a></li>
       </ul>
     </div>
 
     <div class="bd-menu-right"  >
-      <h3><a href="#" class="amarelo">Login</a></h3>
+      <h3><a href="#" class="vermelho">Login</a></h3>
     </div>
 
     <div class="bd-menu-right" >
-      <h3><a href="#" class="vermelho">Pesquisa</a></h3>
+      <h3><a href="#" class="cinza">Pesquisa</a></h3>
     </div>
 
     <div>
       <h3><a href="#" class="verde">Contato</a></h3>
     </div>
 
+  </div>
+
+  <div class="clear"></div>
+
+  <div class="creditos fonte-textos">
+
+    <div class="float-left">
+      Foccus Training - Copyright <?= date('Y') ?>
+    </div>
+
+    <div class="float-right ">
+      Desenvolvido por <a href="#">Magno Dal Magro</a> e <a href="#">João Gabriel N. Vieira</a>
+    </div>
+
+    <div class="clear"></div>
 
   </div>
 

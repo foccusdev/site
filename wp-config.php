@@ -20,7 +20,8 @@
 if ($_SERVER['HTTP_HOST'] == 'localhost') {
 
   /** O nome do banco de dados do WordPress */
-  define('DB_NAME', 'site1367448928');
+  //define('DB_NAME', 'site1367448928');
+  define('DB_NAME', 'foccus');
 
   /** Usuário do banco de dados MySQL */
   define('DB_USER', 'root');
