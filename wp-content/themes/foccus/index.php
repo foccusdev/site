@@ -128,6 +128,84 @@
 
   </div>    
 
+  <div class="clear"></div>
+
+  <div class="separador"></div>
+
+  <div class="parceiros">
+    <h3>Parceiros</h3>
+    <div class="linha-boxes">
+      <div class="box mg-box-right">
+        <a href="#">
+          <img src="<?= get_bloginfo('template_url') ?>/imgs/parceiro.png" />
+        </a>
+      </div>   
+      <div class="box mg-box-right">
+        <a href="#">
+          <img src="<?= get_bloginfo('template_url') ?>/imgs/parceiro.png" />
+        </a>
+      </div> 
+      <div class="box mg-box-right">
+        <a href="#">
+          <img src="<?= get_bloginfo('template_url') ?>/imgs/parceiro.png" />
+        </a>
+      </div> 
+      <div class="box no-mg-right">
+        <a href="#">
+          <img src="<?= get_bloginfo('template_url') ?>/imgs/parceiro.png" />
+        </a>
+      </div> 
+    </div>
+  </div>
+
+  <div class="clear"></div>
+
+  <div class="newsletter">
+    <span>Receba nossa newsletter</span>
+    <form action="" method="post" class="float-right">
+      <label for="news_nome">Nome</label>
+      <input type="text" name="news_nome" id="news_nome" />
+      <label for="news_email">email</label>
+      <input type="text" name="news_email" id="news_email" />
+      <input type="submit" value="enviar" />
+    </form>
+  </div>
+
+
+  <div class="menu-rodape">
+
+    <div class="bd-menu-right" >
+      <h3 class="laranja">Foccus</h3>
+      <ul>
+        <li><a href="#">Conceito</a></li>
+        <li><a href="#">Equipe</a></li>
+        <li><a href="#">Depoimentos</a></li>
+      </ul>
+    </div>
+
+    <div class="bd-menu-right" >
+      <h3 class="azul">Notícias</h3>
+      <ul>
+        <li><a href="#">Últimas Notícias</a></li>
+        <li><a href="#">Artigos</a></li>
+      </ul>
+    </div>
+
+    <div class="bd-menu-right"  >
+      <h3><a href="#" class="amarelo">Login</a></h3>
+    </div>
+
+    <div class="bd-menu-right" >
+      <h3><a href="#" class="vermelho">Pesquisa</a></h3>
+    </div>
+
+    <div>
+      <h3><a href="#" class="verde">Contato</a></h3>
+    </div>
+
+
+  </div>
+
 
 </div>
 

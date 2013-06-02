@@ -14,11 +14,10 @@ root {   display: block; }
 .admin-welcome-wrap { background: #ccc; }
 
 @font-face {
-    font-family: 'Sony Sketch EF';
-    src: url('fonts/Sony_Sketch_EF.ttf');
-    font-weight: regular;
-    font-style: regular;
-
+  font-family: 'Sony Sketch EF';
+  src: url('fonts/Sony_Sketch_EF.ttf');
+  font-weight: regular;
+  font-style: regular;
 }
 
 
@@ -44,6 +43,12 @@ a { text-decoration: none; color: inherit}
 .no-mg-right { margin-right: 0px}
 
 .fonte-textos { font-size: 11px; font-family: verdana; font-weight: normal; color: #666}
+
+.laranja { color: #F88716 } 
+.azul {color: #2B91B3 }
+.amarelo {color:#F3C819 }
+.vermelho { color: #DE0060}
+.verde { color: #2EA2AB}
 
 /* Fim de Classes de uso geral */
 
@@ -73,14 +78,14 @@ a { text-decoration: none; color: inherit}
   .down-arrow {font-size: 0px; line-height: 0%; width: 0px; border-left: 20px solid transparent; border-right: 20px solid transparent; position: relative; top: 14px; left: 17px; }
   .menu-item-foccus .down-arrow { border-top: 6px solid #2B91B3; }
   .menu-item-noticias .down-arrow { border-top: 6px solid #F3C819; }
-  
+
   .submenu { background: #fff; width: 75%; height: 50px;  padding: 14px 0px 0px 20px}
   .submenu span { color: #A4A8AB; font-size: 14px}
   .submenu ul li { display: block; float: left;  list-style-type: none; margin: 10px}
-  
+
   #submenu-foccus { border-bottom: 6px solid #2B91B3; }
   #submenu-noticias { border-bottom: 6px solid #F3C819 }
-  
+
 }
 
 /* Para o submenu funcionar em resoluções entre 695px e 690px de largura */
@@ -123,6 +128,22 @@ a { text-decoration: none; color: inherit}
 
 .box h3  { background: url('imgs/aspas.png') no-repeat top left; padding-left: 30px; padding-top: 0px; font-size: 13px; color: #DE0060; margin-top: 10px; height: 25px; font-weight: normal }
 
+.separador { background: #eee; border-top: 1px solid #ccc; height: 5px; width:100%; margin: 0 0 6px 0 }
+
+.parceiros h3 { font-size: 20px; color: #909195;  }
+
+.parceiros .box { height: auto;}
+
+.parceiros .box img { border: 0; }
+
+.menu-rodape div {  float: left; height: 100px; width:120px; margin: 0 0 0 10px}
+
+.menu-rodape .bd-menu-right { border-right: 1px solid #ccc; }
+
+.menu-rodape ul { list-style-type: none; list-style-position: inside}
+
 .erro { display: none; color: #d00; }
+
+
 
 /* Fim de Classes específicas */
