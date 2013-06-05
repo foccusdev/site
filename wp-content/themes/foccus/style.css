@@ -167,11 +167,21 @@ a { text-decoration: none; color: inherit}
 
 .conteudo-interno {  margin-top: 10px;}
 
-.coluna-esquerda { float: left}
+.conteudo-interno p { margin-bottom: 28px  }
 
-.coluna-direita {width: 270px; background: #EEF2F8; height: 400px; float: right; }
+.texto-conceito { float: left; width: 33%}
 
-.img-destacada { width: 262px; height: 347px; }
+.img-conceito { width: 262px; height: 347px; margin: 4px 35px 35px 5px; }
+
+.coluna-direita {width: 28%; background: #EEF2F8;  float: right; padding-top: 20px; margin-bottom: 10px}
+
+.coluna-direita .secao { background: url('imgs/bg_titulo_coluna_direita.png') 0 0 no-repeat; padding: 5px 0px 0px 20px; color: #DE0060; height: 24px; font-size: 17px;}
+
+.coluna-direita .box {width: 90%; margin: 8px 16px; height: 80px}
+
+.coluna-direita .box img { height: 70px; width: 80px; border: 0; margin-right: 10px }
+
+.coluna-direita .box .saiba-mais { color: #F88716; font-weight: normal; margin-top: 5px}
 
 .erro { display: none; color: #d00; }
 
