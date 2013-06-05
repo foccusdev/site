@@ -77,6 +77,8 @@ a { text-decoration: none; color: inherit}
 
 .twitter { background: url('imgs/social.png') -58px 0;}
 
+.topo-interna { background: url('imgs/bg_topo_interna.png') repeat; height: 125px; margin-bottom: 34px}
+
 @media screen and (min-width: 697px) {
   .menu-mobile { display: none }
   .menu-desktop ul {float: right;}
@@ -123,11 +125,11 @@ a { text-decoration: none; color: inherit}
 
 .newsletter input[type="submit"] { border: 0px; border-radius: 4px; width: 60px; height:20px; color: #fff; padding-bottom: 4px; background: url('imgs/news_btn_bg.png') repeat-x; position: relative; bottom: 3px;}
 
-.linha-boxes { background: url('imgs/arco.png') no-repeat top left; padding-left: 40px;}
+.nome-secao { font-size: 24px; font-weight: normal; color: #666; position: relative; z-index: 2; padding-right: 20px; display: inline-block; background: #fff; bottom: 4px }
 
-.linha-boxes .nome-secao { font-size: 24px; color: #666; background: #fff; position: relative; z-index: 2; padding-right: 20px;  }
+.arco { height: 65px; float: left; position: relative; z-index: 2; padding-right: 6px; background: #fff}
 
-.linha-azul { border-top-style: solid; border-top-width: 1px; border-top-color: #2B91B3; margin-top: 4px; width: 100%; height: 4px; display: block; position: relative; bottom: 16px;}
+.linha-azul { border-top-style: solid; border-top-width: 1px; border-top-color: #2B91B3; margin-top: 4px; width: 100%; height: 4px; display: block; position: relative; bottom: 20px; z-index: 0}
 
 .box {height: 210px; width: 184px;  float: left; margin-top: 10px}
 
@@ -141,7 +143,7 @@ a { text-decoration: none; color: inherit}
 
 .box h3  { background: url('imgs/aspas.png') no-repeat top left; padding-left: 30px; padding-top: 0px; font-size: 13px; color: #DE0060; margin-top: 10px; height: 25px; font-weight: normal }
 
-.separador { background: #eee; border-top: 1px solid #ccc; height: 5px; width:100%; margin: 0 0 6px 0 }
+.separador { background: #f5f5f5; border-top: 1px solid #ccc; height: 5px; width:100%; margin: 0 0 6px 0 }
 
 .parceiros h3 { font-size: 20px; color: #909195;  }
 
@@ -163,8 +165,14 @@ a { text-decoration: none; color: inherit}
 
 .creditos { background: #2B91B3; color: #fff; padding: 45px 30px 0 30px; height: 60px; margin-top: 40px}
 
+.conteudo-interno {  margin-top: 10px;}
+
+.coluna-esquerda { float: left}
+
+.coluna-direita {width: 270px; background: #EEF2F8; height: 400px; float: right; }
+
+.img-destacada { width: 262px; height: 347px; }
+
 .erro { display: none; color: #d00; }
-
-
 
 /* Fim de Classes específicas */
