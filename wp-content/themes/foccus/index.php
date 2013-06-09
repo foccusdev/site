@@ -53,11 +53,7 @@ get_template_part('incs/topo');
     </a>
   </div>    
 
-
   <div class="clear"></div>
-
-  <div class="clear"></div>
-
 
   <img src="<?= get_bloginfo('template_url') ?>/imgs/arco.png" class="arco">
   <span class="nome-secao">Artigos</span>
@@ -93,11 +89,6 @@ get_template_part('incs/topo');
 
   <div class="clear"></div>
 
-
-
-  <div class="clear"></div>
-
-
   <img src="<?= get_bloginfo('template_url') ?>/imgs/arco.png" class="arco">
   <span class="nome-secao">Depoimentos</span>
   <span class="linha-azul"></span>
@@ -131,11 +122,6 @@ get_template_part('incs/topo');
   </div>    
 
   <div class="clear"></div>
-
-
-
-
-
 
 </div>
 

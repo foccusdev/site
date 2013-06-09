@@ -77,7 +77,7 @@ a { text-decoration: none; color: inherit}
 
 .twitter { background: url('imgs/social.png') -58px 0;}
 
-.topo-interna { background: url('imgs/bg_topo_interna.png') repeat; height: 125px; margin-bottom: 34px}
+.topo-interna { background: url('imgs/bg_topo_interna.png') repeat; height: 72px; margin-bottom: 34px; padding-top: 52px}
 
 @media screen and (min-width: 697px) {
   .menu-mobile { display: none }
@@ -168,6 +168,16 @@ a { text-decoration: none; color: inherit}
 .conteudo-interno {  margin-top: 10px;}
 
 .conteudo-interno p { margin-bottom: 28px  }
+
+.topo-interna .newsletter { padding-top: 0px}
+
+.topo-interna .newsletter span { display: block; width: 126px; float: left; font-weight: bold;}
+
+.topo-interna form { margin-top: 15px}
+
+.listagem {width: 658px}
+
+.listagem .mg-box-right { margin-right: 30px}
 
 .texto-conceito { float: left; width: 33%}
 
