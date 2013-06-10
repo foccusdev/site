@@ -18,7 +18,7 @@ ob_start();
     <meta name="revisit-after" content="1" />
     <title>Foccus Training</title>
     <link rel="stylesheet" href="<?=get_bloginfo('template_url') ?>/style.css" />
-
+    <link rel="stylesheet" href="<?=get_bloginfo('template_url') ?>/estilos.css" />
     <!-- Metas para compartilhamento no facebook -->
     <meta property="fb:admins" content="1199485757"/>
     <meta property="og:type" content="website" />
