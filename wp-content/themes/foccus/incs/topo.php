@@ -23,16 +23,13 @@
         <li class="menu-item-busca"><a href="#"></a></li>
         <li class="menu-item-contato"><a href="#">Contato</a></li>
       </ul>
-
-
+      
     </div>
-
-    
     
     <div class="submenu float-right display-none" id="submenu-foccus">
       <span>Conheça nosso trabalho</span>
       <ul>
-        <li><a href="#" class="fonte-textos seta-azul">Conceito</a></li>
+        <li><a href="<?= get_bloginfo('url')?>/conceito/" class="fonte-textos seta-azul">Conceito</a></li>
         <li><a href="#" class="fonte-textos seta-azul">Equipe</a></li>
         <li><a href="#" class="fonte-textos seta-azul">Depoimentos</a></li>
       </ul>
@@ -41,8 +38,8 @@
     <div class="submenu float-right display-none" id="submenu-noticias">
       <span>Fique Informado</span>
       <ul>
-        <li><a href="#" class="fonte-textos seta-amarela">Últimas Notícias</a></li>
-        <li><a href="#" class="fonte-textos seta-amarela">Artigos</a></li>
+        <li><a href="<?= get_bloginfo('url')?>/ultimas-noticias/" class="fonte-textos seta-amarela">Últimas Notícias</a></li>
+        <li><a href="<?= get_bloginfo('url')?>/artigos/" class="fonte-textos seta-amarela">Artigos</a></li>
       </ul>
     </div>
 

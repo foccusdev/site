@@ -50,7 +50,7 @@
     <div class="bd-menu-right" >
       <h3 class="azul">Foccus</h3>
       <ul class="fonte-textos">
-        <li><a href="#">Conceito</a></li>
+        <li><a href="<?= get_bloginfo('url')?>/conceitos/">Conceito</a></li>
         <li><a href="#">Equipe</a></li>
         <li><a href="#">Depoimentos</a></li>
       </ul>
@@ -59,8 +59,8 @@
     <div class="bd-menu-right" >
       <h3 class="amarelo">Notícias</h3>
       <ul class="fonte-textos">
-        <li><a href="#">Últimas Notícias</a></li>
-        <li><a href="#">Artigos</a></li>
+        <li><a href="<?= get_bloginfo('url')?>/ultimas-noticias/">Últimas Notícias</a></li>
+        <li><a href="<?= get_bloginfo('url')?>/artigos/">Artigos</a></li>
       </ul>
     </div>
 
