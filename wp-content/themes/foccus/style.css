@@ -175,6 +175,10 @@ a { text-decoration: none; color: inherit}
 
 .topo-interna form { margin-top: 15px}
 
+.nome-secao-linha { margin-left: 150px}
+
+.topo-linha { width: 63%}
+
 .listagem {width: 658px}
 
 .listagem .mg-box-right { margin-right: 30px}
