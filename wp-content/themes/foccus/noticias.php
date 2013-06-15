@@ -17,10 +17,11 @@ get_template_part('incs/topo');
             </form>
         </div>
     </div>
-    <div class="conteudo-interno fonte-textos">
+    
         <img src="<?= get_bloginfo('template_url') ?>/imgs/arco.png" class="arco">
         <h2 class="nome-secao"><?= $categoria->name ?></h2>
         <span class="linha-azul"></span>
+        <div class="conteudo-interno fonte-textos float-left">
         <div class="listagem float-left">
 
             <div class="box mg-box-right">
@@ -116,11 +117,10 @@ get_template_part('incs/topo');
             <div class="paginacao float-right mg-box-right">
                 <a href="#"><<</a> página 2 de 12 <a href="#">>></a>
             </div>
-
         </div>
-        <? get_template_part('incs/barra-lateral') ?>
-    </div>
 
+    </div>
+        <? get_template_part('incs/barra-lateral') ?>
 </div>
 
 <? get_template_part('incs/rodape'); ?>

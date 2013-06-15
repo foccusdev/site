@@ -11,7 +11,7 @@ switch($categoria->term_id){
         break;
     
     case _EQUIPE:
-        $pagina = 'eqquipe.php';
+        $pagina = 'equipe.php';
         break;
     
     default:
