@@ -17,8 +17,8 @@
         <li class="menu-item-foccus" id="menu-item-foccus"><a href="#">Foccus<div class="down-arrow"></div></a></li>
         <li class="menu-item-noticias" id="menu-item-noticias"><a href="#">Notícias<div class="down-arrow"></div></a></li>
         <li class="menu-item-login"><a href="#">Login</a></li>
-        <li class="menu-item-busca"><a href="#"><img src="<?= get_bloginfo('template_url') ?>/imgs/lupa.png"/></a></li>
-        <li class="menu-item-contato"><a href="#">Contato</a></li>
+        <li class="menu-item-busca"><a href="<?= get_bloginfo('url')?>/busca/"><img src="<?= get_bloginfo('template_url') ?>/imgs/lupa.png"/></a></li>
+        <li class="menu-item-contato"><a href="<?= get_bloginfo('url')?>/contato/">Contato</a></li>
       </ul>
       
     </div>
@@ -28,7 +28,7 @@
       <ul>
         <li><a href="<?= get_bloginfo('url')?>/conceito/" class="fonte-textos seta-azul">Conceito</a></li>
         <li><a href="<?= get_bloginfo('url')?>/equipe/" class="fonte-textos seta-azul">Equipe</a></li>
-        <li><a href="#" class="fonte-textos seta-azul">Depoimentos</a></li>
+        <li><a href="<?= get_bloginfo('url')?>/depoimentos/" class="fonte-textos seta-azul">Depoimentos</a></li>
       </ul>
     </div>
 
