@@ -10,3 +10,10 @@ root {
   display: block;
 }
 
+.mensagem_incentivo{margin-top:-100px; float:left;}
+.texto_img-circulo {font-family: verdana;  font-size: 13pt; margin-top: 0px; z-index:3; margin-left:35px; }
+.img-circulo {margin-left: 0px; z-index: 1; margin-top: -40px;}
+.texto-conceito2{float:left; width: 65%; font-family: verdana; font-size: 11px; margin-top:15px;line-height: 18px; margin-left: 32px;}
+.objetivos{color:#e41e5f; font-size: 22px; margin-top:-15px; margin-left: 32px; }
+.texto-objetivos{color:#e41e5f; font-size: 23px;}
+.clear { clear: both; }
