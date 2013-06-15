@@ -10,10 +10,10 @@ root {
   display: block;
 }
 
-.mensagem_incentivo{margin-top:-100px; float:left;}
-.texto_img-circulo {font-family: verdana;  font-size: 13pt; margin-top: 0px; z-index:3; margin-left:35px; }
-.img-circulo {margin-left: 0px; z-index: 1; margin-top: -40px;}
-.texto-conceito2{float:left; width: 65%; font-family: verdana; font-size: 11px; margin-top:15px;line-height: 18px; margin-left: 32px;}
-.objetivos{color:#e41e5f; font-size: 22px; margin-top:-15px; margin-left: 32px; }
-.texto-objetivos{color:#e41e5f; font-size: 23px;}
+.mensagem_incentivo{margin-top:-120px; margin-left:-340px;}
+.texto_img-circulo {font-family: verdana;  font-size: 13pt; margin-top: 20px; z-index:3; margin-right:395px; float:right; }
+.img-circulo {margin-left: 0px; z-index: -1; margin-top: -60px; float:left;}
+.texto-conceito2{float:left; width: 65%; font-family: verdana; font-size: 11px; margin-top:15px;line-height: 18px; margin-left:-300px;}
+.objetivos{color:#e41e5f; font-size: 22px; margin-top:85px; margin-left:-300px; }
+.texto-objetivos{color:#e41e5f; font-size: 23px; width:90%}
 .clear { clear: both; }

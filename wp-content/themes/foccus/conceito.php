@@ -1,3 +1,6 @@
+
+/* código commitado - Magno*/
+
 <?
 /* Template Name: Conceito */
 get_template_part('incs/head');
