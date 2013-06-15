@@ -193,6 +193,16 @@ a { text-decoration: none; color: inherit}
 
 .box-depoimentos p { padding-left: 36px; margin: auto;}
 
+.box-equipe { margin-bottom: 35px}
+
+.img-equipe { width: 230px; }
+
+.img-equipe img { width: 220px; height: 192px }
+
+.txt-equipe { width: 60%; margin-left: 30px }
+
+.txt-equipe p { line-height:  20px; margin-bottom: 8px}
+
 .coluna-direita {width: 28%; background: #EEF2F8;  float: right; padding-top: 20px; margin-bottom: 10px}
 
 .coluna-direita .secao { background: url('imgs/bg_titulo_coluna_direita.png') 0 0 no-repeat; padding: 5px 0px 0px 20px; color: #DE0060; height: 24px; font-size: 17px;}

@@ -23,12 +23,12 @@ get_template_part('incs/topo');
   </div>
 
 
-    <img src="<?= get_bloginfo('template_url') ?>/imgs/arco.png" class="arco">
-    <h2 class="nome-secao">Conceito</h2>
-    <span class="linha-azul"></span>
+  <img src="<?= get_bloginfo('template_url') ?>/imgs/arco.png" class="arco">
+  <h2 class="nome-secao">Conceito</h2>
+  <span class="linha-azul"></span>
 
-      <div class="conteudo-interno fonte-textos float-left">
-    
+  <div class="conteudo-interno fonte-textos float-left">
+
     <img src="<?= get_bloginfo('template_url') ?>/imgs/img_conceito.jpg" class="img-conceito float-left" />
 
 
@@ -93,7 +93,7 @@ get_template_part('incs/topo');
 
       </div>    
     </div>
-<div class="clear"> </div>
+    <div class="clear"> </div>
   </div>
 
   <? get_template_part('incs/barra-lateral') ?>
