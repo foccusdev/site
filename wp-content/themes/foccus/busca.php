@@ -16,6 +16,4 @@ get_template_part('incs/topo');
   </div>
 </div>
 
-
-
 <? get_template_part('incs/rodape'); ?>
