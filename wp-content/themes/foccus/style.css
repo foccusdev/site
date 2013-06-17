@@ -63,7 +63,7 @@ a { text-decoration: none; color: inherit}
 
 .topo { height: 96px; }
 
-.logo { width: 205px; height: 213px; background: url('imgs/logo_site.png')}
+.logo { width: 197px; height: 213px; background: url('imgs/logo_site.png')}
 
 .icon-topo a, .logo a {display: block; width: 100%; height: 100%}
 
