@@ -1,5 +1,5 @@
 
-/* código commitado - Magno*/
+
 
 <?
 /* Template Name: Conceito */
@@ -71,7 +71,6 @@ get_template_part('incs/topo');
         <div class="texto_objetivos">Objetivos<img src="<?= get_bloginfo('template_url') ?>/imgs/img_objetivos.png"/></div>
       </div>
       <div class="texto-conceito2">
-
         <P>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. 
           Mirum est notare quam littera gothica, quam nunc putamu s parum claram, anteposuerit 
           litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, 
