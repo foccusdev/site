@@ -13,7 +13,12 @@ switch($categoria->term_id){
     case _EQUIPE:
         $pagina = 'equipe.php';
         break;
-    
+
+    case _DEPOIMENTOS:
+        $pagina = 'depoimentos.php';
+        break;
+          
+      
     default:
         $pagina = '404.php';
         break;

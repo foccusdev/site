@@ -187,6 +187,38 @@ a { text-decoration: none; color: inherit}
 
 .img-conceito { width: 262px; height: 347px; margin: 4px 35px 35px 5px; }
 
+.box-depoimentos { background: #FEFFCF; width: 90%; border-left: 30px #FEFFCF solid; border-top: 25px #fff solid; padding: 17px 0px 17px 0px; margin-bottom: 12px }
+
+.box-depoimentos h2 { background: url('imgs/aspas_box.png') no-repeat left center; padding-left: 36px; color: #DD005F; }
+
+.box-depoimentos p { padding-left: 36px; margin: auto;}
+
+.box-equipe { margin-bottom: 35px}
+
+.img-equipe { width: 230px; }
+
+.img-equipe img { width: 220px; height: 192px }
+
+.txt-equipe { width: 60%; margin-left: 30px }
+
+.txt-equipe p { line-height:  20px; margin-bottom: 8px}
+
+.topo-contato { height: 235px; width: 100%; background: url('imgs/contato_banner.jpg') no-repeat top center; }
+
+.contato { padding-top: 40px; padding-left: 70px}
+
+.mapa { width: 316px; height: 168px; background: url('imgs/bg_mapa.png') right center no-repeat #DE0060; padding: 16px}
+
+.form-contato { width: 407px}
+
+.form-contato input, select { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana; height: 17px; width: 333px; padding: 15px; margin-bottom: 20px}
+
+.mensagem { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana; width: 333px; padding: 15px; margin-bottom: 20px} 
+
+.ddd { width: 50px !important; margin-right: 4px}
+
+.telefone { width:  256px !important}
+
 .coluna-direita {width: 28%; background: #EEF2F8;  float: right; padding-top: 20px; margin-bottom: 10px}
 
 .coluna-direita .secao { background: url('imgs/bg_titulo_coluna_direita.png') 0 0 no-repeat; padding: 5px 0px 0px 20px; color: #DE0060; height: 24px; font-size: 17px;}

@@ -1,91 +1,70 @@
-<?php
-/* Template Name: Contato */
-
-require_once ('incs/head.php');
-require_once ('contato.codigo.php');
+<?
+get_template_part('incs/head');
+get_template_part('incs/topo');
 ?>
-<form action="" method="post" enctype="multipart/form-data" id="form-contato">
 
-  <div>
-    <label for="nome">* Nome:</label>
-    <input type="text" name="nome" id="nome" />
-    <span class="erro">Digite um nome com mais de 3 caracteres.</span>
+<div class="conteudo">
+
+  <div class="topo-contato"></div>
+
+  <div class="float-left contato">
+
+    <div class="contato-endereco">
+
+      <h3>Horário de Funcionamento</h3>
+      <p>Segunda a Sexta: 06h às 23h Sábados: 09h às 20h</p>
+
+      <h3>Telefones</h3>
+      <p>
+        (21)3333.3333<br />
+        (21)3333.3333
+      </p>
+
+      <h3>Email</h3>
+      <p>contato@foccustraining.com.br</p>
+
+      <h3>Localização</h3>
+      <p>
+        Rua das Laranjeiras, 200, Laranjeiras, Rio de Janeiro - RJ.<br />
+        CEP 22240-005
+      </p>
+
+    </div>    
+
+    <div class="mapa">         
+      <iframe width="294" height="171" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+das+Laranjeiras,+260,+Rio+de+Janeiro&amp;aq=&amp;sll=-22.934296,-43.18732&amp;sspn=0.008418,0.013926&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=R.+das+Laranjeiras,+260+-+Laranjeiras,+Rio+de+Janeiro,+22240-003&amp;ll=-22.934296,-43.18732&amp;spn=0.008418,0.013926&amp;z=14&amp;output=embed"></iframe>
+    </div>
+
+
+
   </div>
+  <div class="float-right form-contato">      
 
-  <div>
-    <label for="email">* Email:</label>
-    <input type="text" name="email" id="email" />
-    <span class="erro">Digite um email válido.</span>
+    <form action="" method="post">
+
+      <select name="assunto" id="assunto">
+        <option value="">Assunto 01</option>
+        <option value="">Assunto 01</option>
+        <option value="">Assunto 01</option>
+      </select>
+      <div>
+        <input type="text" name="nome" id="nome" value="NOME*"/>
+      </div>
+      <div>
+        <input type="text" name="email" id="email" value="E-MAIL*"/>
+      </div>
+      <div>
+        <input type="text" class="ddd" name="ddd" id="ddd" value="DDD*"/>
+        <input type="text" class="telefone "name="telefone" id="telefone" value="TELEFONE*"/>
+      </div>
+      <div>
+        <textarea name="mensagem" id="mensagem" class="mensagem">MENSAGEM</textarea>
+      </div>
+      <div>
+        <input type="submit" value="Enviar" />
+      </div>
+    </form>
   </div>
-  
-  <div>
-    <label for="tel">Telefone:</label>
-    <input type="text" name="tel" id="tel" />
-  </div>
+</div>
 
- 
-  
-  
-<div class="styled-select">
-   <select>
-      <option>Here is the first option</option>
-      <option>The second option</option>
-   </select>
-</div> 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  <div id="arquivoUpload" style="display: none">
-    <label for="arquivo">Arquivo: (PDF ou DOC)</label>
-    <input type="file" name="arquivo" id="arquivo" />
-  </div>
-
-  <div>
-    <label for="msg">* Mensagem:</label><br />
-    <textarea cols="80" rows="5" name="msg" id="msg"></textarea>
-    <span class="erro"><br />Digite uma mensagem.</span>
-  </div>
-
-  <input type="submit" value="Enviar" />
-
-  <small>* Campos obrigatórios.</small>
-  
-</form>
-
-
-<? 
-require_once ('incs/footer.php');
-if (isset($_GET['msg'])){
-  
-  switch ($_GET['msg']){
-    
-    case 1:
-      $msg = 'Email enviado com sucesso!';
-      break;
-    
-    case 2:
-      $msg = 'Lamentamos informar que houve um erro no envio de email! \nPor favor, tente mais tarde ou entre em contato conosco por outro meio.\nAjude-nos a oferecer um serviço cada vez melhor e informe-nos sobre este erro.';
-      break;
-    
-    case 3:
-      $msg = 'O tipo do arquivo enviado não é permitido.\nPor favor, envie apenas arquivos com as extensões .doc .docx ou .pdf!';
-      break;
-    
-  }
-  
-  echo '<script type="text/javascript">alert("'.$msg.'")</script>';
-  
-  
-}
-?>
+<? get_template_part('incs/rodape'); ?>

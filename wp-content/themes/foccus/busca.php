@@ -4,7 +4,7 @@ get_template_part('incs/head');
 get_template_part('incs/topo');
 ?>
 
-<div class="conteudo">
+<div class="conteudo ">
 
   <div class="conteudo_busca">
   
@@ -26,7 +26,5 @@ get_template_part('incs/topo');
   </div>
   
 </div>
-
-
 
 <? get_template_part('incs/rodape'); ?>
