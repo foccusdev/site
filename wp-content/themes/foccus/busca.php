@@ -12,12 +12,11 @@ get_template_part('incs/topo');
   <span class="linha-azul topo-linha float-right"></span>
     
 <section id="wrapper">
-     <div id="">
         <form>
-           <input type= "text"   id="main" value="Escreva aqui" onFocus="if(this.value=='Escreva aqui')this.value='';">
+           <input type= "text"   id="main" value="Escreva aqui" onFocus="if(this.value==='Escreva aqui')this.value='';">
            <input type="submit"  id="botao" class="solid" value="">
         </form>
-     </div>
+     
 </section>
   
   

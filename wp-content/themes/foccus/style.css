@@ -199,4 +199,33 @@ a { text-decoration: none; color: inherit}
 
 .erro { display: none; color: #d00; }
 
-/* Fim de Classes específicas */
+
+
+
+
+.styled-select select {
+   background: transparent;
+   width: 340px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   }
+   
+   
+   .styled-select {
+   width: 340px;
+   height: 34px;
+   overflow: hidden;
+   background: url('imgs/down_arrow_select.jpg') no-repeat right #ffffff;
+   border: 1px solid #ccc;
+   }
+     
+     
+/* Fim de Classes específicas */   
+     
+     
+     

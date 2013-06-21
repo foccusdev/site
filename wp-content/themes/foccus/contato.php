@@ -1,5 +1,6 @@
 <?php
 /* Template Name: Contato */
+
 require_once ('incs/head.php');
 require_once ('contato.codigo.php');
 ?>
@@ -22,18 +23,28 @@ require_once ('contato.codigo.php');
     <input type="text" name="tel" id="tel" />
   </div>
 
-  <div>
-    <label for="assunto">* Assunto:</label>
-    <select name="assunto" id="assunto" >      
-      <option value="">Selecione uma opção</option>
-      <option value="Dúvidas">Dúvidas</option>
-      <option value="Elogios">Elogios</option>
-      <option value="Críticas">Críticas</option>
-      <option value="Depoimentos">Depoimentos</option>
-      <option value="Envio de Currículo">Envio de Currículo</option>
-    </select>
-    <span class="erro">Selecione um assunto.</span>
-  </div>
+ 
+  
+  
+<div class="styled-select">
+   <select>
+      <option>Here is the first option</option>
+      <option>The second option</option>
+   </select>
+</div> 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   <div id="arquivoUpload" style="display: none">
     <label for="arquivo">Arquivo: (PDF ou DOC)</label>
