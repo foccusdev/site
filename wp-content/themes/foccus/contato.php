@@ -42,12 +42,15 @@ get_template_part('incs/topo');
 
     <form action="" method="post">
 
-      <select name="assunto" id="assunto">
-        <option value="">Assunto 01</option>
-        <option value="">Assunto 01</option>
-        <option value="">Assunto 01</option>
-      </select>
-      <div>
+     
+  <div class="styled-select">
+    <select>
+      <option>Here is the first option</option>
+      <option>The second option</option>
+    </select>
+  </div>
+        
+        
         <input type="text" name="nome" id="nome" value="NOME*"/>
       </div>
       <div>
