@@ -102,6 +102,23 @@
 
 <script type="text/javascript" src="<?= get_bloginfo('template_url') ?>/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="<?= get_bloginfo('template_url') ?>/js/core.js"></script>
+<script type="text/javascript" src="<?= get_bloginfo('template_url') ?>/js/cycle.js"></script>
+
+<script type="text/javascript">
+
+if ($('#slideshow').length>0){
+  $('#slideshow').cycle({ 
+      fx:     'fade', 
+      speed:   300, 
+      timeout: 3000, 
+      next:   '#slideshow', 
+      pause:   1 
+  });  
+  
+}
+
+</script>
+
 </body>
 
 </html>
