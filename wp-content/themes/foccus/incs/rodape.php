@@ -1,4 +1,4 @@
-  <div class="clear"></div>
+<div class="clear"></div>
 
 <div class="rodape">
 
@@ -8,26 +8,25 @@
   <div class="parceiros">
     <h3>Parceiros</h3>
     <div class="linha-boxes">
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/parceiro.png" />
-        </a>
-      </div>   
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/parceiro.png" />
-        </a>
-      </div> 
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/parceiro.png" />
-        </a>
-      </div> 
-      <div class="box no-mg-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/parceiro.png" />
-        </a>
-      </div> 
+
+      <?
+      $wp_query = new WP_Query(array('cat' => _PARCEIROS));
+      //echo '<pre>'; var_dump($wp_query); echo '</pre>';
+      while (have_posts()) {
+        the_post();
+        ?>
+        <div class="box mg-box-right">
+          <a href="<?the_content()?>" target="_blank">
+           <?
+           if (has_post_thumbnail())
+             the_post_thumbnail();
+           ?>
+          </a>
+        </div>   
+
+        <?
+      }
+      ?>
     </div>
   </div>
 
@@ -50,7 +49,7 @@
     <div class="bd-menu-right" >
       <h3 class="azul">Foccus</h3>
       <ul class="fonte-textos">
-        <li><a href="<?= get_bloginfo('url')?>/conceitos/">Conceito</a></li>
+        <li><a href="<?= get_bloginfo('url') ?>/conceitos/">Conceito</a></li>
         <li><a href="#">Equipe</a></li>
         <li><a href="#">Depoimentos</a></li>
       </ul>
@@ -59,8 +58,8 @@
     <div class="bd-menu-right" >
       <h3 class="amarelo">Notícias</h3>
       <ul class="fonte-textos">
-        <li><a href="<?= get_bloginfo('url')?>/ultimas-noticias/">Últimas Notícias</a></li>
-        <li><a href="<?= get_bloginfo('url')?>/artigos/">Artigos</a></li>
+        <li><a href="<?= get_bloginfo('url') ?>/ultimas-noticias/">Últimas Notícias</a></li>
+        <li><a href="<?= get_bloginfo('url') ?>/artigos/">Artigos</a></li>
       </ul>
     </div>
 
@@ -106,16 +105,16 @@
 
 <script type="text/javascript">
 
-if ($('#slideshow').length>0){
-  $('#slideshow').cycle({ 
+  if ($('#slideshow').length>0){
+    $('#slideshow').cycle({ 
       fx:     'fade', 
       speed:   300, 
       timeout: 3000, 
       next:   '#slideshow', 
       pause:   1 
-  });  
+    });  
   
-}
+  }
 
 </script>
 
