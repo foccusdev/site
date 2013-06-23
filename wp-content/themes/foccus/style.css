@@ -50,9 +50,9 @@ a { text-decoration: none; color: inherit}
 .vermelho { color: #DE0060}
 .verde { color: #2EA2AB}
 
-.seta-azul { background: url('imgs/seta_azul.png') no-repeat top left; padding-left: 16px; }
+.seta-azul { background: url('imgs/seta_azul.png') no-repeat top left; padding-left: 16px; height: 18px}
 
-.seta-amarela { background: url('imgs/seta_amarela.png') no-repeat top left; padding-left: 16px; }
+.seta-amarela { background: url('imgs/seta_amarela.png') no-repeat top left; padding-left: 16px; height: 18px }
 
 /* Fim de Classes de uso geral */
 
