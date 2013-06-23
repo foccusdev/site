@@ -28,7 +28,7 @@
 
     <div class="submenu float-right display-none" id="submenu-foccus">
       <span>Conheça nosso trabalho</span>
-      <ul>
+      <ul>Þ
         <li><a href="<?= get_bloginfo('url') ?>/conceito/" class="fonte-textos seta-azul">Conceito</a></li>
         <li><a href="<?= get_bloginfo('url') ?>/equipe/" class="fonte-textos seta-azul">Equipe</a></li>
         <li><a href="<?= get_bloginfo('url') ?>/depoimentos/" class="fonte-textos seta-azul">Depoimentos</a></li>
