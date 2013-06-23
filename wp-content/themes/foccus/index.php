@@ -1,6 +1,10 @@
 <?
+if(!is_user_logged_in())
+  die('Domínio Reservado');
 get_template_part('incs/head');
 get_template_part('incs/topo');
+
+  
 ?>
 
 <div class="conteudo">
