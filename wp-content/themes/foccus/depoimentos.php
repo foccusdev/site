@@ -24,63 +24,22 @@ get_template_part('incs/topo');
   <div class="conteudo-interno float-left lista-depoimentos">
     <div class="listagem float-left">
 
-      <div class="box-depoimentos">
-        <h2>Letícia Freitas de Souza</h2>
-        <p class="fonte-textos">
-          Lorem ipsum dolor sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsum dolor sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, 
-          consectruer adipsiscing 
-        </p>
-      </div>
+      <?
+      $wp_query = new WP_Query(array('cat' => _DEPOIMENTOS, 'posts_per_page' => -1));
+      //echo '<pre>'; var_dump($wp_query); echo '</pre>';
+      while (have_posts()) {
+        the_post();
+        ?>      
 
-      <div class="box-depoimentos">
-        <h2>Letícia Freitas de Souza</h2>
-        <p class="fonte-textos">
-          Lorem ipsum dolor sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsumet, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsum et, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsum sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, 
-          consectruer adipsiscing 
-        </p>
-      </div>
+        <div class="box-depoimentos">
+          <h2><? the_title() ?></h2>
+          <p class="fonte-textos"><? the_content() ?></p>
+        </div>
+        <a name="<? the_ID() ?>"></a>
+        <?
+      }
+      ?>
 
-      <div class="box-depoimentos">
-        <h2>Letícia Freitas de Souza</h2>
-        <p class="fonte-textos">
-          Lorem ipsum dolor sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipset, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsum et, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsum et, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsum et, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsum  ipsum dolor sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, 
-          consectruer adipsiscing 
-        </p>
-      </div>
-
-      <div class="box-depoimentos">
-        <h2>Letícia Freitas de Souza</h2>
-        <p class="fonte-textos">
-          Lorem ipsum dolor sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsum dolor sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, 
-          consectruer adipsiscing       Lorem ipsum dolor sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsum dolor sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, 
-          consectruer adipsiscing       Lorem ipsum dolor sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsum dolor sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, 
-          consectruer adipsiscing 
-        </p>
-      </div>
-
-      <div class="box-depoimentos">
-        <h2>Letícia Freitas de Souza</h2>
-        <p class="fonte-textos">
-          Lorem ipsum dolor sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsum et, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsum et, consectruer adipsiscing Lorem ipsum dolor sit amet, consectruer 
-          adipsiscing Lorem ipsum dolor sit amet, consectruer adipsiscing Lorem ipsum dolor sit amet, 
-          consectruer adipsiscing 
-        </p>
-      </div>
-      
       <div class="clear"></div>
 
     </div>

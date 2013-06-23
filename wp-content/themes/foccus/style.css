@@ -235,10 +235,6 @@ a { text-decoration: none; color: inherit}
 
 .erro { display: none; color: #d00; }
 
-
-
-
-
 .styled-select select {
    background: transparent;
    width: 340px;
@@ -250,7 +246,6 @@ a { text-decoration: none; color: inherit}
    height: 34px;
    -webkit-appearance: none;
    }
-   
    
    .styled-select {
    width: 340px;
