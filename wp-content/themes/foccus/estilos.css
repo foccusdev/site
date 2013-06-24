@@ -43,3 +43,66 @@ root {
 
 .assunto{}
 
+
+
+
+
+
+.styled-select select {
+   background: transparent;
+   width: 405px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 2;
+   border: 0;
+   border-radius: 0;
+   height:46px;
+   -webkit-appearance: none;
+   text-indent: 3pt;
+ }
+   
+   
+.styled-select {
+   width: 405px;
+   height: 46px;
+   overflow: hidden;
+   background: url('imgs/bnt_select.jpg') no-repeat right #ffffff;
+   border: 1px solid #0191b4;
+   margin-bottom: 20px;
+   }
+ 
+ .styled-select:hover {
+   background: url('imgs/bnt_select_bg.jpg') no-repeat right #ffffff;
+ }
+     
+ #submit{
+   width:89px; 
+   height:38px;
+   background: #0191b4;
+   color:white;
+   border: none;
+   padding:2px;
+   float:right;
+ }
+ 
+ #submit:hover{background: #08677d;}
+   
+ .contato-endereco{margin-bottom:45px;}
+ 
+ .grupo1{
+  margin-bottom: 18px;
+}
+
+
+.form-contato { width: 407px; margin-right:65px; margin-top:45px;}
+
+.form-contato input, select { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana; height: 17px; width: 377px; padding: 14px; margin-bottom: 20px;}
+
+.mensagem { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana; width: 376px; padding: 15px; margin-bottom: 20px} 
+
+.ddd { width: 45px !important; margin-right: 4px}
+
+.telefone { width:  294px !important}
+
+
+.contato { padding-top: 40px; padding-left: 70px; margin-bottom: 115px}
