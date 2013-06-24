@@ -38,19 +38,24 @@ get_template_part('incs/topo');
 
 
   </div>
+  
+  
+  
+  
   <div class="float-right form-contato">      
 
+    
+    
     <form action="" method="post">
-
-     
-  <div class="styled-select">
-    <select>
-      <option>Here is the first option</option>
-      <option>The second option</option>
-    </select>
-  </div>
-        
-        
+      
+      <div class="styled-select">
+        <select>
+          <option>PRIMEIRA OPÇÃO</option>
+          <option>SEGUNDA OPÇÃO</option
+          <option>TERCEIRA OPÇÃO</option>
+        </select>
+      </div>
+      <div>      
         <input type="text" name="nome" id="nome" value="NOME*"/>
       </div>
       <div>
