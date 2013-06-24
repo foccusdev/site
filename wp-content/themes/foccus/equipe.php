@@ -23,98 +23,33 @@ get_template_part('incs/topo');
   <span class="linha-azul"></span>
   <div class="conteudo-interno float-left">
     <div class="listagem float-left">
-      <div class="box-equipe">
-        <div class="img-equipe float-left">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-        </div>
-        <div class="txt-equipe float-left">
-          <h2 class="vermelho">Tatiana Azevedo Botão</h2>
-          <div class="fonte-textos">
-            <p><strong>CREF: 000172-G-RS</strong></p>
-            <p>Currículo resumido:</p>
-            <p>
-              2012 - Workshop de Fitness - Providence Eco Club<br />
-              Santa Maria, RS<br />
-              Organizador
-            </p>
-            <p>
-              2012 - Workshop de Fitness - Providence Eco Club<br />
-              Santa Maria, RS<br />
-              Organizador
-            </p>
-            <p>
-              2012 - Workshop de Fitness - Providence Eco Club<br />
-              Santa Maria, RS<br />
-              Organizador
-            </p>              
-          </div>
-        </div>
-        <div class="clear"></div>
-      </div>
-      <div class="box-equipe">
-        <div class="img-equipe float-left">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-        </div>
-        <div class="txt-equipe float-left">
-          <h2 class="vermelho">Tatiana Azevedo Botão</h2>
-          <div class="fonte-textos">
-            <p><strong>CREF: 000172-G-RS</strong></p>
-            <p>Currículo resumido:</p>
-            <p>
-              2012 - Workshop de Fitness - Providence Eco Club<br />
-              Santa Maria, RS<br />
-              Organizador
-            </p>
-            <p>
-              2012 - Workshop de Fitness - Providence Eco Club<br />
-              Santa Maria, RS<br />
-              Organizador
-            </p>
-            <p>
-              2012 - Workshop de Fitness - Providence Eco Club<br />
-              Santa Maria, RS<br />
-              Organizador
-            </p>              
-          </div>
-        </div>
-        <div class="clear"></div>
-      </div>
 
-      <div class="box-equipe">
-        <div class="img-equipe float-left">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-        </div>
-        <div class="txt-equipe float-left">
-          <h2 class="vermelho">Tatiana Azevedo Botão</h2>
-          <div class="fonte-textos">
-            <p><strong>CREF: 000172-G-RS</strong></p>
-            <p>Currículo resumido:</p>
-            <p>
-              2012 - Workshop de Fitness - Providence Eco Club<br />
-              Santa Maria, RS<br />
-              Organizador
-            </p>
-            <p>
-              2012 - Workshop de Fitness - Providence Eco Club<br />
-              Santa Maria, RS<br />
-              Organizador
-            </p>
-            <p>
-              2012 - Workshop de Fitness - Providence Eco Club<br />
-              Santa Maria, RS<br />
-              Organizador
-            </p>              
+      <?
+      while (have_posts()) {
+        the_post();
+        ?>
+
+        <div class="box-equipe">
+          <div class="img-equipe float-left">
+            <?the_post_thumbnail()?>
           </div>
+          <div class="txt-equipe float-left">
+            <h2 class="vermelho"><?the_title()?></h2>
+            <div class="fonte-textos">
+              <?the_content()?>
+            </div>
+          </div>
+          <div class="clear"></div>
         </div>
-        <div class="clear"></div>
-      </div>
-      
-      
+        <?
+      }
+      ?>
+
       <div class="clear"></div>
     </div>
 
   </div>
-  <? get_template_part('incs/barra-lateral') ?>
+<? get_template_part('incs/barra-lateral') ?>
 </div>
 
 <? get_template_part('incs/rodape'); ?>

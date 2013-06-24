@@ -1,6 +1,7 @@
 <?
 get_template_part('incs/head');
 get_template_part('incs/topo');
+the_post();
 ?>
 
 <div class="conteudo">
@@ -19,31 +20,13 @@ get_template_part('incs/topo');
   </div>
 
   <img src="<?= get_bloginfo('template_url') ?>/imgs/arco.png" class="arco">
-  <h2 class="nome-secao"><?= $categoria->name ?></h2>
+  <h2 class="nome-secao"><? the_title() ?></h2>
   <span class="linha-azul"></span>
-  <div class="conteudo-interno float-left lista-depoimentos">
-    <div class="listagem float-left">
+  <div class="conteudo-interno  float-left">
 
-      <?
-      $wp_query = new WP_Query(array('cat' => _DEPOIMENTOS, 'posts_per_page' => -1));
-      //echo '<pre>'; var_dump($wp_query); echo '</pre>';
-      while (have_posts()) {
-        the_post();
-        ?>      
-
-        <div class="box-depoimentos">
-          <h2><? the_title() ?></h2>
-          <p class="fonte-textos"><? the_content() ?></p>
-        </div>
-        <a name="<? the_ID() ?>"></a>
-        <?
-      }
-      ?>
-
-      <div class="clear"></div>
-
+    <div class="fonte-textos">
+      <? the_content() ?>
     </div>
-
   </div>
   <? get_template_part('incs/barra-lateral') ?>
 </div>

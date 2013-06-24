@@ -24,99 +24,35 @@ get_template_part('incs/topo');
   <div class="conteudo-interno fonte-textos float-left">
     <div class="listagem float-left">
 
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-          <h2 class="seta-azul fonte-textos">Foccus abre nova unidade no Leblon - Confira</h2>
-        </a>
-      </div>
+      <?
+      $i = 0;
+      while (have_posts()) {
+        $i++;
+        the_post();
+        $novaLinha = $i % 3 == 0 ? '<div class="clear"></div>' : '';
+        ?>
+        <div class="box mg-box-right">
+          <a href="<? the_permalink() ?>">
+            <? if (has_post_thumbnail()) the_post_thumbnail() ?>
+            <h2 class="seta-azul fonte-textos"><? the_title() ?></h2>
+          </a>
+        </div>
+        <?=$novaLinha?>
+        <?
+        
+      }
+      ?>
 
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-          <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
-        </a>
-      </div>
-
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-          <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
-        </a>
-      </div>
-
-      <div class="clear"></div>
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-          <h2 class="seta-azul fonte-textos">Foccus abre nova unidade no Leblon - Confira</h2>
-        </a>
-      </div>
-
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-          <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
-        </a>
-      </div>
-
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-          <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
-        </a>
-      </div>
+      
 
       <div class="clear"></div>
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-          <h2 class="seta-azul fonte-textos">Foccus abre nova unidade no Leblon - Confira</h2>
-        </a>
-      </div>
-
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-          <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
-        </a>
-      </div>
-
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-          <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
-        </a>
-      </div>
-
-      <div class="clear"></div>
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-          <h2 class="seta-azul fonte-textos">Foccus abre nova unidade no Leblon - Confira</h2>
-        </a>
-      </div>
-
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-          <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
-        </a>
-      </div>
-
-      <div class="box mg-box-right">
-        <a href="#">
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/img-box.jpg" />
-          <h2 class="seta-azul fonte-textos" >Foccus abre nova unidade no Leblon - Confira</h2>
-        </a>
-      </div>            
-
-
-      <div class="clear"></div>
-
+<?/*
       <div class="paginacao float-right mg-box-right">
         <a href="#"><<</a> página 2 de 12 <a href="#">>></a>
       </div>
+ * 
+ * 
+ */?>
     </div>
 
   </div>
