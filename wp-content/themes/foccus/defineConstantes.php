@@ -1,5 +1,5 @@
 <?php
-
+//Magno correção de zica
 // Cria constantes para as seções do site
 define('_NOTICIAS', 2);
 define('_ARTIGOS', 3);
