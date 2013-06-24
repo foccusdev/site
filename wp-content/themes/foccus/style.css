@@ -44,6 +44,8 @@ a { text-decoration: none; color: inherit}
 
 .no-mg { margin: 0}
 
+.no-mg { margin: 0}
+
 .fonte-textos { font-size: 11px; font-family: verdana; font-weight: normal; color: #666}
 
 .laranja { color: #F88716 } 
@@ -244,17 +246,15 @@ a { text-decoration: none; color: inherit}
 
 .conceito-texto-baixo { margin-top:50px}
 
+.conteudo_busca { padding-left: 300px}
 
+.busca-pag {height: 300px }
 
-.grupo1{
-  margin-bottom: 18px;
-}
+.busca-pag .topo-interna { height: 90px}
 
-.submit {
-  width:89px;
-  height:38px
-}
+.busca-pag .topo-interna form { margin: 0}
 
+.busca-pag .topo-interna form input[type="text"]{ font-size: 14px; text-transform: uppercase; color: #c2c2c2; padding-left: 20px; font-weight: bold}
 
 .styled-select select {
    background: transparent;
