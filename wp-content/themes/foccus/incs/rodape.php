@@ -1,4 +1,6 @@
-  <div class="clear"></div>
+//Magno correção de zica
+
+<div class="clear"></div>
 
 <div class="rodape">
 
