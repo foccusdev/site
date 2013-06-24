@@ -214,7 +214,7 @@ a { text-decoration: none; color: inherit}
 
 .topo-contato { height: 235px; width: 100%; background: url('imgs/contato_banner.jpg') no-repeat top center; }
 
-.contato { padding-top: 40px; padding-left: 70px}
+.contato { padding-top: 40px; padding-left: 70px; margin-bottom: 115px}
 
 .mapa { width: 316px; height: 168px; background: url('imgs/bg_mapa.png') right center no-repeat #DE0060; padding: 16px}
 
@@ -242,6 +242,12 @@ a { text-decoration: none; color: inherit}
 
 .conceito-texto-baixo { margin-top:50px}
 
+.grupo1{margin-bottom: 18px;}
+
+.submit {
+  width:89px;
+  height:38px
+}
 .styled-select select {
    background: transparent;
    width: 405px;
@@ -252,8 +258,8 @@ a { text-decoration: none; color: inherit}
    border-radius: 0;
    height:46px;
    -webkit-appearance: none;
-   
-}
+   text-indent: 3pt;
+ }
    
    
 .styled-select {
@@ -262,10 +268,25 @@ a { text-decoration: none; color: inherit}
    overflow: hidden;
    background: url('imgs/bnt_select.jpg') no-repeat right #ffffff;
    border: 1px solid #0191b4;
+   margin-bottom: 20px;
    }
+ 
+ .styled-select:hover {
+   background: url('imgs/bnt_select_bg.jpg') no-repeat right #ffffff;
+ }
      
+ #submit{
+   width:89px; 
+   height:38px;
+   background: #0191b4;
+   color:white;
+   border: none;
+   padding:2px;
+ }
+ 
+ #submit:hover{background: #08677d;}
    
-   
+ .contato-endereco{margin-bottom:45px;}
      
 /* Fim de Classes específicas */   
      

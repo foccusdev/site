@@ -10,25 +10,28 @@ get_template_part('incs/topo');
   <div class="float-left contato">
 
     <div class="contato-endereco">
-
+      <div class="grupo1">
       <h3>Horário de Funcionamento</h3>
       <p>Segunda a Sexta: 06h às 23h Sábados: 09h às 20h</p>
-
+      </div>
+      <div class="grupo1">
       <h3>Telefones</h3>
       <p>
         (21)3333.3333<br />
         (21)3333.3333
       </p>
-
+      </div>
+      <div class="grupo1">
       <h3>Email</h3>
       <p>contato@foccustraining.com.br</p>
-
+      </div>
+      <div class="grupo1">
       <h3>Localização</h3>
       <p>
         Rua das Laranjeiras, 200, Laranjeiras, Rio de Janeiro - RJ.<br />
         CEP 22240-005
       </p>
-
+      </div>
     </div>    
 
     <div class="mapa">         
@@ -47,17 +50,19 @@ get_template_part('incs/topo');
     
     
     <form action="" method="post">
-      
+      <div>
       <div class="styled-select">
         <select>
           <option>PRIMEIRA OPÇÃO</option>
-          <option>SEGUNDA OPÇÃO</option
-          <option>TERCEIRA OPÇÃO</option>
+          <option>SEGUNDA OPÇÃO</option>
         </select>
       </div>
+      </div>
+      
       <div>      
         <input type="text" name="nome" id="nome" value="NOME*"/>
       </div>
+      
       <div>
         <input type="text" name="email" id="email" value="E-MAIL*"/>
       </div>
@@ -69,7 +74,7 @@ get_template_part('incs/topo');
         <textarea name="mensagem" id="mensagem" class="mensagem">MENSAGEM</textarea>
       </div>
       <div>
-        <input type="submit" value="Enviar" />
+        <input type="submit" value="Enviar" id="submit"/>
       </div>
     </form>
   </div>
