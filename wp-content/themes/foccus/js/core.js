@@ -86,3 +86,5 @@ $("#submenu-noticias").hover(function(){
 },function(){
     submenuDelay = setTimeout(function(){$('#submenu-noticias').slideUp(150);}, 250);       
 });
+
+
