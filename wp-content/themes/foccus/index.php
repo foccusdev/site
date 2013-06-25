@@ -101,7 +101,6 @@ get_template_part('incs/topo');
     the_post();
     $classe = $i == 3 ? 'class="no-mg-right box"' : 'class="box mg-box-right"';
     ?>
-
     <div <?=$classe?>>
       <a href="<? the_permalink()?>">
         <h3><?the_title()?></h3>
