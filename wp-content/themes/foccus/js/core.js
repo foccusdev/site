@@ -1,5 +1,5 @@
 /* resolvendo conflito*/
-
+/* resolvendo conflito2*/
 $('#assunto').change(function(){
   
   if ($(this).val()=='Envio de Currículo')
