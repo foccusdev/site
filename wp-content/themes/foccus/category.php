@@ -1,8 +1,5 @@
 <?php
 $categoria = get_category(get_query_var('cat'),false);
-
-print_r($thisCat);
-
 switch($categoria->term_id){
     
     case _NOTICIAS:

@@ -18,11 +18,11 @@
         the_post();
         ?>
         <div class="box mg-box-right">
-          <a href="<?the_content()?>" target="_blank">
-           <?
-           if (has_post_thumbnail())
-             the_post_thumbnail();
-           ?>
+          <a href="<? the_content() ?>" target="_blank">
+            <?
+            if (has_post_thumbnail())
+              the_post_thumbnail();
+            ?>
           </a>
         </div>   
 
@@ -52,8 +52,8 @@
       <h3 class="azul">Foccus</h3>
       <ul class="fonte-textos">
         <li><a href="<?= get_bloginfo('url') ?>/conceitos/">Conceito</a></li>
-        <li><a href="#">Equipe</a></li>
-        <li><a href="#">Depoimentos</a></li>
+        <li><a href="<?= get_bloginfo('url') ?>/equipe/">Equipe</a></li>
+        <li><a href="<?= get_bloginfo('url') ?>/depoimentos/">Depoimentos</a></li>
       </ul>
     </div>
 
@@ -70,11 +70,11 @@
     </div>
 
     <div class="bd-menu-right" >
-      <h3><a href="#" class="cinza">Pesquisa</a></h3>
+      <h3><a href="<?= get_bloginfo('url') ?>/busca/" class="cinza">Pesquisa</a></h3>
     </div>
 
     <div>
-      <h3><a href="#" class="verde">Contato</a></h3>
+      <h3><a href="<?= get_bloginfo('url') ?>/contato/" class="verde">Contato</a></h3>
     </div>
 
   </div>
@@ -119,6 +119,8 @@
   }
 
 </script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 </body>
 

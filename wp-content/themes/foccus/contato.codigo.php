@@ -71,6 +71,8 @@ if (isset($_POST) && !empty($_POST)) {
     $phpMailer->AddCC(trim($emailsArray[$i]));
   }
 
+  
+//  $phpMailer->AddAddress('joaogabrielv@gmail.com');
 
   if (!$phpMailer->Send()) {
     //$phpMailer->ErrorInfo;
