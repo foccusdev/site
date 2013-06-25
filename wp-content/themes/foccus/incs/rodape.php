@@ -81,8 +81,18 @@
 
   <div class="clear"></div>
 
-  <div class="creditos fonte-textos">
 
+
+
+</div>
+
+</div>
+
+
+  <div class="creditos ">
+
+    <div class="wrapper fonte-textos branco">
+    
     <div class="float-left">
       Foccus Training - Copyright <?= date('Y') ?>
     </div>
@@ -93,13 +103,9 @@
     
     <div class="clear"></div>
 
+    
+    </div>
   </div>
-
-
-</div>
-
-</div>
-
 
 <script type="text/javascript" src="<?= get_bloginfo('template_url') ?>/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="<?= get_bloginfo('template_url') ?>/js/core.js"></script>
