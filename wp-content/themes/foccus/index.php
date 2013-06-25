@@ -119,3 +119,4 @@ get_template_part('incs/topo');
 
 
 <? get_template_part('incs/rodape') ?>
+<div id="bg_rodape"/>

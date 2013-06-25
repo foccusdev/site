@@ -97,3 +97,5 @@ the_post();
 
 
 <? get_template_part('incs/rodape'); ?>
+
+<div id="bg_rodape"/>

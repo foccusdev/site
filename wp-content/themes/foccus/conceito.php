@@ -75,3 +75,4 @@ get_template_part('incs/topo');
 <div class="clear"> </div>
 
 <? get_template_part('incs/rodape'); ?>
+<div id="bg_rodape"/>

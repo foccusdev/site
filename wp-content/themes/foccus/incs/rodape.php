@@ -90,7 +90,7 @@
     <div class="float-right ">
       Desenvolvido por <a href="#">Magno Dal Magro</a> e <a href="#">João Gabriel N. Vieira</a>
     </div>
-
+    
     <div class="clear"></div>
 
   </div>
