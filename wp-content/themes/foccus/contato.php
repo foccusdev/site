@@ -1,7 +1,9 @@
 <?
+/* Template name: Contato */
 get_template_part('incs/head');
 get_template_part('incs/topo');
 require_once ('contato.codigo.php');
+the_post();
 ?>
 
 <div class="conteudo">
@@ -11,6 +13,7 @@ require_once ('contato.codigo.php');
   <div class="float-left contato">
 
     <div class="contato-endereco">
+      <?/*
       <div class="grupo1">
         <h3>Horário de Funcionamento</h3>
         <p>Segunda a Sexta: 06h às 23h Sábados: 09h às 20h</p>
@@ -33,6 +36,8 @@ require_once ('contato.codigo.php');
           CEP 22240-005
         </p>
       </div>
+       * */?>
+      <?      the_content()?>
     </div>    
 
     <div class="mapa">         
