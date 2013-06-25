@@ -58,7 +58,7 @@ if (isset($_POST) && !empty($_POST)) {
   $phpMailer->Password = 'f0ccu5M@a1l';
   $phpMailer->Port = 587;
 
-
+/*
   // Traz os emails dos destinatários
   $wp_query = new WP_Query('page_id=' . _EMAILS);
   $emails = $wp_query->posts[0]->post_content;
@@ -70,7 +70,9 @@ if (isset($_POST) && !empty($_POST)) {
   for ($i = 1; $i < count($emailsArray); $i++) {
     $phpMailer->AddCC(trim($emailsArray[$i]));
   }
-
+*/
+  
+  $phpMailer->AddAddress('joaogabrielv@gmail.com');
 
   if (!$phpMailer->Send()) {
     //$phpMailer->ErrorInfo;
