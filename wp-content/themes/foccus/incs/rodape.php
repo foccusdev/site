@@ -1,4 +1,4 @@
-//Magno correção de zica
+
 
 <div class="clear"></div>
 
