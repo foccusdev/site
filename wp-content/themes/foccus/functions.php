@@ -16,16 +16,6 @@ $args = array(
 );
 register_post_type('slide', $args);
 
-// Altera o logo do login do wp-admin
-function my_custom_login_logo() {
-  echo '<style type="text/css">
-        h1 a { background-image:url(' . get_bloginfo('template_url') . '/images/login_page_logo.png) !important; }
-    </style>';
-}
-
-add_action('login_head', 'my_custom_login_logo');
-
-
 
 //********************************************************
 // Personalizações para o usuário Editor
@@ -210,7 +200,7 @@ if (!current_user_can('manage_options')) {
 //Altera o logo do login 
 function custom_login_logo() {
   echo '<style type="text/css">' .
-  'h1 a { background-image:url(' . get_bloginfo('template_directory') . '/imgs/logo.jpeg) !important; width: 319px !important; padding-bottom: 131px !important; background-size: auto !important; border: 1px solid #ccc}' .
+  'h1 a { background-image:url(' . get_bloginfo('template_directory') . '/imgs/logo.jpg) !important; width: 319px !important; padding-bottom: 131px !important; background-size: auto !important; border: 1px solid #ccc}' .
   '</style>';
 }
 
