@@ -30,12 +30,12 @@ get_template_part('incs/topo');
       while (have_posts()) {
         the_post();
         ?>      
-
+        <a name="<? the_ID() ?>"></a>
         <div class="box-depoimentos">
           <h2><? the_title() ?></h2>
           <p class="fonte-textos"><? the_content() ?></p>
         </div>
-        <a name="<? the_ID() ?>"></a>
+
         <?
       }
       ?>
