@@ -1,9 +1,9 @@
 
-    Document   : style
-    Created on : 29/04/2013, 21:06:49
-    Author     : joao
-    Description:
-        Purpose of the stylesheet follows.
+Document   : style
+Created on : 29/04/2013, 21:06:49
+Author     : joao
+Description:
+Purpose of the stylesheet follows.
 */
 
 
@@ -65,16 +65,27 @@ a { text-decoration: none; color: inherit}
 /* Classes específicas */
 
 .wrapper { max-width: 960px; margin: auto; /*background: #fff; */position: relative}
+@media screen and (min-width: 697px) {
+  .topo { height: 96px; }
+}
 
-.topo { height: 96px; }
 
-/*.topo-box { position: absolute; left: 0px; top: 0px; width: 100%; z-index: 4;}*/
+.social-topo { height: 25px; padding-top: 45px; }
 
-.logo { width: 197px; height: 213px; z-index:4; background: url('imgs/logo_site.png'); position: absolute; top: 0px; left: 0px}
+/* Logo no desktop */
+@media screen and (min-width: 697px) {
+  .logo { width: 197px; height: 213px; z-index:4; background: url('imgs/logo_site.png'); position: absolute; top: 0px; left: 0px}
+  .social-topo { margin-left: 200px}
+}
+
+/* Logo no celular */
+@media screen and (max-width: 696px) {
+  .logo { width: 197px; height: 213px;  background: url('imgs/logo_site.png');}
+}
 
 .icon-topo a, .logo a {display: block; width: 100%; height: 100%;}
 
-.social-topo { height: 25px; padding-top: 45px; margin-left: 200px}
+
 
 .icon-topo { width: 24px; height: 24px; margin-right: 10px }
 
@@ -86,20 +97,22 @@ a { text-decoration: none; color: inherit}
 
 .topo-interna { background: url('imgs/bg_topo.png') repeat; height: 82px; margin-bottom: 34px; padding-top: 42px; z-index: 1;}
 
-.submenu {top: 77px; right: 0px; position: absolute; z-index: 10}
+.menu-desktop .submenu {top: 77px; right: 0px; position: absolute; z-index: 10}
 
 .menu-desktop { position: absolute; right: 0; z-index: 11; }
+
+.menu-item-home { background: #F88716 }
+.menu-item-foccus { background: #2B91B3 }
+.menu-item-noticias { background: #F3C819}
+.menu-item-login { background: #DE0060}
+.menu-item-busca {background: #C2C2C2}
+.menu-item-contato { background: #2EA2AB}
 
 @media screen and (min-width: 697px) {
   .menu-mobile { display: none }
   .menu-desktop ul {float: right;}
   .menu-desktop ul li { display: block; float: left; width: 77px; height: 33px; list-style-type: none; padding-top: 44px; text-align: center; font-size: 18px; color: #fff }
-  .menu-item-home { background: #F88716 }
-  .menu-item-foccus { background: #2B91B3 }
-  .menu-item-noticias { background: #F3C819}
-  .menu-item-login { background: #DE0060}
-  .menu-item-busca {width: 32px !important; background: #C2C2C2}
-  .menu-item-contato { background: #2EA2AB}
+  .menu-item-busca {width: 32px !important; }
   .down-arrow {font-size: 0px; line-height: 0%; width: 0px; border-left: 20px solid transparent; border-right: 20px solid transparent; position: relative; top: 14px; left: 17px; }
   .menu-item-foccus .down-arrow { border-top: 6px solid #2B91B3; }
   .menu-item-noticias .down-arrow { border-top: 6px solid #F3C819; }
@@ -108,7 +121,7 @@ a { text-decoration: none; color: inherit}
   .submenu span { color: #A4A8AB; font-size: 20px}
   .submenu ul li { display: block; float: left;  list-style-type: none; margin: 6px 27px 0px 0px }
   .submenu ul li a {font-size: 12px; color: #A4A8AB; display: block; height: 18px; padding-top: 1px}
-  
+
   #submenu-foccus { border-bottom: 6px solid #2B91B3; }
   #submenu-noticias { border-bottom: 6px solid #F3C819 }
 
@@ -117,12 +130,19 @@ a { text-decoration: none; color: inherit}
 /* Para o submenu funcionar em resoluções entre 695px e 690px de largura */
 @media screen and (min-width: 697px) and  (max-width: 960px) {
   .submenu { background: #fff; width: 69%; height: 67px;  padding: 14px 0px 0px 20px}
-  
 }
 
 @media screen and (max-width: 696px) {
-  .menu-mobile { }
-  .menu-desktop { display: none}
+  .menu-mobile { display: block;  width: 100%; margin-bottom: 20px;}
+  .menu-mobile a { display: block; width: 100%; height: 100% }
+  .menu-mobile ul li { display: block; width: 100%; list-style-type: none; padding: 10px 0px; text-align: center; font-size: 18px; color: #fff }
+  .submenu { text-align: left;}
+  .submenu span {color: #bbb; font-size: 22px; font-weight: bold;}
+  .submenu ul li { text-align: left}
+  .submenu ul li a { font-size: 14px}
+  #submenu-foccus-mobile,#submenu-noticias-mobile { display: none; position: relative}
+  .menu-desktop, .slideshow, .newsletter  { display: none}
+
 }
 
 .slideshow { width: 100%; height: 405px; }
@@ -260,57 +280,57 @@ a { text-decoration: none; color: inherit}
 .busca-pag .topo-interna form input[type="text"]{ font-size: 14px; text-transform: uppercase; color: #c2c2c2; padding-left: 20px; font-weight: bold}
 
 .styled-select select {
-   background: transparent;
-   width: 405px;
-   padding: 5px;
-   font-size: 16px;
-   line-height: 2;
-   border: 0;
-   border-radius: 0;
-   height:46px;
-   -webkit-appearance: none;
-   text-indent: 3pt;
- }
-   
-   
+  background: transparent;
+  width: 405px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 2;
+  border: 0;
+  border-radius: 0;
+  height:46px;
+  -webkit-appearance: none;
+  text-indent: 3pt;
+}
+
+
 .styled-select {
-   width: 405px;
-   height: 46px;
-   overflow: hidden;
-   background: url('imgs/bnt_select.jpg') no-repeat right #ffffff;
-   border: 1px solid #0191b4;
-   margin-bottom: 20px;
-   }
- 
- .styled-select:hover {
-   background: url('imgs/bnt_select_bg.jpg') no-repeat right #ffffff;
- }
-     
- #submit{
-   width:89px; 
-   height:38px;
-   background: #0191b4;
-   color:white;
-   border: none;
-   padding:2px;
-   float:right;
- }
- 
- #submit:hover{background: #08677d;}
-   
- .contato-endereco{margin-bottom:45px
- }
-                     
- #bg_rodape{
-   z-index:-2px; 
-   background:#2B91B3 repeat-x; 
-   color: #fff; 
-   padding: 45px 30px 0 30px; 
-   height: 60px;
-   margin-top:-105px;
- }                   
-     
+  width: 405px;
+  height: 46px;
+  overflow: hidden;
+  background: url('imgs/bnt_select.jpg') no-repeat right #ffffff;
+  border: 1px solid #0191b4;
+  margin-bottom: 20px;
+}
+
+.styled-select:hover {
+  background: url('imgs/bnt_select_bg.jpg') no-repeat right #ffffff;
+}
+
+#submit{
+  width:89px; 
+  height:38px;
+  background: #0191b4;
+  color:white;
+  border: none;
+  padding:2px;
+  float:right;
+}
+
+#submit:hover{background: #08677d;}
+
+.contato-endereco{margin-bottom:45px
+}
+
+#bg_rodape{
+  z-index:-2px; 
+  background:#2B91B3 repeat-x; 
+  color: #fff; 
+  padding: 45px 30px 0 30px; 
+  height: 60px;
+  margin-top:-105px;
+}                   
+
 /* Fim de Classes específicas */   
-     
-     
-     
+
+
+

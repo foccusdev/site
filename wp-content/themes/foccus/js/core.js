@@ -90,3 +90,14 @@ $("#submenu-noticias").hover(function(){
 });
 
 
+$("#menu-item-foccus-mobile").click(function(){
+  $('#submenu-foccus-mobile').toggle('slow');   
+});
+
+$("#menu-item-noticias-mobile").click(function(){
+  $('#submenu-noticias-mobile').toggle('slow');   
+});
+
+
+
+
