@@ -97,8 +97,6 @@ a { text-decoration: none; color: inherit}
 
 .topo-interna { background: url('imgs/bg_topo.png') repeat; height: 82px; margin-bottom: 34px; padding-top: 42px; z-index: 1;}
 
-.menu-desktop .submenu {top: 77px; right: 0px; position: absolute; z-index: 10}
-
 .menu-desktop { position: absolute; right: 0; z-index: 11; }
 
 .menu-item-home { background: #F88716 }
@@ -121,10 +119,12 @@ a { text-decoration: none; color: inherit}
   .submenu span { color: #A4A8AB; font-size: 20px}
   .submenu ul li { display: block; float: left;  list-style-type: none; margin: 6px 27px 0px 0px }
   .submenu ul li a {font-size: 12px; color: #A4A8AB; display: block; height: 18px; padding-top: 1px}
-
+ 
   #submenu-foccus { border-bottom: 6px solid #2B91B3; }
   #submenu-noticias { border-bottom: 6px solid #F3C819 }
 
+  #submenu-foccus , #submenu-noticias {top: 77px; right: 0px; position: absolute; z-index: 10}  
+  
 }
 
 /* Para o submenu funcionar em resoluções entre 695px e 690px de largura */
