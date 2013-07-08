@@ -42,10 +42,10 @@
         <li><a href="<?= get_bloginfo('url') ?>/artigos/" class="fonte-textos seta-amarela">Artigos</a></li>
       </ul>
     </div>
-
+<div class="menu-mobile-icon"><a href="javascript:void()"></a></div>
     <div class="clear"></div>
-
-    <div class="menu-mobile">
+    
+    <div class="menu-mobile display-none">
 
       <ul>
         <li class="menu-item-home"><a href="#">Home</a></li>

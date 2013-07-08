@@ -12,11 +12,10 @@ get_template_part('incs/topo');
  
   <div class="slideshow" id="slideshow">
   <? 
-  $wp_query = new WP_Query( 'post_type=slide' );  
-  $slides = '';
+  $wp_query = new WP_Query( 'post_type=slide' );
   while(have_posts()){
     the_post();
-    $slides.=the_post_thumbnail();
+    the_post_thumbnail();
   }
   ?>
   </div>   

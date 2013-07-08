@@ -107,7 +107,7 @@ a { text-decoration: none; color: inherit}
 .menu-item-contato { background: #2EA2AB}
 
 @media screen and (min-width: 697px) {
-  .menu-mobile { display: none }
+  .menu-mobile, .menu-mobile-icon { display: none }
   .menu-desktop ul {float: right;}
   .menu-desktop ul li { display: block; float: left; width: 77px; height: 33px; list-style-type: none; padding-top: 44px; text-align: center; font-size: 18px; color: #fff }
   .menu-item-busca {width: 32px !important; }
@@ -133,7 +133,7 @@ a { text-decoration: none; color: inherit}
 }
 
 @media screen and (max-width: 696px) {
-  .menu-mobile { display: block;  width: 100%; margin-bottom: 20px;}
+  .menu-mobile {   width: 100%; margin-bottom: 20px;}
   .menu-mobile a { display: block; width: 100%; height: 100% }
   .menu-mobile ul li { display: block; width: 100%; list-style-type: none; padding: 10px 0px; text-align: center; font-size: 18px; color: #fff }
   .submenu { text-align: left;}
@@ -141,8 +141,9 @@ a { text-decoration: none; color: inherit}
   .submenu ul li { text-align: left}
   .submenu ul li a { font-size: 14px}
   #submenu-foccus-mobile,#submenu-noticias-mobile { display: none; position: relative}
-  .menu-desktop, .slideshow, .newsletter  { display: none}
-
+  .menu-desktop, .slideshow, .newsletter, .coluna-direita  { display: none}
+  .menu-mobile-icon { width: 48px; height: 45px; background: url('imgs/menu-mobile-icone.png'); position: absolute;top: 113px;left: 242px;}
+  .menu-mobile-icon a { display: block; width: 100%; height: 100%; }
 }
 
 .slideshow { width: 100%; height: 405px; }
