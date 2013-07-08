@@ -1,6 +1,6 @@
 <?php
 
-// Define as constantes 
+// Define as constantes do projeto 
 require_once ('defineConstantes.php');
 
 // Habilita thumbnails 
@@ -9,13 +9,14 @@ if (function_exists('add_theme_support')) {
 }
 
 // Retira os atributos height e width dos thumbnails para evitar possíveis conflitos com CSS
-add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10);
-add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10);
-
 function remove_thumbnail_dimensions($html) {
   $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
   return $html;
 }
+add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10);
+add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10);
+
+
 
 // Registra o tipo Slides
 $args = array(
@@ -46,7 +47,6 @@ if (!current_user_can('manage_options')) {
     // Retira o logo do WP do topo
     $wp_admin_bar->remove_menu('wp-logo');
   }
-
   add_action('wp_before_admin_bar_render', 'customizeTopMenu');
 
 // Personalização do menu lateral no wp-admin para o Editor 
@@ -82,7 +82,6 @@ if (!current_user_can('manage_options')) {
     add_submenu_page('edit.php?cat=' . _AMBIENTE, 'Ambiente', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _AMBIENTE);
     add_submenu_page('edit.php?cat=' . _DEPOIMENTOS, 'Depoimentos', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _DEPOIMENTOS);
   }
-
   add_action('admin_menu', 'customizeAdminLeftMenu');
 
   // Manipula o que o editor pode ou não fazer
@@ -107,15 +106,17 @@ if (!current_user_can('manage_options')) {
   add_action('admin_head', 'escondeUpdate');
   
   
-// Esconde os filtros por categoria e a possibilidade de se listar todos os posts na tela de listagem de posts
+// Esconde os filtros por categoria e a possibilidade de se listar todos os posts na tela de listagem de posts,
+// Retira também o nome da categoria (q já é exibida no topo), a coluna de comentários e o botão "edição rápida"
+// (para evitar que se configure categorias)
   function escondeFiltros() {
     echo '
     <style type="text/css">
       .tablenav.top .alignleft.actions select[name="m"],
       .tablenav.top .alignleft.actions select#cat,
       .tablenav.top .alignleft.actions input#post-query-submit,
-      .tablenav.top .view-switch,
-      .subsubsub,
+      .tablenav.top .view-switch, .column-categories, .column-comments, 
+      .subsubsub, .inline, 
       #message p a{ 
           display: none; 
       }
@@ -126,11 +127,11 @@ if (!current_user_can('manage_options')) {
   add_action('admin_head-post-new.php', 'escondeFiltros');
 
   
-  // Retira o link de exclusão do conteúdo se for da categoria Conceito
+  // Retira o link de exclusão e edição de slug se for da categoria Conceito
   function escondeDelLink() {
     $categoria = get_the_category();
     if ($categoria[0]->term_id == _CONCEITO) {
-      echo '<style type="text/css">.deletion { display: none; }</style>';
+      echo '<style type="text/css">.deletion, #edit-slug-box { display: none; }</style>';
     }
   }
   add_action('admin_head-post.php', 'escondeDelLink');
@@ -175,11 +176,6 @@ if (!current_user_can('manage_options')) {
       $customUIScript .= '$(".trash").remove();';
     }
 
-
-    // Esconde o link "edição rápida" da listagem (para evitar que se configure categorias)
-    $customUIScript .= '$(".inline").remove();';
-
-
     // Se estiver na index.php, exibe uma mensagem de boas vindas
     if (strpos($_SERVER['PHP_SELF'], '/index.php') !== FALSE) {
       $handle = fopen(dirname(__FILE__) . '/adminWelcome.php', 'r');
@@ -187,13 +183,6 @@ if (!current_user_can('manage_options')) {
       $adminWelcome = str_replace("\n", '', $adminWelcome);
       $customUIScript.='$("#dashboard-widgets").html(\'' . $adminWelcome . '\');';
     }
-
-
-    // Esconde a edição do link permanente
-    $customUIScript .= '
-      if ($("#edit-slug-box").length>0)
-          $("#edit-slug-box").hide();   
-    ';
 
 
     // Esconde o link "Ver post" depois da mensagem 
