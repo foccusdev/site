@@ -18,9 +18,9 @@ the_post();
       </form>
     </div>
   </div>
-<h2 class="nome-secao">
+
   <img src="<?= get_bloginfo('template_url') ?>/imgs/arco.png" class="arco">
-  <? the_title() ?></h2>
+  <h2 class="nome-secao"><? the_title() ?></h2>
   <span class="linha-azul"></span>
   <div class="conteudo-interno  float-left">
 
