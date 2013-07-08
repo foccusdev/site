@@ -28,7 +28,7 @@ register_post_type('slide', $args);
 
 
 //********************************************************
-// Personalizações para o usuário Editor
+// Personalizações para o usuário Editor (e qualquer outro que não tenha privilégios de acessar as opções do blog)
 //********************************************************
 
 if (!current_user_can('manage_options')) {
@@ -36,16 +36,21 @@ if (!current_user_can('manage_options')) {
 // Personalização da barra superior no wp-admin para o Editor 
   function customizeTopMenu() {
     global $wp_admin_bar;
+
+    // Remove o menu "Novo" do topo
     $wp_admin_bar->remove_menu('new-content');
-    $wp_admin_bar->remove_menu('new-link');
+
+    // Retira o item para moderação de comentários (que são feitos através do facebook)
     $wp_admin_bar->remove_menu('comments');
+
+    // Retira o logo do WP do topo
+    $wp_admin_bar->remove_menu('wp-logo');
   }
 
   add_action('wp_before_admin_bar_render', 'customizeTopMenu');
 
 // Personalização do menu lateral no wp-admin para o Editor 
   function customizeAdminLeftMenu() {
-
 
     remove_menu_page('index.php');                // Retira Painel
     remove_menu_page('edit.php');                 // Retira Posts
@@ -57,6 +62,7 @@ if (!current_user_can('manage_options')) {
 
     $primeiroItem = 37;
 
+    // Insere os itens personalizados
     add_menu_page('Slides', 'Slides', 'edit_posts', 'edit.php?post_type=slide', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Parceiros', 'Parceiros', 'edit_posts', 'edit.php?cat=' . _PARCEIROS, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Notícias', 'Notícias', 'edit_posts', 'edit.php?cat=' . _NOTICIAS, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
@@ -68,7 +74,7 @@ if (!current_user_can('manage_options')) {
     add_menu_page('Contato', 'Contato', 'edit_posts', 'post.php?post=45&action=edit', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Emails', 'Emails', 'edit_posts', 'post.php?post=' . _EMAILS . '&action=edit', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
 
-
+    // Insere os itens dos submenus
     add_submenu_page('edit.php?cat=' . _PARCEIROS, 'Parceiros', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _PARCEIROS);
     add_submenu_page('edit.php?cat=' . _NOTICIAS, 'Notícias', 'Adicionar Nova', 'edit_posts', 'post-new.php?cat=' . _NOTICIAS);
     add_submenu_page('edit.php?cat=' . _ARTIGOS, 'Artigos', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _ARTIGOS);
@@ -79,19 +85,29 @@ if (!current_user_can('manage_options')) {
 
   add_action('admin_menu', 'customizeAdminLeftMenu');
 
-// Manipula o que o editor pode ou não fazer
+  // Manipula o que o editor pode ou não fazer
   function manipulaPapeisDeUsuarios() {
-    // gets the author role
     $role = get_role('editor');
+    // Pode criar usuários
     $role->add_cap('create_users');
+    // Pode excluir usuários
     $role->add_cap('delete_users');
+    // Pode visualizar usuários
     $role->add_cap('view_users');
+    // Não pode manipular categorias
     $role->remove_cap('manage_categories');
   }
-
   add_action('admin_init', 'manipulaPapeisDeUsuarios');
 
-// Retira os filtros por categoria e a possibilidade de se listar todos os posts da listagem de posts
+  
+  // Esconde o aviso de atualização do WP
+  function escondeUpdate(){
+    echo '<style type="text/css">.update-nag{ display: none}</style>';
+  }
+  add_action('admin_head', 'escondeUpdate');
+  
+  
+// Esconde os filtros por categoria e a possibilidade de se listar todos os posts na tela de listagem de posts
   function escondeFiltros() {
     echo '
     <style type="text/css">
@@ -106,28 +122,33 @@ if (!current_user_can('manage_options')) {
     </style>
     ';
   }
-
   add_action('admin_head-edit.php', 'escondeFiltros');
   add_action('admin_head-post-new.php', 'escondeFiltros');
 
+  
+  // Retira o link de exclusão do conteúdo se for da categoria Conceito
+  function escondeDelLink() {
+    $categoria = get_the_category();
+    if ($categoria[0]->term_id == _CONCEITO) {
+      echo '<style type="text/css">.deletion { display: none; }</style>';
+    }
+  }
+  add_action('admin_head-post.php', 'escondeDelLink');
+
+  
   // Faz algumas alterações visuais via Javascript (mais detalhes abaixo)
   function customInterface() {
 
     $customUIScript = '
-          <script src="' . get_bloginfo('template_url') . '/js/jquery-1.9.1.min.js"></script>
+      <script src="' . get_bloginfo('template_url') . '/js/jquery-1.9.1.min.js"></script>
       <script>
 
       $("document").ready(function(){
-    ';
-
-    // Edição de conteúdo
-    if (isset($_GET['post']) && isset($_GET['cat']) && $_GET['cat'] == _CONCEITO) {
-      $customUIScript .= '$(".deletion").hide();';
-    }
+        ';
 
     if (isset($_GET['cat']) || isset($_GET['post'])) {
 
-      // Traz o nome da categoria
+      // Traz o nome e ID da categoria
       if (isset($_GET['cat'])) {
         $categoriaNome = get_the_category_by_ID($_GET['cat']);
         $categoriaId = $_GET['cat'];
@@ -137,18 +158,15 @@ if (!current_user_can('manage_options')) {
         $categoriaId = $categoria[0]->term_id;
       }
 
-
       // Substitui o nome Posts no alto de cada tela pelo nome da categoria sendo alterada
-      $customUIScript .= 'var conteudoH2 = "' . $categoriaNome . ' ";';
-
-
+      // e pre-seleciona a categoria especificada na URL para o conteúdo, não permitindo que o usuário altere no form
       $customUIScript .= '
-        $("h2:first").html(conteudoH2);
+        $("h2:first").html("' . $categoriaNome . ' ");
         
         // Pre-seleciona a categoria 
         if ($("#categorychecklist").length>0)
           $("#in-category-' . $categoriaId . '").attr("checked", "checked");     
-      ';
+        ';
     }
 
 
