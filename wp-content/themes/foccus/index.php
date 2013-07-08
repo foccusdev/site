@@ -1,23 +1,21 @@
 <?
-if(!is_user_logged_in())
+if (!is_user_logged_in())
   die('Domínio Reservado');
 get_template_part('incs/head');
 get_template_part('incs/topo');
-
-  
 ?>
 
 <div class="conteudo">
 
- 
+
   <div class="slideshow" id="slideshow">
-  <? 
-  $wp_query = new WP_Query( 'post_type=slide' );
-  while(have_posts()){
-    the_post();
-    the_post_thumbnail();
-  }
-  ?>
+<?
+$wp_query = new WP_Query('post_type=slide');
+while (have_posts()) {
+  the_post();
+  the_post_thumbnail();
+}
+?>
   </div>   
 
   <div class="newsletter">
@@ -35,56 +33,59 @@ get_template_part('incs/topo');
   <span class="nome-secao">Últimas Notícias</span>
   <span class="linha-azul"></span>
 
-  <?
-  $wp_query = new WP_Query(array('cat' => _NOTICIAS, 'posts_per_page' => 4));
-  $i = 0;
-  while (have_posts()) {
-    the_post();
-    $classe = $i == 3 ? 'class="no-mg-right box"' : 'class="box mg-box-right"';
-    ?>
+  <div class="linha-boxes">
 
-    <div <?= $classe ?>>
-      <a href="<? the_permalink() ?>">
-        <?
-        if (has_post_thumbnail())
-          the_post_thumbnail();
-        ?>
-        <h2 class="seta-azul fonte-textos"><? the_title() ?></h2>
-      </a>
-    </div>
-    <?
-    $i++;
-  }
+<?
+$wp_query = new WP_Query(array('cat' => _NOTICIAS, 'posts_per_page' => 4));
+$i = 0;
+while (have_posts()) {
+  the_post();
+  $classe = $i == 3 ? 'class="no-mg-right box"' : 'class="box mg-box-right"';
   ?>
 
+      <div <?= $classe ?>>
+        <a href="<? the_permalink() ?>">
+  <?
+  if (has_post_thumbnail()){
+    the_post_thumbnail();
+  }
+  ?>
+          <h2 class="seta-azul fonte-textos"><? the_title() ?></h2>
+        </a>
+      </div>
+  <?
+  $i++;
+}
+?>
+  </div>
   <div class="clear"></div>
 
   <img src="<?= get_bloginfo('template_url') ?>/imgs/arco.png" class="arco">
   <span class="nome-secao">Artigos</span>
   <span class="linha-azul"></span>
 
-  <?
-  $wp_query = new WP_Query(array('cat' => _ARTIGOS, 'tag' => 'destaque'));
-  //echo '<pre>'; var_dump($wp_query); echo '</pre>';
-  $i = 0;
-  while (have_posts()) {
-    the_post();
-    $classe = $i == 3 ? 'class="no-mg-right box"' : 'class="box mg-box-right"';
-    ?>
+<?
+$wp_query = new WP_Query(array('cat' => _ARTIGOS, 'tag' => 'destaque'));
+//echo '<pre>'; var_dump($wp_query); echo '</pre>';
+$i = 0;
+while (have_posts()) {
+  the_post();
+  $classe = $i == 3 ? 'class="no-mg-right box"' : 'class="box mg-box-right"';
+  ?>
 
     <div <?= $classe ?>>
       <a href="<? the_permalink() ?>">
-        <?
-        if (has_post_thumbnail())
-          the_post_thumbnail();
-        ?>
+  <?
+  if (has_post_thumbnail())
+    the_post_thumbnail();
+  ?>
         <h2 class="seta-azul fonte-textos"><? the_title() ?></h2>
       </a>
     </div>
-    <?
-    $i++;
-  }
-  ?>  
+  <?
+  $i++;
+}
+?>  
 
   <div class="clear"></div>
 
@@ -92,25 +93,25 @@ get_template_part('incs/topo');
   <span class="nome-secao">Depoimentos</span>
   <span class="linha-azul"></span>
 
-  <?
-  $wp_query = new WP_Query(array('cat' => _DEPOIMENTOS, 'tag' => 'destaque'));
-  //echo '<pre>'; var_dump($wp_query); echo '</pre>';
-  $i = 0;
-  while (have_posts()) {
-    the_post();
-    $classe = $i == 3 ? 'class="no-mg-right box"' : 'class="box mg-box-right"';
-    ?>
-    <div <?=$classe?>>
-      <a href="<? the_permalink()?>">
-        <h3><?the_title()?></h3>
-        <p class="fonte-textos"><?the_excerpt()?> </p>
+<?
+$wp_query = new WP_Query(array('cat' => _DEPOIMENTOS, 'tag' => 'destaque'));
+//echo '<pre>'; var_dump($wp_query); echo '</pre>';
+$i = 0;
+while (have_posts()) {
+  the_post();
+  $classe = $i == 3 ? 'class="no-mg-right box"' : 'class="box mg-box-right"';
+  ?>
+    <div <?= $classe ?>>
+      <a href="<? the_permalink() ?>">
+        <h3><? the_title() ?></h3>
+        <p class="fonte-textos"><? the_excerpt() ?> </p>
       </a>
     </div>
-    <?
-    $i++;
-  }
-  ?>    
-   
+  <?
+  $i++;
+}
+?>    
+
 
   <div class="clear"></div>
 
