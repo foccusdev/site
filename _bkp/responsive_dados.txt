@@ -1,0 +1,15 @@
+
+
+* 960 - 34 (da margem lateral-esquerda) = 926
+
+Coluna direita:
+960 = 100%
+275 = 29%
+
+Conteudo Interno:
+926 = 100%
+651 = 70%
+
+
+
+927

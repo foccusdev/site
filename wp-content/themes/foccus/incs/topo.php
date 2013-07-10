@@ -3,7 +3,7 @@
   <div class="topo">
 
     <div class="logo float-left">
-      <a href="<?= get_bloginfo('url') . '/' ?>"><img src="<? bloginfo('template_url') ?>/imgs/bg_topo.png"/></a>
+      <a href="<?= get_bloginfo('url') . '/' ?>"><img src="<? bloginfo('template_url') ?>/imgs/logo_site.png"/></a>
       <div class="clear"></div>
     </div>
 
