@@ -70,17 +70,14 @@ a { text-decoration: none; color: inherit}
   .topo { height: 96px; }
 }
 
-
-
-
 /* Logo e social no desktop */
-@media screen and (min-width: 770px) {
-  .logo a img { width: 197px; height: 213px; z-index:4; position: absolute; top: 0px; left: 0px}
+@media screen and (min-width: 750px) {
+  .logo a img { width: 20.5%; height: auto; z-index:4; position: absolute; top: 0px; left: 0px}
   .social-topo { height: 25px; margin-left: 200px; padding-top: 45px;}
 }
 
 /* Logo e social no celular */
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 749px) {
   .logo { width: 197px; height: 213px;  }
   .social-topo { height: 25px; padding-top: 45px; float: right}
 }
@@ -106,7 +103,7 @@ a { text-decoration: none; color: inherit}
 .menu-item-busca {background: #C2C2C2}
 .menu-item-contato { background: #2EA2AB}
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 750px) {
   .menu-mobile, .menu-mobile-icon { display: none }
   .menu-desktop ul {float: right;}
   .menu-desktop ul li { display: block; float: left; width: 77px; height: 33px; list-style-type: none; padding-top: 44px; text-align: center; font-size: 18px; color: #fff }
@@ -115,7 +112,7 @@ a { text-decoration: none; color: inherit}
   .menu-item-foccus .down-arrow { border-top: 6px solid #2B91B3; }
   .menu-item-noticias .down-arrow { border-top: 6px solid #F3C819; }
 
-  .submenu { background: #fff; width: 75%; height: 54px; padding: 10px 0px 0px 20px;}
+  .submenu { background: #fff; width: 75%; height: 54px; padding: 1% 0px 0px 2%;}
   .submenu span { color: #A4A8AB; font-size: 20px}
   .submenu ul li { display: block; float: left;  list-style-type: none; margin: 6px 27px 0px 0px }
   .submenu ul li a {font-size: 12px; color: #A4A8AB; display: block; height: 18px; padding-top: 1px}
@@ -127,7 +124,7 @@ a { text-decoration: none; color: inherit}
   
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 749px) {
   .menu-mobile { width: 100%; margin-bottom: 20px;}
   .menu-mobile a { display: block; width: 100%; height: 100% }
   .menu-mobile ul li { display: block; width: 100%; list-style-type: none; padding: 10px 0px; text-align: center; font-size: 18px; color: #fff }
@@ -164,7 +161,7 @@ a { text-decoration: none; color: inherit}
 .linha-azul { border-top-style: solid; border-top-width: 1px; border-top-color: #2B91B3; margin-top: 4px; width: 100%; height: 4px; display: block; position: relative; bottom: 20px; z-index: 0}
 
 /* Mobile */
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 749px) {
   .box {height: auto; width: 75%;  margin: 20px auto;}
   .mg-box-right { margin-right: auto; }  
   .conteudo-interno {  margin-top: 10px; width: 98%; margin-bottom: 40px;}
@@ -173,7 +170,7 @@ a { text-decoration: none; color: inherit}
 }
 
 /* Desktop */
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 750px) {
   .box {height: 210px; width: 18.5%;  float: left; margin-top: 10px}
   .mg-box-right { margin-right: 6.48%; }
   .conteudo-interno {  margin-top: 10px; width: 68%; margin-bottom: 40px;}
@@ -249,7 +246,7 @@ a { text-decoration: none; color: inherit}
 .txt-equipe p { line-height:  20px; margin-bottom: 8px}
 
 /* Mobile */
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 749px) {
   .img-equipe { width: 80%;  float: none; margin: auto; }
   .img-equipe img { width: 100%; height: auto; margin-top:6px; }
   .txt-equipe { float: none; width: 80%; margin: auto; }
