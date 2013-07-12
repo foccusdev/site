@@ -47,7 +47,7 @@ while (have_posts()) {
         <a href="<? the_permalink() ?>">
   <?
   if (has_post_thumbnail()){
-    the_post_thumbnail();
+    ?><div class="img-box"><? the_post_thumbnail(); ?> </div> <?
   }
   ?>
           <h2 class="seta-azul fonte-textos"><? the_title() ?></h2>
