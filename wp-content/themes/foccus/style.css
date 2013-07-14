@@ -148,12 +148,12 @@ a { text-decoration: none; color: inherit}
 @media screen and (min-width: 750px) {
 
   .newsletter { margin: 2.6% 0 3.75% 3.4%;}
-  .newsletter form { width: 61.5%}
-  .newsletter span { font-size: 20px; color: #2C90B7}
+  .newsletter form { width: 71.5%}
+  .newsletter span { font-size: 20px; color: #2C90B7; width: 28.5%; display: block; float: left;}
   .newsletter label { color: #909195; margin-right: 0.53%; }
   .newsletter input[type="text"] { border: 1px #909195 solid; margin-right: 2.4%; width: 33.33%; height: 20px}
   .newsletter input[type="submit"] { border: 0px; border-radius: 4px; width: 11.5%; height:26px; color: #fff; padding-bottom: 4px; background: #2B91B3; position: relative; bottom: 3px; }
-  .newsletter input[type="submit"]:hover { background: url('imgs/news_bg.png') repeat-x;  }
+  .newsletter input[type="submit"]:hover {  background: #1F677D }
   .newsletter .form-campo { display: inline } 
 
 }
@@ -177,7 +177,7 @@ a { text-decoration: none; color: inherit}
 
 .linha-azul { border-top-style: solid; border-top-width: 1px; border-top-color: #2B91B3; margin-top: 4px; width: 100%; height: 4px; display: block; position: relative; bottom: 20px; z-index: 0}
 
-/* Mobile */
+/* Boxes Mobile */
 @media screen and (max-width: 749px) {
   .box {height: auto; width: 75%;  margin: 20px auto;}
   .mg-box-right { margin-right: auto; }  
@@ -186,7 +186,7 @@ a { text-decoration: none; color: inherit}
   .arco { height: auto; width: 25px; float: left; position: relative; z-index: 2; padding-right: 0.6%; background: #fff}
 }
 
-/* Desktop */
+/* Boxes Desktop */
 @media screen and (min-width: 750px) {
   .box {height: 210px; width: 18.5%;  float: left; margin-top: 10px}
   .mg-box-right { margin-right: 6.48%; }
@@ -290,22 +290,6 @@ a { text-decoration: none; color: inherit}
   .txt-equipe { float: none; width: 80%; margin: auto; }
 }
 
-.topo-contato { height: 235px; width: 100%; background: url('imgs/contato_banner.jpg') no-repeat top center; }
-
-.contato { padding-top: 40px; padding-left: 70px; margin-bottom: 115px}
-
-.mapa { width: 316px; height: 168px; background: url('imgs/bg_mapa.png') right center no-repeat #DE0060; padding: 16px}
-
-.form-contato { width: 407px; margin-right:65px; margin-top:45px;}
-
-.form-contato input, select { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana; height: 17px; width: 377px; padding: 14px; margin-bottom: 20px;}
-
-.mensagem { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana; width: 376px; padding: 15px; margin-bottom: 20px} 
-
-.ddd { width: 45px !important; margin-right: 4px}
-
-.telefone { width:  294px !important}
-
 .coluna-direita {width: 28%; background: #EEF2F8;  float: right; padding-top: 20px; margin-bottom: 10px}
 
 .coluna-direita .secao { background: url('imgs/bg_titulo_coluna_direita.png') 0 0 no-repeat; padding: 5px 0px 0px 20px; color: #DE0060; height: 24px; font-size: 17px;}
@@ -337,7 +321,7 @@ a { text-decoration: none; color: inherit}
 
 .styled-select select {
   background: transparent;
-  width: 405px;
+  width: 100%;
   padding: 5px;
   font-size: 16px;
   line-height: 2;
@@ -350,7 +334,7 @@ a { text-decoration: none; color: inherit}
 
 
 .styled-select {
-  width: 405px;
+  width: 100%;
   height: 46px;
   overflow: hidden;
   background: url('imgs/bnt_select.jpg') no-repeat right #ffffff;
@@ -374,8 +358,33 @@ a { text-decoration: none; color: inherit}
 
 #submit:hover{background: #08677d;}
 
-.contato-endereco{margin-bottom:45px
+.topo-contato { height: 235px; width: 100%; background: url('imgs/contato_banner.jpg') no-repeat top right; }
+.contato-bloco { width: 84.37%; margin: 55px auto }
+.contato-esquerda { width: 50% }
+.contato-direita { width: 50% }
+.mapa { width: 78.02%; height: 168px; background: url('imgs/bg_mapa.png') right center no-repeat #DE0060; padding: 16px}
+.contato-direita form input, select, textarea { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana;  width: 93.2%; padding: 3.4%; margin-bottom: 20px;}
+.contato-direita form input, select {height: 17px; }
+
+.ddd { width: 11.1% !important; margin-right: 0.46%}
+.telefone { width:  72.33% !important}
+.contato-endereco{margin-bottom:45px}
+
+.grupo1{   margin-bottom: 18px; }
+
+
+/* Contato mobile */
+@media screen and (max-width: 749px) {
+  .contato-esquerda, .contato-direita { width: 90%; float: none; margin: 40px auto; }
+  .mapa { width: 90%; margin: auto}
+  /*.topo-contato { display: none}*/
+  .form-contato { width: 100%; margin-top:45px; display: block;}
+  .contato-direita form input, select, textarea { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana;  width: 93.2%; padding: 3.4%; margin-bottom: 20px;}
+  .contato-direita form input, select {height: 17px; }
+.ddd { width: 16.33% !important; margin-right: 0.46%}
+.telefone { width: 66.66% !important;}
 }
+
 
 #bg_rodape{
   z-index:-2px; 
