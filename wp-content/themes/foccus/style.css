@@ -160,7 +160,7 @@ a { text-decoration: none; color: inherit}
 /* Newsletter mobile */
 @media screen and (max-width: 749px) {
   .newsletter .form-campo { display: block; width: 90%; margin: auto; } 
-  .newsletter { margin: 0; width: 100% }
+  .newsletter { margin: auto; width: 90% }
   .newsletter form { width: 100%; margin-bottom: 20px}
   .newsletter span { font-size: 200%; color: #2C90B7; margin-left: 5%; display: block;}
   .newsletter label { color: #909195; margin-right: 0.53%; display: block}
