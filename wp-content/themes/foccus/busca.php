@@ -12,10 +12,11 @@ get_template_part('incs/topo');
     <span class="linha-azul"></span>
   </div>
   
-  <div class="topo-interna">
+  <div class="topo-interna div-form-busca">
     <form action="<? bloginfo('url') ?>" method="get" id="busca-form">
       <input type= "text" id="main" name="s" value="Pesquisar no site" onfocus="if(this.value==='Pesquisar no site')this.value='';" onblur="if (this.value==='')this.value='Pesquisar no site';">
       <input type="submit"  id="botao" class="solid" value="">
+      <div class="clear"></div>
     </form>
   </div>
 

@@ -283,7 +283,7 @@ a { text-decoration: none; color: inherit}
 
 .txt-equipe p { line-height:  20px; margin-bottom: 8px}
 
-/* Mobile */
+/* Equipe Mobile */
 @media screen and (max-width: 749px) {
   .img-equipe { width: 80%;  float: none; margin: auto; }
   .img-equipe img { width: 100%; height: auto; margin-top:6px; }
@@ -318,15 +318,22 @@ a { text-decoration: none; color: inherit}
 
 .erro { display: none; color: #d00; }
 
-.conteudo_busca { padding-left: 300px}
+.conteudo_busca { padding-left: 31.25%}
 
 .busca-pag {height: 300px }
 
 .busca-pag .topo-interna { height: 90px}
 
-.busca-pag .topo-interna form { margin: 0}
+.busca-pag .topo-interna form { margin-left: 31.35%; width: 44.37%; display: block; }
 
-.busca-pag .topo-interna form input[type="text"]{ font-size: 14px; text-transform: uppercase; color: #c2c2c2; padding-left: 20px; font-weight: bold}
+.busca-pag .topo-interna form input[type="text"]{ font-size: 14px; text-transform: uppercase; color: #c2c2c2; padding-left: 3%; font-weight: bold}
+
+/* Busca Mobile */
+@media screen and (max-width: 749px) {
+  .busca-pag .div-form-busca { display: block}
+  .busca-pag .topo-interna form { margin:auto; width: 90%; display: block; }
+}
+
 
 .styled-select select {
   background: transparent;

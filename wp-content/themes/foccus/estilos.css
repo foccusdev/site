@@ -27,25 +27,24 @@ root {
 
 
 #main {
-    width: 350px;
-    height: 43px;
+    width: 82%;
+    height: 44px;
     z-index:2;
-    margin-left: 300px;
     float:left;
     border: 1px solid #0191b4;
    }
 
 #botao {
-    width: 50px;
+    width: 12%;
     height: 46px;
     z-index:2;
-    float:left;
-    background: url('imgs/bnt_busca.jpg') no-repeat; 
+    float:right;
+    background: url('imgs/bnt_busca.jpg') no-repeat center; 
     border: none;
    }
    
 #botao:hover { 
-    background: url('imgs/bnt_busca_over.jpg'); 
+    background: url('imgs/bnt_busca_over.jpg')  no-repeat center; 
    }
    
 
