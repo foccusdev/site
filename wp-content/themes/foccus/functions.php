@@ -18,6 +18,8 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10);
 
 
 
+
+
 // Registra o tipo Slides
 $args = array(
     'public' => true,
