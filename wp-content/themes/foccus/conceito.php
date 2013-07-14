@@ -34,6 +34,8 @@ get_template_part('incs/topo');
   ?>  
 
   <div class="conteudo-interno fonte-textos float-left">
+    
+    <div class="conceito-conteudo-cima">
     <?
     $wp_query = new WP_Query('p=' . _CONCEITO_TEXTO_CIMA);
     the_post();
@@ -45,16 +47,14 @@ get_template_part('incs/topo');
       <div class="texto_img-circulo" >
         <?=$mensagemIncentivo ?>
       </div> 
-      <div class="img-circulo" >
-        <img src="<?= get_bloginfo('template_url') ?>/imgs/circulo_pontilhado.png"/>
-      </div> 
     </div> 
 
 
     <div class="texto-conceito">
       <? the_content() ?>
     </div>
-
+      <div class="clear"></div>
+</div>
     <?
     $wp_query = new WP_Query('p=' . _CONCEITO_TEXTO_BAIXO);
     the_post();

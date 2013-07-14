@@ -175,7 +175,7 @@ a { text-decoration: none; color: inherit}
 @media screen and (min-width: 750px) {
   .box {height: 210px; width: 18.5%;  float: left; margin-top: 10px}
   .mg-box-right { margin-right: 6.48%; }
-  .conteudo-interno {  margin-top: 10px; width: 68%; margin-bottom: 40px;}
+  .conteudo-interno {  margin-top: 10px; width: 68%; margin-bottom: 40px; position: relative}
 }
 
 .box img { width: 100%; height: auto; max-width: 100%; border-top: 12px solid #2B91B3;}
@@ -243,6 +243,15 @@ a { text-decoration: none; color: inherit}
 
 .img-conceito { width: 40.1%; height: auto; margin: 0.6% 5.3% 5.3% 0.76%; }
 
+/* Conceitos mobile */
+@media screen and (max-width: 749px) {
+  .img-conceito { width: 90%; height: auto; margin: 0 5% 5.3% 5%; float: none;}
+  .texto-conceito { float: none; width: 90%; margin: auto; text-justify: distribute}
+  .mensagem_incentivo{ display: none}
+.texto-conceito2{ width: 90%; font-family: verdana; font-size: 11px; margin:15px auto; line-height: 18px; }
+}
+
+
 .box-depoimentos { background: #FEFFCF; width: 90%; border-left: 30px #FEFFCF solid; border-top: 25px #fff solid; padding: 17px 0px 17px 0px; margin-bottom: 12px }
 
 .box-depoimentos h2 { background: url('imgs/aspas_box.png') no-repeat left center; padding-left: 36px; color: #DD005F; }
@@ -293,8 +302,6 @@ a { text-decoration: none; color: inherit}
 .coluna-direita .box .saiba-mais { color: #F88716; font-weight: normal; margin-top: 5px}
 
 .erro { display: none; color: #d00; }
-
-.conceito-texto-baixo { margin-top:50px}
 
 .conteudo_busca { padding-left: 300px}
 

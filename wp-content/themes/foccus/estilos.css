@@ -10,13 +10,21 @@ root {
   display: block;
 }
 
-.mensagem_incentivo{margin-top:-120px; margin-left:-340px;}
-.texto_img-circulo {font-family: verdana;  font-size: 13pt; margin-top: 40px; z-index:3; margin-right:420px; float:right; }
-.img-circulo {margin-left: 305px; z-index: -3; margin-top: -70px; float:left;}
+/* Ajuste para melhorar desempenho responsivo (João) */
+.conceito-conteudo-cima { position: relative}
+/*.mensagem_incentivo{position: absolute; bottom: 0px; background: url('imgs/circulo_pontilhado.png') no-repeat left center; width: 300px; height: 82px; font-size: 13px; font-style: italic; font-weight: bold }*/
+@media screen and (min-width: 750px) {
+.mensagem_incentivo { position: absolute; bottom: 0px; left: -25px; background: url('imgs/circulo_pontilhado.png') no-repeat left top; width: 300px; height: 82px; font-size: 13pt; font-style: italic; font-weight: bold; display: table; vertical-align: bottom; }
+}
+.texto_img-circulo { display: table-cell; vertical-align: bottom; padding: 0 0 18px 28px;}
+@media screen and (min-width: 750px) {
 .texto-conceito2{float:left; width: 98%; font-family: verdana; font-size: 11px; margin-top:15px;line-height: 18px; margin-left:0px; z-index: 2;}
-.objetivos{color:#e41e5f; font-size: 22px; margin-top:100px; margin-left:0px; }
+}
+.objetivos{color:#e41e5f; font-size: 22px;}
 .texto-objetivos{color:#e41e5f; font-size: 23px; width:90%;}
 .clear { clear: both}
+
+
 
 #main {
     width: 350px;
