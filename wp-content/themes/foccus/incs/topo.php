@@ -16,10 +16,10 @@
     <div class="menu-desktop float-right">
 
       <ul>
-        <li class="menu-item-home"><a href="#">Home</a></li>
-        <li class="menu-item-foccus" id="menu-item-foccus"><a href="#">Foccus<div class="down-arrow"></div></a></li>
-        <li class="menu-item-noticias" id="menu-item-noticias"><a href="#">Notícias<div class="down-arrow"></div></a></li>
-        <li class="menu-item-login"><a href="#" title="em breve">Login</a></li>
+        <li class="menu-item-home"><a href="<?=get_bloginfo('url')?>">Home</a></li>
+        <li class="menu-item-foccus" id="menu-item-foccus"><a href="javascript:void(0)">Foccus<div class="down-arrow"></div></a></li>
+        <li class="menu-item-noticias" id="menu-item-noticias"><a href="javascript:void(0)">Notícias<div class="down-arrow"></div></a></li>
+        <li class="menu-item-login"><a href="javascript:alert('Em breve!')" title="em breve">Login</a></li>
         <li class="menu-item-busca"><a href="<?= get_bloginfo('url') ?>/busca/"><img src="<?= get_bloginfo('template_url') ?>/imgs/lupa.png"/></a></li>
         <li class="menu-item-contato"><a href="<?= get_bloginfo('url') ?>/contato/">Contato</a></li>
       </ul>
@@ -50,7 +50,7 @@
       <ul>
         <li class="menu-item-home"><a href="#">Home</a></li>
         <li class="menu-item-foccus" id="menu-item-foccus-mobile">
-          <a href="#">Foccus + </a>
+          <a href="javascript:void(0)">Foccus + </a>
         </li>
         <li id="submenu-foccus-mobile" class="display-none">
           <div class="submenu" >
@@ -63,7 +63,7 @@
           </div>
         </li>
         <li class="menu-item-noticias" id="menu-item-noticias-mobile">
-          <a href="#">Notícias +</a>
+          <a href="javascript:void(0)">Notícias +</a>
         </li>
         <li class="display-none" id="submenu-noticias-mobile">
           <div class="submenu">
@@ -74,7 +74,7 @@
             </ul>
           </div>          
         </li>
-        <li class="menu-item-login"><a href="#" title="em breve">Login</a></li>
+        <li class="menu-item-login"><a href="javascript:alert('Em breve!')" title="em breve">Login</a></li>
         <li class="menu-item-busca"><a href="<?= get_bloginfo('url') ?>/busca/"><img src="<?= get_bloginfo('template_url') ?>/imgs/lupa.png"/></a></li>
         <li class="menu-item-contato"><a href="<?= get_bloginfo('url') ?>/contato/">Contato</a></li>
       </ul>      
