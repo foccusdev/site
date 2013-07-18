@@ -27,10 +27,10 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
   define('DB_USER', 'root');
 
   /** Senha do banco de dados MySQL */
-  define('DB_PASSWORD', '');
+  define('DB_PASSWORD', '20n@bd');
 
   /** nome do host do MySQL */
-  define('DB_HOST', 'localhost');
+  define('DB_HOST', '192.168.0.102');
 } else {
   
   /** O nome do banco de dados do WordPress */

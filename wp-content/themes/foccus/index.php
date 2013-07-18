@@ -1,6 +1,6 @@
 <?
 if (!is_user_logged_in())
-  die('Domínio Reservado');
+  die(header('Location: '.  get_bloginfo('url').'/embreve.php'));
 get_template_part('incs/head');
 get_template_part('incs/topo');
 ?>

@@ -9,10 +9,10 @@ ob_start();
     <meta content="width=device-width, height=420, user-scalable=no" name="viewport"/>
 
     <base href="<?= get_bloginfo('url') ?>/" />
-    <meta name="title" content="Foccus Training" />
+    <meta name="title" content="<?the_title()?> Foccus Training" />
     <meta name="url" content="http://www.foccustraining.com.br/" />
-    <meta name="description" content="Aqui vai entrar a descrição da página!" />
-    <meta name="keywords" content="Aqui entrarão as keywords" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="company" content="Foccus" />
     <meta name="revisit-after" content="1" />
@@ -22,8 +22,8 @@ ob_start();
     <!-- Metas para compartilhamento no facebook -->
     <meta property="fb:admins" content="1199485757"/>
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://www.foccustraining.com.br/face-teste/" />
-    <meta property="og:title" content="Foccus" />
+    <meta property="og:url" content="<?the_permalink()?>" />
+    <meta property="og:title" content="<?=get_the_title()?>" />
     <meta property="og:image" content="http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg" />
 
   </head>
