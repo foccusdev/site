@@ -43,9 +43,7 @@
           var novoBlur = blur.replace('blur(','');
           novoBlur = novoBlur.replace('px)','');
           novoBlur = parseInt(novoBlur);
-          
-          novoBlur--;
-          
+          novoBlur--;          
           novoBlur = novoBlur.toString();
           logo.css('-webkit-filter', 'blur('+novoBlur+'px)');
           logo.css('-moz-filter', 'blur('+novoBlur+'px)');
