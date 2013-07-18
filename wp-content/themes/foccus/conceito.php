@@ -27,7 +27,15 @@ get_template_part('incs/topo');
   <h2 class="nome-secao">Conceito</h2>
   <span class="linha-azul"></span>
 
+  <?
+  $wp_query = new WP_Query('p=' . _CONCEITO_TEXTO_BAIXO);
+  the_post();
+  $mensagemIncentivo = get_the_excerpt();
+  ?>  
+
   <div class="conteudo-interno fonte-textos float-left">
+    
+    <div class="conceito-conteudo-cima">
     <?
     $wp_query = new WP_Query('p=' . _CONCEITO_TEXTO_CIMA);
     the_post();
@@ -35,25 +43,24 @@ get_template_part('incs/topo');
       the_post_thumbnail('post-thumbnail', array('class' => 'img-conceito float-left'));
     ?>  
 
+    <div class="mensagem_incentivo" >
+      <div class="texto_img-circulo" >
+        <?=$mensagemIncentivo ?>
+      </div> 
+    </div> 
+
+
     <div class="texto-conceito">
       <? the_content() ?>
     </div>
-
+      <div class="clear"></div>
+</div>
     <?
     $wp_query = new WP_Query('p=' . _CONCEITO_TEXTO_BAIXO);
     the_post();
     ?>
 
     <div class="conceito-texto-baixo float-left">
-
-      <div class="mensagem_incentivo" >
-        <div class="texto_img-circulo" >
-          <p><b><i>Mensagem de incentivo</i></b></p>
-        </div> 
-        <div class="img-circulo" >
-          <img src="<?= get_bloginfo('template_url') ?>/imgs/circulo_pontilhado.png"/>
-        </div> 
-      </div> 
 
       <div class="objetivos">
         <div class="texto_objetivos"><? the_title() ?><img src="<?= get_bloginfo('template_url') ?>/imgs/img_objetivos.png"/></div>
