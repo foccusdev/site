@@ -22,16 +22,21 @@
     <meta property="og:title" content="Foccus" />
     <meta property="og:image" content="http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg" />
     <style>
-      * { text-align: center}
-      img { -webkit-filter: blur(8px); -moz-filter: blur(8px); -o-filter: blur(8px); -ms-filter: blur(8px); filter: blur(8px); }
+      * { text-align: center; margin: 0; padding: 0}
+      .container { max-width: 960px; margin:auto;}
+      img { -webkit-filter: blur(8px); -moz-filter: blur(8px); -o-filter: blur(8px); -ms-filter: blur(8px); filter: blur(8px); width: 55.42%;height: auto;}
+      /* No celular */
+      @media screen and (max-width: 749px) {      
+        img {width: 90%;}
+      }
       p { text-align: center; font-family: verdana; font-size: 31px; color: #2B91B3;}
     </style>
 
   </head>
   <body>
-    <img src="http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo_embreve.jpg?nocache=<?=rand()?>" id="logo" />
-
-    <p></p>
+    <div class="container">
+      <img src="http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo_embreve.jpg?nocache=<?= rand() ?>" id="logo" />
+    </div>
     <script type="text/javascript" src="http://www.foccustraining.com.br/wp-content/themes/foccus/js/jquery-1.9.1.min.js"></script>
     <script>
 
