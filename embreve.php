@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
   <head>
@@ -31,7 +31,7 @@
   <body>
     <img src="http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo_embreve.jpg?nocache=<?=rand()?>" id="logo" />
 
-    <p>Um novo conceito em treinamento</p>
+    <p></p>
     <script type="text/javascript" src="http://www.foccustraining.com.br/wp-content/themes/foccus/js/jquery-1.9.1.min.js"></script>
     <script>
 
@@ -63,7 +63,7 @@
         logo.css('-ms-filter', 'blur(0px)');
         logo.css('filter', 'blur(0px)');        
         
-      },3000);
+      },9000);
 
     </script>
 
