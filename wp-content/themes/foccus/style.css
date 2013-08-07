@@ -72,7 +72,7 @@ a { text-decoration: none; color: inherit}
 
 /* Logo e social no desktop */
 @media screen and (min-width: 750px) {
-  .logo a img { width: 20.5%; height: auto; z-index:4; position: absolute; top: 0px; left: 0px}
+  .logo a img { width: 20.5%; height: auto; z-index:9999; position: absolute; top: 0px; left: 0px}
   .social-topo { height: 25px; margin-left: 200px; padding-top: 45px;}
 }
 
@@ -214,7 +214,7 @@ a { text-decoration: none; color: inherit}
 
 .menu-rodape { font-size: 16px; padding-top:15px; margin-left:-20px;  }
 
-.menu-rodape div {  float: left; height: 100px; width:120px; margin: 0 0 0 20px}
+.menu-rodape div {  float: left; height: 100px; width:12.50%; margin: 0 0 0 20px}
 
 .menu-rodape .bd-menu-right { border-right: 1px solid #ccc; }
 
