@@ -28,6 +28,9 @@ body {  font-family: Sony Sketch EF; font-size: 14px; color: #666}
 
 a { text-decoration: none; color: inherit}
 
+a img { border: 0}
+
+
 /* Fim de Classes para elementos HTML */
 
 
@@ -191,6 +194,7 @@ a { text-decoration: none; color: inherit}
   .box {height: 210px; width: 18.5%;  float: left; margin-top: 10px}
   .mg-box-right { margin-right: 6.48%; }
   .conteudo-interno {  margin-top: 10px; width: 68%; margin-bottom: 40px; position: relative}
+  .conteudo-interno .box {width: 26.5%; }
 }
 
 .box img { width: 100%; height: auto; max-width: 100%; border-top: 12px solid #2B91B3;}
@@ -251,8 +255,6 @@ a { text-decoration: none; color: inherit}
 .topo-linha { width: 63%}
 
 .listagem {width: 100%; margin-bottom: 70px;}
-
-.listagem .mg-box-right { margin-right: 30px}
 
 .texto-conceito { float: left; width: 51%; line-height: 18px;}
 
@@ -394,6 +396,9 @@ a { text-decoration: none; color: inherit}
   height: 60px;
   margin-top:-105px;
 }                   
+
+
+
 
 /* Fim de Classes específicas */   
 
