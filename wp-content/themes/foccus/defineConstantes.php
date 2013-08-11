@@ -9,6 +9,7 @@ define('_EQUIPE', 5);
 define('_AMBIENTE', 6);
 define('_DEPOIMENTOS', 10);
 define('_PARCEIROS', 11);
+define('_ATIVIDADES', 12);
 define('_CONCEITO_TEXTO_CIMA', 54);
 define('_CONCEITO_TEXTO_BAIXO', 51);
 

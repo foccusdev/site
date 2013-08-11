@@ -32,6 +32,7 @@
         <li><a href="<?= get_bloginfo('url') ?>/conceito/" class="fonte-textos seta-azul">Conceito</a></li>
         <li><a href="<?= get_bloginfo('url') ?>/equipe/" class="fonte-textos seta-azul">Equipe</a></li>
         <li><a href="<?= get_bloginfo('url') ?>/depoimentos/" class="fonte-textos seta-azul">Depoimentos</a></li>
+        <li><a href="<?= get_bloginfo('url') ?>/atividades/" class="fonte-textos seta-azul">Atividades</a></li>
       </ul>
     </div>
 
@@ -59,6 +60,7 @@
               <li><a href="<?= get_bloginfo('url') ?>/conceito/" class="fonte-textos seta-azul">Conceito</a></li>
               <li><a href="<?= get_bloginfo('url') ?>/equipe/" class="fonte-textos seta-azul">Equipe</a></li>
               <li><a href="<?= get_bloginfo('url') ?>/depoimentos/" class="fonte-textos seta-azul">Depoimentos</a></li>
+              <li><a href="<?= get_bloginfo('url') ?>/atividades/" class="fonte-textos seta-azul">Atividades</a></li>
             </ul>
           </div>
         </li>

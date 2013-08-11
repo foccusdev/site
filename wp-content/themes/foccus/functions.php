@@ -71,6 +71,7 @@ if (!current_user_can('manage_options')) {
     add_menu_page('Artigos', 'Artigos', 'edit_posts', 'edit.php?cat=' . _ARTIGOS, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Conceito', 'Conceito', 'edit_posts', 'edit.php?cat=' . _CONCEITO, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Equipe', 'Equipe', 'edit_posts', 'edit.php?cat=' . _EQUIPE, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
+    add_menu_page('Atividades', 'Atividades', 'edit_posts', 'edit.php?cat=' . _ATIVIDADES, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Ambiente', 'Ambiente', 'edit_posts', 'edit.php?cat=' . _AMBIENTE, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Depoimentos', 'Depoimentos', 'edit_posts', 'edit.php?cat=' . _DEPOIMENTOS, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Contato', 'Contato', 'edit_posts', 'post.php?post=45&action=edit', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
@@ -81,7 +82,8 @@ if (!current_user_can('manage_options')) {
     add_submenu_page('edit.php?cat=' . _NOTICIAS, 'Notícias', 'Adicionar Nova', 'edit_posts', 'post-new.php?cat=' . _NOTICIAS);
     add_submenu_page('edit.php?cat=' . _ARTIGOS, 'Artigos', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _ARTIGOS);
     add_submenu_page('edit.php?cat=' . _EQUIPE, 'Equipe', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _EQUIPE);
-    add_submenu_page('edit.php?cat=' . _AMBIENTE, 'Ambiente', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _AMBIENTE);
+    add_submenu_page('edit.php?cat=' . _ATIVIDADES, 'Atividades', 'Adicionar Nova', 'edit_posts', 'post-new.php?cat=' . _ATIVIDADES);
+    add_submenu_page('edit.php?cat=' . _AMBIENTE, 'Ambientes', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _AMBIENTE);
     add_submenu_page('edit.php?cat=' . _DEPOIMENTOS, 'Depoimentos', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _DEPOIMENTOS);
   }
   add_action('admin_menu', 'customizeAdminLeftMenu');

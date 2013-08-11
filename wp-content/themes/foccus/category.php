@@ -15,6 +15,10 @@ switch($categoria->term_id){
         $pagina = 'depoimentos.php';
         break;
           
+      case _ATIVIDADES:
+        $pagina = 'atividades.php';
+        break;
+        
       
     default:
         $pagina = '404.php';
