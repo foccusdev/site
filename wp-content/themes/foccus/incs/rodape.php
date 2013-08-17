@@ -43,6 +43,7 @@
       <input type="text" name="news_email" id="news_email" />
       <input type="submit" value="enviar" />
     </form>
+    <div class="clear"></div>
   </div>
 
 
