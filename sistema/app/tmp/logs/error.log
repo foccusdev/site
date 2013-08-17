@@ -1,0 +1,52 @@
+2013-08-17 23:00:27 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/Controller/UsuariosController.php, line 8]
+2013-08-17 23:00:27 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /foccus/sistema/Usuarios
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 8, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 8, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-17 23:01:02 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/Controller/UsuariosController.php, line 8]
+2013-08-17 23:01:02 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /foccus/sistema/Usuarios
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 8)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 8, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 8, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-17 23:01:38 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/Controller/UsuariosController.php, line 11]
+2013-08-17 23:01:38 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /foccus/sistema/Usuarios
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 11, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 11, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-17 23:01:51 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/Controller/UsuariosController.php, line 11]
+2013-08-17 23:01:51 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /foccus/sistema/Usuarios
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 11, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 11, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-17 23:05:10 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/View/Usuarios/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/View/Usuarios/view.ctp',
+)
+Request URL: /foccus/sistema/usuarios/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
