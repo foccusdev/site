@@ -1,0 +1,118 @@
+ Escopo e Orçamento para o Sistema de Matrícula, Cadastro de Atividades, Planos e Usuários
+ 
+
+
+1. Tipos de usuário:
+Administrador
+Recepcionista
+Aluno
+
+Os tipos de usuários que têm acesso à funcionalidade descrita estão entre colchetes:
+
+
+2. Funcionalidades
+
+
+2.1 Gerenciamento de Usuários [Administrador]
+
+Nesta seção o Administrador pode Cadastrar usuários do tipo Administrador ou Recepcionista (os Alunos são cadastrados através da matrícula, que pode ser efetuada pelo Recepcionista ou Administrador)
+
+Preciso saber que dados interessam a vocês desses usuários. A princípio, indispensávelmente temos: nome, email e senha.
+
+OBS: A Senha dos usuários será criptografada e deverá ter no mínimo 4 e no máximo 12 caracteres.
+No caso de perda da senha, o sistema enviará um link para o email cadastrado do usuário com um link para definir uma nova senha.
+
+
+2.2. Gerenciamento de Atividades [Administrador, Recepcionista (pode apenas visualizar)] (musculação, pilates, etc) 
+
+O administrador cadastra, lista, edita ou exclui qualquer atividade
+Os dados de cada atividade seriam apenas nome e valor*, conforme conversamos?
+* O cadastro do valor seria apenas a nível informativo, já que neste momento ainda não está contemplado o controle de fluxo de caixa.
+
+
+2.3. Gerenciamento de Planos [Administrador, Recepcionista (pode apenas visualizar)] (agrupamento de atividades com preços especiais)
+
+O administrador cadastra, lista, edita ou exclui os planos, que são uma ou mais atividades 
+com possibilidade valores* especiais (descontos).
+* O cadastro do valor seria apenas a nível informativo, já que neste momento ainda não está contemplado o controle de fluxo de caixa.
+
+
+2.4. Matrícula de um Aluno [Administrador, Recepcionista]
+
+2.4.1 - Cadastro dos Dados Pessoais:
+
+São os dados do Aluno em si.
+
+Preciso das informações exatas que serão armazenadas de cada aluno no momento da matrícula. Até o momento temos:
+nome
+telefone, 
+profissão, 
+data de nascimento, 
+número de filhos, 
+como conheceu, 
+email, 
+estado civil, 
+CPF, 
+Contato em caso de emergência, 
+senha para acesso ao horário pelo site,
+OBS
+
+2.4.2 - Dados Cadastrais:
+
+São os dados referentes à matrícula do aluno na academia.
+
+Matrícula (número único gerado pelo sistema)
+Plano (Selecionará um dos planos cadastrados pelo administrador)
+Data de Cadastro (pode ser pré-preenchido pelo sistema)
+Vencimento Mensalidade (data)
+
+2.4.3 - Listagem de Alunos Matriculados
+
+A listagem consiste no nome, email, telefone, matrícula, data do próximo vencimento e links para editar ou excluir um aluno além de um botão “Pagar mensalidade” e outro “Horário”
+Pode-se ordenar os alunos por ordem alfabética, matrícula ou data de vencimento da próxima mensalidade.
+
+Os alunos que estiverem com a mensalidade vencida estarão marcados em vermelho.
+
+2.4.3.1 - Pagamento de Mensalidade
+
+Ao clicar em “Pagar mensalidade”, o usuário é levado para uma tela onde confirma o mês e ano da mensalidade que está sendo paga (podendo alterar antes, para alguma eventualidade) e, após isso, clica em confirmar.
+OBS: Lembro que neste primeiro momento, não estamos lidando com valores, o sistema apenas indica a data em que foi feito o pagamento e o mês a que se refere. A gravação e manipulação de valores estaria ligada ao controle de fluxo de caixa que veremos futuramente.
+OBS2: Um email é enviado ao Aluno assim que este ficar inadimplente, pedindo que regularize sua situação junto à academia e que seus horários estão cancelados. Ao tentar logar no site para visualizar o horário, o aluno também receberá um alerta informando e não poderá realizar nenhuma ação. 
+
+
+2.4.3.2 - Horário e Agendamento:
+
+Devemos definir quais serão os intervalos possíveis para seleção. Para facilitar o processo de dimensionamento eu assumi: das 6:00 às 22:00 com intervalos de 30 minutos, de segunda à sabado.
+
+O Aluno terá acesso ao seu horário através do login no site.
+
+Já o administrador e o recepcionista terão acesso através da listagem de alunos ao horário de cada um dos Alunos.
+
+
+* As imagens são apenas ilustrativas para se ter uma ideia melhor. Não necessáriamente indicam a aparência final. 
+A imagem da listagem dos alunos contém também a aba "usuários" que será acessível somente ao(s) administrador(es).
+
+
+3. Questões técnicas:
+
+O sistema será baseado em Web podendo ser acessado através de qualquer dispositivo com acesso à internet, mas seu funcionamento é garantido somente nos navegadores Internet Explorer 10 e últimas versões vigentes dos navegadores Fire Fox, Google Chrome e Safari em suas versões para desktop.
+
+O acesso ao sistema é feito através de login e senha que serão encriptados e devem ser mantidos em sigilo.
+
+Será desenvolvido com as tecnologias PHP5 e MySQL e aproveitará a estrutura previamente contratada para o site (www.foccutraining.com.br).
+
+
+4. Orçamento Final:
+
+Levando em conta exatamente o que está especificado nos itens anteriores fica estipulado:
+
+Investimento Total: R$ 2.500,00* 
+Prazo Estimado: 1 mês e meio a contar da confirmação do pagamento (integral ou primeira parcela).
+
+* Podendo ser dividido em duas parcelas de R$1.250,00 com a primeira parcela sendo necessária para o início do trabalho e a segunda na entrega do sistema.
+
+OBS: Qualquer alteração no escopo aqui definido pode impactar em alterações no prazo e investimento estipulados.
+
+
+05/08/2013
+Atualizado em 10/08/2013 - Item 2.4.3

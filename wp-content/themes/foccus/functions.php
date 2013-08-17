@@ -175,9 +175,12 @@ if (!current_user_can('manage_options')) {
     }
 
 
-    // Esconde o botão excluir da listagem, se for institucional
+    // Esconde o botão excluir e ver da listagem, se for institucional
     if (isset($_GET['cat']) && $_GET['cat'] == _CONCEITO) {
-      $customUIScript .= '$(".trash").remove();';
+      $customUIScript .= '
+        $(".trash").remove();
+        $(".view").remove();
+        ';
     }
 
     // Se estiver na index.php, exibe uma mensagem de boas vindas
