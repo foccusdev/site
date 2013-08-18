@@ -1,0 +1,57 @@
+/* 
+    Document   : estilo
+    Created on : 17/08/2013, 20:39:58
+    Author     : joao
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+  display: block;
+}
+
+
+* { padding: 0; margin: 0}
+
+/* Classes para elementos HTML */
+
+body { font-family: verdana; color: #000}
+
+a { color: inherit}
+
+a img { border: 0}
+
+ul li { list-style-type: none; }
+
+/* Fim de Classes para elementos HTML */
+
+
+/* Classes de uso geral */
+
+.float-left { float: left; }
+
+.float-right { float: right; }
+
+.clear { clear: both; }
+
+.display-none { display: none}
+
+.no-mg-right { margin-right: 0px}
+
+.no-mg { margin: 0}
+
+/* Classes específicas */
+
+#container { width: 90%; margin: 1% auto;  }
+
+.menu-sistema {position: relative; top: 1px; z-index: 2000; width: 90% }
+
+.menu-sistema ul { display: inline}
+
+.menu-sistema ul li { float: left; margin: 0% 0.5% 0% 0%; padding: 0.5%}
+
+.menu-sistema ul li a { text-decoration: none; }
+
+.menu-sistema .selecionado {border: 1px solid #000; border-radius: 4px 4px 0 0; border-bottom: 0; background: #e5e5e5}
+
+#content { background: #e5e5e5; border: 1px solid #000; padding: 0.5%}

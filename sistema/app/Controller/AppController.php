@@ -32,4 +32,19 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+  
+  
+    /* Inclui o controle de sessão a todas as classes controller */
+    public $components = array(
+        'Session',
+        'Auth' => array(
+            'loginRedirect' => array('controller' => 'posts', 'action' => 'index'),
+            'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home')
+        )
+    );
+
+    //Permite que os métodos index e view de qualquer classe sejam executados mesmo sem autenticação 
+    function beforeFilter() {
+        $this->Auth->allow('index', 'view');
+    }
 }
