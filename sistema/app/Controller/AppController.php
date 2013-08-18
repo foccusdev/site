@@ -38,13 +38,14 @@ class AppController extends Controller {
     public $components = array(
         'Session',
         'Auth' => array(
-            'loginRedirect' => array('controller' => 'posts', 'action' => 'index'),
-            'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home')
+            'loginRedirect' => array('controller' => 'users', 'action' => 'index'),
+            'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
+        'authError' => 'A visualização desta seção exige autenticação e nível de acesso compatível.',
         )
     );
 
     //Permite que os métodos index e view de qualquer classe sejam executados mesmo sem autenticação 
     function beforeFilter() {
-        $this->Auth->allow('index', 'view');
+        $this->Auth->allow('index', 'view', 'add');
     }
 }

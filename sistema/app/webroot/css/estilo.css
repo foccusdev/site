@@ -11,7 +11,7 @@ root {
 }
 
 
-* { padding: 0; margin: 0}
+* { padding: 0; margin: 0; font-size: 12px}
 
 /* Classes para elementos HTML */
 
@@ -22,6 +22,14 @@ a { color: inherit}
 a img { border: 0}
 
 ul li { list-style-type: none; }
+
+h1 { font-size: 20px; font-weight: bold}
+
+form { width: 50%; margin: auto}
+
+form label { font-weight: bold; display: block}
+
+form input { border: 1px solid #000; border-radius: 4px; height: 20px; background: #fff; width: 100%}
 
 /* Fim de Classes para elementos HTML */
 
@@ -44,14 +52,32 @@ ul li { list-style-type: none; }
 
 #container { width: 90%; margin: 1% auto;  }
 
-.menu-sistema {position: relative; top: 1px; z-index: 2000; width: 90% }
+.menu-sistema {position: relative; top: 2px; z-index: 2000; width: 90% }
 
 .menu-sistema ul { display: inline}
 
-.menu-sistema ul li { float: left; margin: 0% 0.5% 0% 0%; padding: 0.5%}
+.menu-sistema ul li { float: left; padding: 0.5%; border: 1px solid #ccc; border-radius: 4px 4px 0 0; border-bottom: 1px solid #000; background: #eee; color: #333 }
 
 .menu-sistema ul li a { text-decoration: none; }
 
-.menu-sistema .selecionado {border: 1px solid #000; border-radius: 4px 4px 0 0; border-bottom: 0; background: #e5e5e5}
+.menu-sistema .selecionado {border: 1px solid #000; border-radius: 4px 4px 0 0; border-bottom: 0px; background: #e5e5e5; font-weight: bold}
 
 #content { background: #e5e5e5; border: 1px solid #000; padding: 0.5%}
+
+#flashMessage { border: 1px solid #000; background: #0074a2; color: #fff; padding: 0.5%; text-align: center; margin: 12px auto; font-weight: bold;}
+
+.botao {display: block; border: 1px solid #000; border-radius: 4px; background: #ccc; padding: 0.5%; text-decoration: none; }
+.botao:hover { background: #bbb}
+
+.dado-form label { font-weight: bold}
+
+form .input { margin: 10px 0px 10px 0px}
+
+
+.table-usuarios { width: 90%; margin: 20px auto; border-spacing:0; border-collapse:collapse;}
+.table-usuarios tr th, .table-usuarios tr td { background: #ccc; text-align: center; padding: 0.5%; border: 1px solid #000}
+.table-usuarios tr td { background: #fff; }
+.table-usuarios tr.linha-escura td { background: #d5d5d5; }
+.coluna-acoes { width: 195px}
+
+

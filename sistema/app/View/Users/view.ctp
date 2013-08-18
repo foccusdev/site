@@ -2,12 +2,17 @@
 
 <div class="dado-form">
   <label>Nome:</label>
-  <span><?=$usuario['Usuario']['nome']?></span>
+  <span><?=$user['User']['nome']?></span>
 </div>
 
 <div class="dado-form">
-  <label>Email:</label>
-  <span><a href="mailto:<?=$usuario['Usuario']['email']?>"><?=$usuario['Usuario']['email']?></a></span>
+  <label>Email/Login:</label>
+  <span><a href="mailto:<?=$user['User']['username']?>"><?=$user['User']['username']?></a></span>
+</div>
+
+<div class="dado-form">
+      <label>    Tipo de usuário:</label>
+  <span><?=$user['User']['role']?></span>
 </div>
 
 <div>

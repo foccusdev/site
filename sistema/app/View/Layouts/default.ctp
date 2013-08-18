@@ -23,17 +23,25 @@
       <div class="menu-sistema float-left">
 
         <ul>
-          <li class="menu-item-home <?=($this->params['controller'] == 'users')? 'selecionado' : ''?>"><a href="/users/">Usuários</a></li>
-          <li class="menu-item-home <?=($this->params['controller'] == 'Matriculas')? 'selecionado' : ''?>"><a href="/Matriculas/">Matrículas</a></li>
-          <li class="menu-item-home <?=($this->params['controller'] == 'Atividades')? 'selecionado' : ''?>"><a href="/Atividades/">Atividades</a></li>
-          <li class="menu-item-home <?=($this->params['controller'] == 'Planos')? 'selecionado' : ''?>"><a href="/Planos/">Planos</a></li>
+          <li class="menu-item-home <?=($this->params['controller'] == 'users')? 'selecionado' : ''?>">
+            <?=$this->Html->link('Usuários', array('controller' => 'users', 'action' => 'index')); ?>
+          </li>
+          <li class="menu-item-home <?=($this->params['controller'] == 'Matriculas')? 'selecionado' : ''?>">
+            <?=$this->Html->link('Matrículas', array('controller' => 'Matriculas', 'action' => 'index')); ?>
+          </li>
+          <li class="menu-item-home <?=($this->params['controller'] == 'Atividades')? 'selecionado' : ''?>">
+            <?=$this->Html->link('Atividades', array('controller' => 'Atividades', 'action' => 'index')); ?>
+          </li>
+          <li class="menu-item-home <?=($this->params['controller'] == 'Planos')? 'selecionado' : ''?>">
+            <?=$this->Html->link('Planos', array('controller' => 'Planos', 'action' => 'index')); ?>
+          </li>
         </ul>
         <div class="clear"></div>
  
       
         
       </div>   
-     <span class="logout float-right"><a href="#"> X Sair </a></span>
+     <span class="logout float-right"><?=$this->Html->link('X Sair', array('controller' => 'users', 'action' => 'logout')); ?></span>
       <div class="clear"></div>
     </div>
     
