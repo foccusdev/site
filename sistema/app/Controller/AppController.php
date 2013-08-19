@@ -40,12 +40,12 @@ class AppController extends Controller {
         'Auth' => array(
             'loginRedirect' => array('controller' => 'users', 'action' => 'index'),
             'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
-        'authError' => 'A visualização desta seção exige autenticação e nível de acesso compatível.',
+        'authError' => 'A seção que você tentou acessar exige autenticação e nível de acesso compatível.',
         )
     );
 
     //Permite que os métodos index e view de qualquer classe sejam executados mesmo sem autenticação 
     function beforeFilter() {
-        $this->Auth->allow('index', 'view', 'add');
+       /* $this->Auth->allow('index', 'view', 'add');*/
     }
 }

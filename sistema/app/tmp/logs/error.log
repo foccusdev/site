@@ -699,3 +699,101 @@ Request URL: /foccus/sistema/Atividades
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-08-18 02:39:56 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/View/Atividade/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/View/Atividade/index.ctp',
+)
+Request URL: /foccus/sistema/Atividades
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AtividadesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-18 02:43:14 Error: [MissingActionException] Action AtividadesController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'AtividadesController',
+  'action' => 'add',
+)
+Request URL: /foccus/sistema/atividades/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AtividadesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-18 02:56:38 Error: [MissingActionException] Action AtividadesController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'AtividadesController',
+  'action' => 'view',
+)
+Request URL: /foccus/sistema/atividades/view/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AtividadesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-18 02:58:38 Error: Fatal Error (1): Call to a member function read() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/Controller/AtividadesController.php, line 60]
+2013-08-18 02:58:38 Error: [FatalErrorException] Call to a member function read() on a non-object
+Request URL: /foccus/sistema/atividades/view/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 60, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 60, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-18 03:03:35 Error: [MissingControllerException] Controller class MatriculasController could not be found.
+Exception Attributes: array (
+  'class' => 'MatriculasController',
+  'plugin' => NULL,
+)
+Request URL: /foccus/sistema/Matriculas
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-18 03:04:04 Error: [MissingControllerException] Controller class MatriculasController could not be found.
+Exception Attributes: array (
+  'class' => 'MatriculasController',
+  'plugin' => NULL,
+)
+Request URL: /foccus/sistema/Matriculas
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-19 01:14:30 Error: [MissingControllerException] Controller class PlanosController could not be found.
+Exception Attributes: array (
+  'class' => 'PlanosController',
+  'plugin' => NULL,
+)
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-19 01:14:35 Error: [MissingControllerException] Controller class PlanosController could not be found.
+Exception Attributes: array (
+  'class' => 'PlanosController',
+  'plugin' => NULL,
+)
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-19 01:14:36 Error: [MissingControllerException] Controller class MatriculasController could not be found.
+Exception Attributes: array (
+  'class' => 'MatriculasController',
+  'plugin' => NULL,
+)
+Request URL: /foccus/sistema/Matriculas
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-19 01:14:38 Error: [MissingControllerException] Controller class MatriculasController could not be found.
+Exception Attributes: array (
+  'class' => 'MatriculasController',
+  'plugin' => NULL,
+)
+Request URL: /foccus/sistema/Matriculas
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

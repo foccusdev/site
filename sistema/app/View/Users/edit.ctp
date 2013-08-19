@@ -7,6 +7,6 @@
   echo $this->Form->input('username', array('label' => 'Email / Login: '));
   echo $this->Form->input('password', array('label' => 'Senha: '));
   echo $this->Form->input('role', array('label' => 'Tipo de Usuário: ', 'options' => array('admin' => 'Administrador', 'recepcionista' => 'Recepcionista')));
-  echo $this->Form->end('Cadastrar');
+  echo $this->Form->end('Alterar');
   ?>
 </div>

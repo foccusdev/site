@@ -18,35 +18,37 @@
 
 <body>
   <div id="container">
-    
+
     <div id="header">
       <div class="menu-sistema float-left">
 
         <ul>
-          <li class="menu-item-home <?=($this->params['controller'] == 'users')? 'selecionado' : ''?>">
-            <?=$this->Html->link('Usuários', array('controller' => 'users', 'action' => 'index')); ?>
+          <li class="menu-item-home <?= ($this->params['controller'] == 'users') ? 'selecionado' : '' ?>">
+            <?= $this->Html->link('Usuários', array('controller' => 'users', 'action' => 'index')); ?>
           </li>
-          <li class="menu-item-home <?=($this->params['controller'] == 'Matriculas')? 'selecionado' : ''?>">
-            <?=$this->Html->link('Matrículas', array('controller' => 'Matriculas', 'action' => 'index')); ?>
+          <li class="menu-item-home <?= ($this->params['controller'] == 'Matriculas') ? 'selecionado' : '' ?>">
+            <?= $this->Html->link('Matrículas', array('controller' => 'Matriculas', 'action' => 'index')); ?>
           </li>
-          <li class="menu-item-home <?=($this->params['controller'] == 'Atividades')? 'selecionado' : ''?>">
-            <?=$this->Html->link('Atividades', array('controller' => 'Atividades', 'action' => 'index')); ?>
+          <li class="menu-item-home <?= ($this->params['controller'] == 'atividades') ? 'selecionado' : '' ?>">
+            <?= $this->Html->link('Atividades', array('controller' => 'atividades', 'action' => 'index')); ?>
           </li>
-          <li class="menu-item-home <?=($this->params['controller'] == 'Planos')? 'selecionado' : ''?>">
-            <?=$this->Html->link('Planos', array('controller' => 'Planos', 'action' => 'index')); ?>
+          <li class="menu-item-home <?= ($this->params['controller'] == 'Planos') ? 'selecionado' : '' ?>">
+            <?= $this->Html->link('Planos', array('controller' => 'Planos', 'action' => 'index')); ?>
           </li>
         </ul>
         <div class="clear"></div>
- 
-      
-        
+
+
+
       </div>   
-     <span class="logout float-right"><?=$this->Html->link('X Sair', array('controller' => 'users', 'action' => 'logout')); ?></span>
+      <? if ($this->Session->read('Auth.User')) { ?>
+        <span class="logout float-right"><?= $this->Html->link('X Sair', array('controller' => 'users', 'action' => 'logout')); ?></span>
+      <? } ?>
       <div class="clear"></div>
     </div>
-    
+
     <div class="borda-topo"></div>
-    
+
     <div id="content">
 
       <?php echo $this->Session->flash(); ?>
