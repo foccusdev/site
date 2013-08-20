@@ -15,7 +15,7 @@ class Plano extends AppModel{
     public $name = 'Plano';
   
     public $hasAndBelongsToMany = array(
-        'Atividade'=>
+        'AtividadesPlano'=>
             array(
                 'className' => 'Atividade',
                 'joinTable' => 'atividades_planos',

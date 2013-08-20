@@ -22,7 +22,7 @@ class PlanosController extends AppController{
   
  public function add() {
     $this->loadModel('Atividade'); //if it's not already loaded
-    $this->set('atividades', $this->Atividade->find('all'));
+    $this->set('atividades', $this->Atividade->find('all', array('fields' => array('Atividade.id', 'Atividade.nome'))));
    
     // Verifica se recebeu um POST
     if ($this->request->is('post')) {
@@ -34,7 +34,18 @@ class PlanosController extends AppController{
       // This will update Recipe with id 10
       $planoNovo = $this->Plano->save($planoDados);      
       
-      var_dump($planoNovo['Plano']['id']);
+      $planoNovoId = $planoNovo['Plano']['id'];
+ 
+       
+
+       foreach ($this->request->data['Atividade'] as $atividade){
+         var_dump($atividade);
+         $dados = array(
+             'Plano' => array('id' => $planoNovoId), 'Atividade' => array('id' => $atividade));
+        $this->Plano->save($dados);  
+         
+       }
+       
       
       // Se sim cria um registro para o que está sendo incluído
       /*
