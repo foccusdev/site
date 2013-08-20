@@ -1,40 +1,20 @@
 <h1>Cadastro de Plano</h1>
-<? echo '<pre>';
-//var_dump($atividades);
-echo '</pre>';
-//die();
-?>
-
 <div>
-<? 
-echo $this->Form->create('Plano');
-echo $this->Form->input('nome', array('label' => 'Nome do plano:'));
-//echo $this->Form->input('Atividade.nome', array('label' => 'Atividade:'));
-?>
-
-  <div class="input checkbox">
-
-    <label>Atividades Inclusas: </label>
-
-    <?/*foreach ($atividades as $atividade) { ?>
-      <input type="checkbox" value="<?= $atividade['Atividade']['id'] ?>" name="data[Atividade][id][]" /> <?=$atividade['Atividade']['nome']?> 
-      <? if (!empty($atividade['Atividade']['valor'])) echo ' = R$ '.$atividade['Atividade']['valor']; ?>
-      <br />
-    <? }*/ ?>
-      
-       <?php
- 
-        // output all the checkboxes at once
-          $checked = $form->value('Atividade.Atividade');
-        echo $form->label(__('Atividades',true));
-        foreach ($atividades as $id=>$label) {
-            echo $form->input("Atividade.checkbox.$id", array(
-                'label'=>$label,
-                'type'=>'checkbox',
-                'checked'=>(isset($checked[$id])?'checked':false),
-            ));
-        }?>    
-    
+  <?
+  echo $this->Form->create('Plano');
+  echo $this->Form->input('nome', array('label' => 'Nome do plano:'));
+  ?>
+  <div class="input checkbox">    
+    <?php
+    echo $this->Form->label('Atividades Inclusas: ');
+    foreach ($atividades as $id => $label) {
+      echo $this->Form->input("Atividade.checkbox.$id", array(
+          'label' => $label['Atividade']['nome'],
+          'value' => $label['Atividade']['id'],
+          'type' => 'checkbox'
+      ));
+    }
+    ?>    
   </div>
 
   <?

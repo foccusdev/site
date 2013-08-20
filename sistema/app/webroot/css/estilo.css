@@ -77,7 +77,11 @@ form input[type=checkbox] { width: auto; }
 
 form .input { margin: 10px 0px 10px 0px}
 
+
+
 form .checkbox { display: block }
+
+form .checkbox label { display: inline}
 
 .table-usuarios { width: 90%; margin: 20px auto; border-spacing:0; border-collapse:collapse;}
 .table-usuarios tr th, .table-usuarios tr td { background: #ccc; text-align: center; padding: 0.5%; border: 1px solid #000}
