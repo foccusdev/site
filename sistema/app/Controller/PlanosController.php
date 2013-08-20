@@ -50,6 +50,13 @@ class PlanosController extends AppController {
     $this->set('atividades', $this->Atividade->find('all', array('fields' => array('Atividade.id', 'Atividade.nome'))));
   }
   
+  public function view($id = null) {
+    // Passa o id para o model
+    $this->Plano->id = $id;
+    // Envia uma variável $atividade para a view com o conteúdo do registro
+    $this->set('plano', $this->Plano->read());
+  }    
+  
   public function delete($id = null) {
     
     // Verifica se a requisição foi por POST

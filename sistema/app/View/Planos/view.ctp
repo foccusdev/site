@@ -1,17 +1,34 @@
-<h1>Dados do Usuário</h1>
+<h1>Dados do Plano</h1>
+  <div class="dado-form">
+    <label>Nome do Plano:</label>
+    <span><?= $plano['Plano']['nome'] ?></span>
+  </div>
 
-<form>
+  <h2>Atividades Inclusas:</h2>
+
+  <?
+  $valorTotal = 0;
+  foreach ($plano['Atividade'] as $atividade) {
+    $valorTotal += $atividade['valor'];
+    ?>
+    <div class="dado-form">
+      <label><?= $atividade['nome'] ?>:</label>
+      <span>R$ <?= $atividade['valor'] ?></span>
+    </div>
+    <?
+  }
+  ?>
 
   <div class="dado-form">
-    <label>Nome:</label>
-    <span><?= $atividade['Atividade']['nome'] ?></span>
+    <label>Valor Total:</label>
+    <span> R$ <?= $valorTotal ?></span>
   </div>
 
   <div class="dado-form">
-    <label>Valor:</label>
-    <span><?= $atividade['Atividade']['valor'] ?></span>
+    <label>Valor Especial:</label>
+    <span> R$ <?= $plano['Plano']['valor_especial'] ?></span>
   </div>
-</form>
+
 <div>
   <a href="javascript:history.back()">Voltar</a>
 </div>
