@@ -1,2 +1,2 @@
-1376874883
-a:1:{s:4:"name";a:2:{s:32:"8d8fba26b64b87694fb5661d4154e20a";s:8:"`foccus`";s:32:"79c64be6cfa78573f2ca6d4e78e2a0c3";s:11:"`sys_users`";}}
+1376963741
+a:2:{s:4:"name";a:9:{s:32:"8d8fba26b64b87694fb5661d4154e20a";s:8:"`foccus`";s:32:"d403430597b89ee2649b5c571a97f6c1";s:16:"`sys_atividades`";s:32:"b1df6ddebe029cae9b4bb3947690a8e7";s:16:"`Atividade`.`id`";s:32:"7ced148b50ec5155ed8bd275c3675f1c";s:18:"`Atividade`.`nome`";s:32:"0336d23d34ceff4c772d4e2a5fd63f62";s:19:"`Atividade`.`valor`";s:32:"ef41169df302611b0c52df8388e11f3c";s:11:"`Atividade`";s:32:"0ee69762403c8941968e062040d863ee";s:12:"`sys_planos`";s:32:"6570e63ab8919e1b6e852dddcdadda5f";s:6:"`nome`";s:32:"0b41806cf242c2362808cae28161fcd5";s:16:"`valor_especial`";}s:6:"fields";a:1:{s:32:"607d0a1c2abc16bc3a2886aa89194c90";a:3:{i:0;s:16:"`Atividade`.`id`";i:1;s:18:"`Atividade`.`nome`";i:2;s:19:"`Atividade`.`valor`";}}}

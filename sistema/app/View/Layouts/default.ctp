@@ -14,8 +14,6 @@
 
 </head>
 
-
-
 <body>
   <div id="container">
 
@@ -32,13 +30,11 @@
           <li class="menu-item-home <?= ($this->params['controller'] == 'atividades') ? 'selecionado' : '' ?>">
             <?= $this->Html->link('Atividades', array('controller' => 'atividades', 'action' => 'index')); ?>
           </li>
-          <li class="menu-item-home <?= ($this->params['controller'] == 'Planos') ? 'selecionado' : '' ?>">
-            <?= $this->Html->link('Planos', array('controller' => 'Planos', 'action' => 'index')); ?>
+          <li class="menu-item-home <?= ($this->params['controller'] == 'planos') ? 'selecionado' : '' ?>">
+            <?= $this->Html->link('Planos', array('controller' => 'planos', 'action' => 'index')); ?>
           </li>
         </ul>
         <div class="clear"></div>
-
-
 
       </div>   
       <? if ($this->Session->read('Auth.User')) { ?>

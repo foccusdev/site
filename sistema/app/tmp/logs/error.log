@@ -797,3 +797,140 @@ Request URL: /foccus/sistema/Matriculas
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-08-20 00:46:13 Error: [ReflectionException] Class PlanosController does not have a constructor, so you cannot pass any constructor arguments
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Routing/Dispatcher.php(239): ReflectionClass->newInstance(Object(CakeRequest), Object(CakeResponse))
+#1 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Routing/Dispatcher.php(153): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 00:48:25 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/Controller/PlanosController.php, line 20]
+2013-08-20 00:48:25 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 20, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 20, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 00:49:28 Error: Fatal Error (1): Call to a member function schema() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Model/Model.php, line 3379]
+2013-08-20 00:49:28 Error: [FatalErrorException] Call to a member function schema() on a non-object
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 3379)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 00:50:34 Error: Fatal Error (1): Call to a member function schema() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Model/Model.php, line 3379]
+2013-08-20 00:50:34 Error: [FatalErrorException] Call to a member function schema() on a non-object
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 3379)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 00:53:29 Error: Fatal Error (1): Call to a member function schema() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Model/Model.php, line 3379]
+2013-08-20 00:53:29 Error: [FatalErrorException] Call to a member function schema() on a non-object
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 3379)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 01:05:07 Error: Fatal Error (1): Call to a member function schema() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Model/Model.php, line 3379]
+2013-08-20 01:05:07 Error: [FatalErrorException] Call to a member function schema() on a non-object
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 3379)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 01:05:25 Error: Fatal Error (1): Call to a member function schema() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Model/Model.php, line 3379]
+2013-08-20 01:05:25 Error: [FatalErrorException] Call to a member function schema() on a non-object
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 3379)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 01:05:26 Error: Fatal Error (1): Call to a member function schema() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Model/Model.php, line 3379]
+2013-08-20 01:05:26 Error: [FatalErrorException] Call to a member function schema() on a non-object
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 3379)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 01:05:27 Error: Fatal Error (1): Call to a member function schema() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Model/Model.php, line 3379]
+2013-08-20 01:05:27 Error: [FatalErrorException] Call to a member function schema() on a non-object
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 3379)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 01:05:27 Error: Fatal Error (1): Call to a member function schema() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Model/Model.php, line 3379]
+2013-08-20 01:05:27 Error: [FatalErrorException] Call to a member function schema() on a non-object
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 3379)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 01:05:27 Error: Fatal Error (1): Call to a member function schema() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Model/Model.php, line 3379]
+2013-08-20 01:05:27 Error: [FatalErrorException] Call to a member function schema() on a non-object
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 3379)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 01:05:27 Error: Fatal Error (1): Call to a member function schema() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Model/Model.php, line 3379]
+2013-08-20 01:05:27 Error: [FatalErrorException] Call to a member function schema() on a non-object
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 3379)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 01:05:27 Error: Fatal Error (1): Call to a member function schema() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Model/Model.php, line 3379]
+2013-08-20 01:05:27 Error: [FatalErrorException] Call to a member function schema() on a non-object
+Request URL: /foccus/sistema/Planos
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 3379)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 3379, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 01:31:57 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/app/Controller/PlanosController.php, line 25]
+2013-08-20 01:31:57 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /foccus/sistema/planos/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 25)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 25, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 25, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/foccus/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
