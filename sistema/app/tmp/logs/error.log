@@ -1129,3 +1129,12 @@ Stack Trace:
 #1 C:\mowes\www\foccus\sistema\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PlanosController), Object(CakeRequest), Object(CakeResponse))
 #2 C:\mowes\www\foccus\sistema\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2013-08-20 12:00:59 Error: [MissingControllerException] Controller class MatriculasController could not be found.
+Exception Attributes: array (
+  'class' => 'MatriculasController',
+  'plugin' => NULL,
+)
+Request URL: /foccus/sistema/Matriculas
+Stack Trace:
+#0 C:\mowes\www\foccus\sistema\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

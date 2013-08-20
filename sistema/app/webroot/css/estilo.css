@@ -83,8 +83,8 @@ form .checkbox label { display: inline}
 
 .table-usuarios { width: 90%; margin: 20px auto; border-spacing:0; border-collapse:collapse;}
 .table-usuarios tr th, .table-usuarios tr td { background: #ccc; text-align: center; padding: 0.5%; border: 1px solid #000}
-.table-usuarios tr td { background: #fff; }
+.table-usuarios tr td { background: #fff; word-wrap: break-word; word-break: break-all}
 .table-usuarios tr.linha-escura td { background: #d5d5d5; }
-.coluna-acoes { width: 205px}
+.coluna-acoes { min-width: 210px}
 
 
