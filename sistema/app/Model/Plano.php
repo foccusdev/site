@@ -15,16 +15,18 @@ class Plano extends AppModel{
     public $name = 'Plano';
   
     public $hasAndBelongsToMany = array(
-        'AtividadesPlano'=>
+        'Atividade'=>
             array(
                 'className' => 'Atividade',
                 'joinTable' => 'atividades_planos',
                 'foreignKey' => 'plano_id',
                 'associationForeignKey' => 'atividade_id',
-                'unique' => true,
+                'unique' => false,
                 'with' => 'AtividadesPlano'
                 )
           );
+    
+   
 }
 
 ?>
