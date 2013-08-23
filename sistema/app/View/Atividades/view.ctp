@@ -1,5 +1,5 @@
+<a href="javascript:history.back(-1)" class="seta-voltar float-left" title="Clique aqui para voltar para a listagem."></a> 
 <h1>Dados da Atividade</h1>
-
 <form>
 
   <div class="dado-form">
@@ -12,6 +12,3 @@
     <span><?= $atividade['Atividade']['valor'] ?></span>
   </div>
 </form>
-<div>
-  <a href="javascript:history.back()">Voltar</a>
-</div>

@@ -1,3 +1,4 @@
+<a href="javascript:history.back(-1)" class="seta-voltar float-left" title="Clique aqui para voltar para a listagem."></a> 
 <h1>Dados do Plano</h1>
   <div class="dado-form">
     <label>Nome do Plano:</label>

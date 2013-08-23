@@ -1,3 +1,4 @@
+<a href="javascript:history.back(-1)" class="seta-voltar float-left" title="Clique aqui para voltar para a listagem."></a> 
 <h1>Cadastro de usuário</h1>
 
 <div>
