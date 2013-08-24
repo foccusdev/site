@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Application level Controller
  *
@@ -32,20 +33,40 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-  
-  
-    /* Inclui o controle de sessão a todas as classes controller */
-    public $components = array(
-        'Session',
-        'Auth' => array(
-            'loginRedirect' => array('controller' => 'users', 'action' => 'index'),
-            'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
-        'authError' => 'A seção que você tentou acessar exige autenticação e nível de acesso compatível.',
-        )
-    );
+  /* Inclui o controle de sessão a todas as classes controller */
 
-    //Permite que os métodos index e view de qualquer classe sejam executados mesmo sem autenticação 
-    function beforeFilter() {
-       /* $this->Auth->allow('index', 'view', 'add');*/
+  public $components = array(
+      'Session',
+      'Auth' => array(
+          'loginRedirect' => array('controller' => 'matriculas', 'action' => 'index'),
+          'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
+          'authError' => 'A seção que você tentou acessar exige autenticação e nível de acesso compatível.',
+          'authorize' => array('Controller') // Adicionamos essa linha            
+      )
+  );
+
+  // Não permite que usuários que não são administradores entrem em áreas restritas
+  public function isAuthorized($user) {
+
+    // Se for administrador, pode acessar qualquer página do sistema
+    if (isset($user['role']) && $user['role'] === 'admin') {
+      return true;
+    } elseif (isset($user['role']) && $user['role'] === 'recepcionista') {
+      // Se for recepcionista, pode acessar apenas listagens e visualizações
+      if (in_array($this->action, array('index', 'view'))) {    
+        return true;
+      }else{
+        $this->Session->setFlash(
+        'Você não tem permissão para adicionar, editar ou excluir estes registros. <br/>Entre em contato com um dos administradores do sistema.',
+        'default',
+        array('class' => 'erro') 
+                );
+        return false;
+      }
     }
+
+    // Se for aluno (ou qq outro), não pode acessar nenhuma das páginas do sistem    
+    return false; // O resto não pode
+  }
+
 }

@@ -14,9 +14,10 @@ class UsersController extends AppController {
     $this->set('user', $this->User->read());
   }
 
+  // Permite que o usuário se deslogue
   public function beforeFilter() {
     parent::beforeFilter();
-    $this->Auth->allow('add'); // Letting users register themselves
+    $this->Auth->allow('logout'); 
   }
 
   public function login() {

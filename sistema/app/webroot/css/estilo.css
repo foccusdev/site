@@ -70,6 +70,8 @@ form input[type=checkbox] { width: auto; }
 
 #authMessage { border: 1px solid #000; background: #CC0000; color: #fff; padding: 0.5%; text-align: center; margin: 12px auto; font-weight: bold;}
 
+.erro { background: #CC0000 !important; }
+
 .botao {display: block; border: 1px solid #000; border-radius: 4px; background: #ccc; padding: 0.5%; text-decoration: none; }
 .botao:hover { background: #bbb}
 
