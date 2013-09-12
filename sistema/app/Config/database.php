@@ -69,7 +69,7 @@ class DATABASE_CONFIG {
 		'password' => '',
 		'database' => 'foccus',
 		'prefix' => 'sys_',
-		//'encoding' => 'utf8',
+		'encoding' => 'utf8',
 	);
 
 	public $test = array(

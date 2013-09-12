@@ -6,7 +6,18 @@ class UsersController extends AppController {
   public $name = 'Users';
 
   public function index() {
-    $this->set('users', $this->User->find('all'));
+    
+    // Traz apenas usuários administradores ou recepcionistas
+    
+    $this->set('users', $this->User->find('all', array(
+                  'conditions' => array(
+                    'OR' => array(
+                      'User.role' => array('admin','recepcionista'),  
+                  )
+                )
+              )
+            )
+    );
   }
 
   public function view($id = null) {
@@ -17,7 +28,7 @@ class UsersController extends AppController {
   // Permite que o usuário se deslogue
   public function beforeFilter() {
     parent::beforeFilter();
-    $this->Auth->allow('logout'); 
+    $this->Auth->allow('logout');
   }
 
   public function login() {
