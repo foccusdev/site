@@ -18,7 +18,7 @@
         the_post();
         ?>
         <div class="box mg-box-right">
-          <a href="<? the_content() ?>" target="_blank">
+          <a href="<?=get_the_excerpt() ?>" target="_blank">
             <?
             if (has_post_thumbnail())
               the_post_thumbnail();
