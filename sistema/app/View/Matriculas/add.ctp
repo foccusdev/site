@@ -26,7 +26,7 @@
     <?
     echo $this->Form->input('profissao');
     echo $this->Form->input('como_conheceu');
-    echo $this->Form->input('vencimento_mensalidade', array('value' => date('d'), 'max' => '31'));
+    echo $this->Form->input('proximo_vencimento', array('monthNames' => false, 'dateFormat' => 'DMY', 'selected' => date('Y-m-d', strtotime("+30 days"))));
     echo $this->Form->input('obs');
     echo $this->Form->end('Cadastrar');
     ?>

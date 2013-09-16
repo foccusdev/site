@@ -41,7 +41,7 @@ class MatriculasController extends AppController {
   public function index() {
 
     // Traz todas as atividades cadastradas
-    //$this->set('matriculas', $this->Matricula->find('all'));
+    $this->set('matriculas', $this->Matricula->find('all'));
   }
 
   public function add() {
