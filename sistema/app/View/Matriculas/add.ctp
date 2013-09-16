@@ -1,3 +1,4 @@
+<a href="javascript:history.back(-1)" class="seta-voltar float-left" title="Clique aqui para voltar para a listagem."></a> 
 <h1>Nova Matrícula</h1>
 
 <div>
@@ -20,9 +21,9 @@
   ?>
   <fieldset>
     <legend><strong>Sexo</strong></legend>
-    <input type="hidden" name="data[matricula][sexo]" id="matriculaSexo_" value=""/>
-    <input type="radio" name="data[matricula][sexo]" id="MatriculaSexoM" value="M" /> Masculino
-    <input type="radio" name="data[matricula][sexo]" id="MatriculaSexoF" value="F" /> Feminino 
+    <input type="hidden" name="data[Matricula][sexo]" id="matriculaSexo_" value=""/>
+    <input type="radio" name="data[Matricula][sexo]" id="MatriculaSexoM" value="M" /> Masculino
+    <input type="radio" name="data[Matricula][sexo]" id="MatriculaSexoF" value="F" /> Feminino 
   </fieldset>  
     <?
     echo $this->Form->input('profissao');

@@ -63,8 +63,8 @@ class MatriculasController extends AppController {
     // Traz os Planos
     $this->loadModel('Plano');
     $args = array('fields' => array('id', 'nome'));
-    $this->set('planos', $this->Plano->find('list', $args));    
-    
+    $this->set('planos', $this->Plano->find('list', $args));
+
     // Traz os estados 
     $this->loadModel('Estado');
     $args = array('fields' => array('id', 'Descricao'));
@@ -95,6 +95,7 @@ class MatriculasController extends AppController {
       throw new NotFoundException(__('Matricula inexistente'));
     }
     if ($this->request->is('post') || $this->request->is('put')) {
+    
       if ($this->Matricula->save($this->request->data)) {
         $this->Session->setFlash(__('Operação realizada com sucesso!'));
         $this->redirect(array('action' => 'index'));
@@ -102,7 +103,16 @@ class MatriculasController extends AppController {
         $this->Session->setFlash(__('Ocorreu um erro e a operação não foi realizada. Por favor, tente novamente.'));
       }
     } else {
-      $this->request->data = $this->Matricula->read(null, $id);
+      
+      $matricula = $this->Matricula->read(null, $id);
+      $this->set('matriculas', $matricula);
+      
+      $this->request->data = $matricula;
+
+      // Traz os Planos
+      $this->loadModel('Plano');
+      $args = array('fields' => array('id', 'nome'));
+      $this->set('planos', $this->Plano->find('list', $args));
 
       // Traz os estados 
       $this->loadModel('Estado');
@@ -131,12 +141,12 @@ class MatriculasController extends AppController {
     // Envia uma variável $matricula para a view com o conteúdo do registro
     $matricula = $this->Matricula->read();
     $this->set('matricula', $matricula);
-    
+
     // Traz o plano
     $this->loadModel('Plano');
     $args = array('fields' => array('nome'), 'conditions' => array('id' => $matricula['Matricula']['plano']));
-    $this->set('planos', $this->Plano->find('first', $args));    
-    
+    $this->set('planos', $this->Plano->find('first', $args));
+
     // Traz o estado
     $this->loadModel('Estado');
     $args = array('fields' => array('Descricao'), 'conditions' => array('id' => $matricula['Matricula']['estado']));
