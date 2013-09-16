@@ -31,7 +31,7 @@ form label { font-weight: bold; display: block}
 
 form input { border: 1px solid #000; border-radius: 4px; height: 20px; background: #fff; width: 100%}
 
-form input[type=checkbox] { width: auto; }
+form input[type=checkbox], form input[type=radio] { width: auto; }
 
 /* Fim de Classes para elementos HTML */
 
@@ -79,6 +79,8 @@ form input[type=checkbox] { width: auto; }
 
 form .input { margin: 10px 0px 10px 0px}
 
+form .select select { width: 100%}
+form .textarea textarea { width: 100%}
 form .checkbox { display: block }
 
 form .checkbox label { display: inline}
