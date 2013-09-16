@@ -23,7 +23,7 @@ class CidadesController extends AppController{
   	public function getByEstado() {
       
     // Pega o ID do estado (que será passado via post)  
-		$estado_id = $this->request->data['matricula']['estado'];
+		$estado_id = $this->request->data['Matricula']['estado'];
  
     // Traz as cidades do estado selecionado
 		$cidades = $this->Cidade->find('list', array(

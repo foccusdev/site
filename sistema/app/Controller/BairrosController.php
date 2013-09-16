@@ -22,7 +22,7 @@ class BairrosController extends AppController{
   	public function getByCidade() {
       
     // Pega o ID do estado (que será passado via post)  
-		$cidade_id = $this->request->data['matricula']['cidade'];
+		$cidade_id = $this->request->data['Matricula']['cidade'];
  
     // Traz as cidades do estado selecionado
 		$bairros = $this->Bairro->find('list', array(

@@ -4,6 +4,7 @@
 
   <?
   echo $this->Form->create('Matricula');
+  echo $this->Form->input('plano');
   echo $this->Form->input('nome');
   echo $this->Form->input('email');
   echo $this->Form->input('senha');
@@ -37,11 +38,11 @@
 
 <?
 // Código para inserir o AJAX no select de Estados e trazer as Cidades
-$this->Js->get('#matriculaEstado')->event('change', $this->Js->request(array(
+$this->Js->get('#MatriculaEstado')->event('change', $this->Js->request(array(
             'controller' => 'cidades',
             'action' => 'getByEstado'
                 ), array(
-            'update' => '#matriculaCidade',
+            'update' => '#MatriculaCidade',
             'async' => true,
             'method' => 'post',
             'dataExpression' => true,
@@ -53,11 +54,11 @@ $this->Js->get('#matriculaEstado')->event('change', $this->Js->request(array(
 );
 
 // Código para inserir o AJAX no select de Cidades e trazer os Bairros
-$this->Js->get('#matriculaCidade')->event('change', $this->Js->request(array(
+$this->Js->get('#MatriculaCidade')->event('change', $this->Js->request(array(
             'controller' => 'bairros',
             'action' => 'getByCidade'
                 ), array(
-            'update' => '#matriculaBairro',
+            'update' => '#MatriculaBairro',
             'async' => true,
             'method' => 'post',
             'dataExpression' => true,
