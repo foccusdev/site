@@ -40,8 +40,11 @@ class MatriculasController extends AppController {
 
   public function index() {
 
+    $direcao = ' ASC ';
+    $ordem = 'proximo_vencimento '.$direcao;
+    
     // Traz todas as atividades cadastradas
-    $this->set('matriculas', $this->Matricula->find('all'));
+    $this->set('matriculas', $this->Matricula->find('all', array('order' => $ordem)));
   }
 
   public function add() {
