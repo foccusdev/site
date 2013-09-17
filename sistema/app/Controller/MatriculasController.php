@@ -192,6 +192,23 @@ class MatriculasController extends AppController {
     $this->Session->setFlash(__('Ocorreu um erro! Tente novamente!'));
     $this->redirect(array('action' => 'index'));
   }
+  
+  public function pagar($id = null) {
+    
+    // Passa o id para o model
+    $this->Matricula->id = $id;
+    // Envia uma variável $matricula para a view com o conteúdo do registro
+    $matricula = $this->Matricula->read();    
+    $this->set('matriculas', $matricula);
+    
+    // Traz o plano
+    $this->loadModel('Plano');
+    $args = array('conditions' => array('id' => $matricula['Matricula']['plano']));
+    $this->set('planos', $this->Plano->find('first', $args));    
+    
+    
+  }
+  
 
 }
 
