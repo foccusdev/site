@@ -95,7 +95,7 @@ class MatriculasController extends AppController {
       throw new NotFoundException(__('Matricula inexistente'));
     }
     if ($this->request->is('post') || $this->request->is('put')) {
-    
+
       if ($this->Matricula->save($this->request->data)) {
         $this->Session->setFlash(__('Operação realizada com sucesso!'));
         $this->redirect(array('action' => 'index'));
@@ -103,10 +103,10 @@ class MatriculasController extends AppController {
         $this->Session->setFlash(__('Ocorreu um erro e a operação não foi realizada. Por favor, tente novamente.'));
       }
     } else {
-      
+
       $matricula = $this->Matricula->read(null, $id);
       $this->set('matriculas', $matricula);
-      
+
       $this->request->data = $matricula;
 
       // Traz os Planos
@@ -192,23 +192,47 @@ class MatriculasController extends AppController {
     $this->Session->setFlash(__('Ocorreu um erro! Tente novamente!'));
     $this->redirect(array('action' => 'index'));
   }
-  
+
   public function pagar($id = null) {
-    
+
+    // Pega o id do registro e associa ao model
+    $this->Matricula->id = $id;
+    // Verifica se o registro existe
+    if (!$this->Matricula->exists()) {
+      throw new NotFoundException(__('Matricula inexistente'));
+    }
+
+    // Verifica se o formulário foi submetido
+    if ($this->request->is('post')) {
+
+      // Altera a data do próximo vencimento na matrícula para o Campo Pagamento.data_proximo_vencimento
+      $this->Matricula->saveField('proximo_vencimento', $this->request->data['Pagamento']['data_proximo_vencimento']);
+
+      // Insere o registro de pagamento
+      $this->loadModel('Pagamento');
+      $this->Pagamento->save($this->request->data);
+
+      $this->Session->setFlash('Operação realizada com sucesso!');
+      $this->redirect(array('action' => 'index'));      
+      
+
+    }
+
+
     // Passa o id para o model
     $this->Matricula->id = $id;
     // Envia uma variável $matricula para a view com o conteúdo do registro
-    $matricula = $this->Matricula->read();    
+    $matricula = $this->Matricula->read();
     $this->set('matriculas', $matricula);
-    
+
     // Traz o plano
     $this->loadModel('Plano');
     $args = array('conditions' => array('id' => $matricula['Matricula']['plano']));
-    $this->set('planos', $this->Plano->find('first', $args));    
-    
-    
+    $this->set('planos', $this->Plano->find('first', $args));
+
+    // Traz o model de pagamento
+    $this->loadModel('Pagamento');
   }
-  
 
 }
 

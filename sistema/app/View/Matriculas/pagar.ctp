@@ -9,27 +9,25 @@
       'dateFormat' => 'DMY',
       'selected' => date('Y-m-d', strtotime($matriculas['Matricula']['proximo_vencimento'])),
       'label' => 'Pagar mensalidade referente a '
-    )
+          )
   );
-  echo $this->Form->input('Plano.valor_especial', array('label' => ' no valor de ', 'value' => $planos['Plano']['valor_especial']));
+  
+  echo $this->Form->input('Plano.valor_especial', array('label' => ' No valor de ', 'value' => $planos['Plano']['valor_especial']));
 
   echo '<div><strong>Plano: ' . $planos['Plano']['nome'] . '</strong></div>';
-  ?>
+  
+  echo $this->Form->input('Pagamento.data_proximo_vencimento', array(
+      'monthNames' => false,
+      'dateFormat' => 'DMY',
+      'selected' => date('Y-m-d', strtotime($matriculas['Matricula']['proximo_vencimento'] . "+30 days")),
+      'label' => 'Próximo vencimento: '
+          )
+  );
 
-  <div class="input date"><label for="MatriculaProximoVencimentoDay"></label>
-
-    <?
-    echo $this->Form->input('proximo_vencimento', array(
-        'monthNames' => false,
-        'dateFormat' => 'DMY',
-        'selected' => date('Y-m-d', strtotime($matriculas['Matricula']['proximo_vencimento']."+30 days")),
-        'label' => 'Próximo vencimento: '
-      )
-    );
-    ?>
-
-  </div>
-  <?
+  echo $this->Form->hidden('Pagamento.data_referencia', array('value' => $matriculas['Matricula']['proximo_vencimento']));
+  
+  echo $this->Form->hidden('Pagamento.matricula_id', array('value' => $matriculas['Matricula']['id']));
+  
   echo $this->Form->end('Efetuar Pagamento');
   ?>
 </div>

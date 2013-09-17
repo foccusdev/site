@@ -38,7 +38,7 @@
       <td class="coluna-acoes">
         <?= $this->Html->link('Detalhes', array('controller' => 'matriculas', 'action' => 'view', $matricula['Matricula']['id'])); ?> |
         <?= $this->Html->link('Editar Dados', array('controller' => 'matriculas', 'action' => 'edit', $matricula['Matricula']['id'])); ?> |
-        <?= $this->Form->postLink('Pagar Mensalidade', array('action' => 'pagar', $matricula['Matricula']['id'])) ?> |
+        <?= $this->Html->link('Pagar Mensalidade', array('controller' => 'matriculas', 'action' => 'pagar', $matricula['Matricula']['id'])); ?> |
         <?= $this->Html->link('Horário', array('controller' => 'horario', 'action' => 'index', $matricula['Matricula']['id'])); ?> |
         <?= $this->Form->postLink('Excluir', array('action' => 'delete', $matricula['Matricula']['id']), array('confirm' => 'Tem certeza que deseja excluir o registro?')) ?>       
       </td>
