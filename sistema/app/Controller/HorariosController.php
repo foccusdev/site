@@ -124,7 +124,24 @@ class HorariosController extends AppController {
       throw new NotFoundException(__('Horario inexistente'));
     } else {
       if ($this->request->is('post') || $this->request->is('put')) {
+        
+        // Verificar se o horário deve ser alterado somente para o próximo treino
+        if ($this->request->data['Horario']['alterado']==true){
+          $mensagemAlterado = ' somente para o próximo treino.';
+          
+          // Traz o horário atual do treino a ser alterado e salva como hora_anterior e dia_semana_anterior
+          
+        }else{
+          $mensagemAlterado = ' permanentemente.';
+          
+        }
+        
         if ($this->Horario->save($this->request->data)) {
+          
+          // Envia email para os funcionários
+          
+          // Envia email para o aluno
+          
           $this->Session->setFlash(__('Operação realizada com sucesso!'));
           $this->redirect(array('action' => 'lista', $this->request->data['Horario']['matricula_id']));
         } else {

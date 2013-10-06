@@ -52,6 +52,8 @@ form input[type=checkbox], form input[type=radio] { width: auto; }
 
 .azul {color: #2B91B3 }
 
+.text-align-right { text-align: right}
+
 /* Classes específicas */
 
 #container { width: 90%; margin: 1% auto;  }

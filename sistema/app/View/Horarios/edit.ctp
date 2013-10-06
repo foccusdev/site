@@ -26,6 +26,11 @@
       'type' => 'time'
   ));
 
+  echo $this->Form->input('alterado', array(
+      'label' => 'Alterar apenas para o próximo treino'
+  ));
+
+ 
   echo $this->Form->hidden('matricula_id', array('value' => $matriculaId));
 
   ?><div id="aviso"></div><?
@@ -58,7 +63,6 @@ $this->Js->get('#HorarioDiaSemana, #HorarioHoraHour, #HorarioHoraMin')->event(
 );
 
 // Ao submeter o formulário, valida se o horário está disponível 
-//$this->Js->get('#HorarioAddForm')->event('submit', 
 $this->Html->scriptBlock('
   
   $("#HorarioEditForm").submit(function(){

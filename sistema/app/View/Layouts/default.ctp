@@ -53,6 +53,7 @@
         <?php echo $this->fetch('content'); ?>
       </div>
       <div id="footer">
+        <p class="text-align-right">Desenvolvido por <a href="mailto:joaogabrielv@gmail.com">João Gabriel</a></p>
       </div>
     </div>
     <?php echo $this->element('sql_dump'); ?>
