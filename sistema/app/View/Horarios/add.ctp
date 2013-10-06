@@ -1,7 +1,6 @@
-<a href="javascript:history.back(-1)" class="seta-voltar float-left" title="Clique aqui para voltar para a listagem."></a> 
+<?/*<a href="javascript:history.back(-1)" class="seta-voltar float-left" title="Clique aqui para voltar para a listagem."></a> */?>
+<?= $this->Html->link('', array('controller' => 'horarios', 'action' => 'lista', $matriculaId), array('class' => 'seta-voltar float-left', 'title' => 'Clique aqui para voltar para a listagem.')); ?>
 <h1>Cadastro de Horario</h1>
-
-<span id="flashMessage" class="message"></span>
 
 <div>
   <?
@@ -33,10 +32,14 @@
 
   echo $this->Form->hidden('matricula_id', array('value' => $matriculaId));
 
+  ?><div id="aviso"></div><?
+  
   echo $this->Form->end('Cadastrar');
   ?>
 
 </div>
+
+
 
 <?
 // Código para inserir o AJAX no select de Estados e trazer as Cidades
@@ -57,4 +60,24 @@ $this->Js->get('#HorarioDiaSemana, #HorarioHoraHour, #HorarioHoraMin')->event(
             ))
         ))
 );
+
+// Ao submeter o formulário, valida se o horário está disponível 
+//$this->Js->get('#HorarioAddForm')->event('submit', 
+$this->Html->scriptBlock('
+  
+  $("#HorarioAddForm").submit(function(){
+  
+    if ($("#horarioValido").val()=="false"){
+      alert("O Horário selecionado não está disponível. Por favor escolha outro.");
+      return false;
+    }
+
+    
+  });
+  
+  ', array('inline' => false));
+
 ?>
+
+
+  

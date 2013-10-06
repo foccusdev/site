@@ -12,6 +12,8 @@
  */
 class HorariosController extends AppController {
 
+ public $helpers = array( 'Html','Form', 'Js' => array('Jquery'));
+  
   public function lista($matriculaId = null) {
 
     // Passa o valor da Matricula ID para a View
@@ -30,14 +32,16 @@ class HorariosController extends AppController {
         'hora' => $this->request->data['Horario']['hora']['hour'].':'.$this->request->data['Horario']['hora']['min'].':00'
             )
         );
-    if (count($this->Horario->find('all', $args))<1)
+    if (count($this->Horario->find('all', $args))<1){
       $resultado = 'true';
-    else{
+      $mensagem = '';
+    }else{
       $resultado = 'false';
-      echo 'Este horário não está disponível';
+      $mensagem = 'Este horario não está disponível. Por favor, escolha outro.';
     }   
         
     $this->set('horarioValido', $resultado);
+    $this->set('mensagem', $mensagem);
     
     $this->layout = 'ajax';
     
