@@ -4,7 +4,7 @@
 <div>
   <?
   echo $this->Form->create();
-  echo $this->Form->input('proximo_vencimento', array(
+  echo $this->Form->input('Matricula.proximo_vencimento', array(
       'monthNames' => false,
       'dateFormat' => 'DMY',
       'selected' => date('Y-m-d', strtotime($matriculas['Matricula']['proximo_vencimento'])),
@@ -12,7 +12,7 @@
           )
   );
   
-  echo $this->Form->input('Plano.valor_especial', array('label' => ' No valor de ', 'value' => $planos['Plano']['valor_especial']));
+  echo $this->Form->input('valor', array('label' => ' No valor de ', 'value' => $planos['Plano']['valor_especial']));
 
   echo '<div><strong>Plano: ' . $planos['Plano']['nome'] . '</strong></div>';
   
