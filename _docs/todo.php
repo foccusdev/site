@@ -1,10 +1,9 @@
 Fazer o cálculo automático do valor_especial na criação e edição dos planos
 
-Criar aba para visualização dos pagamentos
-
 Criar tela para horário de cada aluno:
-Lista de horários (com botão editar e excluir)
 Botão "Adicionar treino" (escolha atividade, dia da semana, hora e minuto)
+
+Verificar horários já ocupados e não exibir no select
 
 sys_horario
 matricula_id

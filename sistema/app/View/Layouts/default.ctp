@@ -25,7 +25,7 @@
           <li class="menu-item-home <?= ($this->params['controller'] == 'users') ? 'selecionado' : '' ?>">
 <?= $this->Html->link('Usuários', array('controller' => 'users', 'action' => 'index')); ?>
           </li>
-          <li class="menu-item-home <?= ($this->params['controller'] == 'matriculas') ? 'selecionado' : '' ?>">
+          <li class="menu-item-home <?= ($this->params['controller'] == 'matriculas' || $this->params['controller'] == 'pagamentos' || $this->params['controller'] == 'horarios') ? 'selecionado' : '' ?>">
 <?= $this->Html->link('Matrículas', array('controller' => 'matriculas', 'action' => 'index')); ?>
           </li>
           <li class="menu-item-home <?= ($this->params['controller'] == 'atividades') ? 'selecionado' : '' ?>">
