@@ -96,4 +96,4 @@ form .checkbox label { display: inline}
 
 .seta-voltar { border-right: 18px solid #666; border-bottom: 10px solid transparent; border-top: 10px solid transparent; border-left: 0; display: block; width: 0px; margin: 3px}
 
-
+#aviso { color: #d00; font-weight: bold; text-align: center; margin-bottom: 10px;}

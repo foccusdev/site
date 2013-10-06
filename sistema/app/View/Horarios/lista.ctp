@@ -1,10 +1,13 @@
-<a href="javascript:history.back(-1)" class="seta-voltar float-left" title="Clique aqui para voltar para a listagem."></a> 
-<h1>Horarios da Academia</h1>
-<?= $this->Html->link('Adicionar Horário', array('controller' => 'horarios', 'action' => 'add', $matriculaId), array('class' => 'botao float-right')); ?>
+<?/*<a href="javascript:history.back(-1)" class="seta-voltar float-left" title="Clique aqui para voltar para a listagem."></a> */?>
+<?= $this->Html->link('', array('controller' => 'matriculas', 'action' => 'index'), array('class' => 'seta-voltar float-left', 'title' => 'Clique aqui para voltar para a listagem.')); ?>
+
+<h1>Horários do Aluno</h1>
+<?= $this->Html->link('Adicionar Horário', array('controller' => 'horarios', 'action' => 'add', $aluno['Matricula']['id']), array('class' => 'botao float-right')); ?>
 <div class="clear"></div>
 
-<span><p><?= count($horarios) ?> registros encontrados</p></span>
+<h2>Pagamentos referentes ao aluno <?= $aluno['Matricula']['nome'] ?></h2>
 
+<span><p><?= count($horarios) ?> registros encontrados</p></span>
 <?
 if (count($horarios) < 1) {
   ?><span>O horário deste aluno ainda não foi definido</span><?
@@ -28,8 +31,8 @@ if (count($horarios) < 1) {
         <td><?= $diaSemana[$horario['Horario']['dia_semana']]; ?></td>
         <td><?= $horario['Horario']['hora']; ?></td>
         <td class="coluna-acoes">
-          <?= $this->Html->link('Alterar', array('controller' => 'horarios', 'action' => 'edit', $horario['Horario']['id'])); ?> |
-    <?php echo $this->Form->postLink('Excluir', array('action' => 'delete', $horario['Horario']['id']), array('confirm' => 'Tem certeza que deseja excluir o registro?')) ?>
+          <?= $this->Html->link('Alterar', array('controller' => 'horarios', 'action' => 'edit', $horario['Horario']['id'], $aluno['Matricula']['id'])); ?> |
+    <?php echo $this->Form->postLink('Excluir', array('action' => 'delete', $horario['Horario']['id'], $aluno['Matricula']['id']), array('confirm' => 'Tem certeza que deseja excluir o registro?')) ?>
         </td>
 
       </tr>

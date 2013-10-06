@@ -1,15 +1,5 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of MatriculasController
- *
- * @author joao
- */
 class MatriculasController extends AppController {
 
   public $helpers = array('Html', 'Form', 'Js');

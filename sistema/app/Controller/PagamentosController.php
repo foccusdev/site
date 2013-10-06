@@ -31,7 +31,8 @@ class PagamentosController extends AppController {
 
     // Pega o id do registro e associa ao model
     $this->loadModel('Matricula');
-    $this->set('matriculas', $this->Matricula->find('first', array('conditions' => array('id' => $id))));
+    $aluno = $this->Matricula->find('first', array('conditions' => array('id' => $id)));
+    $this->set('matriculas', $aluno);
     
     $this->Matricula->id = $id;
     // Verifica se o registro existe
@@ -49,7 +50,7 @@ class PagamentosController extends AppController {
       $this->Pagamento->save($this->request->data);
 
       $this->Session->setFlash('Operação realizada com sucesso!');
-      $this->redirect(array('action' => 'listar'));
+      $this->redirect(array('action' => 'listar', $aluno['Matricula']['id']));
     }
 
     // Passa o id para o model
