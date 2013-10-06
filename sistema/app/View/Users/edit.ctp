@@ -6,7 +6,6 @@
   echo $this->Form->create('User');
   echo $this->Form->input('nome', array('label' => 'Nome do Usuário: '));
   echo $this->Form->input('username', array('label' => 'Email / Login: '));
-  echo $this->Form->input('password', array('label' => 'Senha: '));
   echo $this->Form->input('role', array('label' => 'Tipo de Usuário: ', 'options' => array('admin' => 'Administrador', 'recepcionista' => 'Recepcionista')));
   ?>
   <div class="dado-form">

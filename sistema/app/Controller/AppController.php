@@ -53,7 +53,7 @@ class AppController extends Controller {
       return true;
     } elseif (isset($user['role']) && $user['role'] === 'recepcionista') {
       // Se for recepcionista, pode acessar apenas listagens e visualizações
-      if (in_array($this->action, array('index', 'view'))) {    
+      if (in_array($this->action, array('index', 'view', 'lista', 'listar'))) {    
         return true;
       }else{
         $this->Session->setFlash(
@@ -65,7 +65,7 @@ class AppController extends Controller {
       }
     }
 
-    // Se for aluno (ou qq outro), não pode acessar nenhuma das páginas do sistem    
+    // Se for aluno (ou qq outro), não pode acessar nenhuma das páginas do sistema    
     return false; // O resto não pode
   }
 

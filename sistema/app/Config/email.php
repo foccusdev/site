@@ -36,7 +36,7 @@
  *
  */
 class EmailConfig {
-
+/*
 	public $default = array(
 		'transport' => 'Mail',
 		'from' => 'you@localhost',
@@ -71,7 +71,7 @@ class EmailConfig {
 		'timeout' => 30,
 		'username' => 'nao_responda@site1367448928.provisorio.ws',
 		'password' => 'f0ccu5M@a1l',
-		'client' => null,
+		//'client' => null,
 		'log' => false,
 		'charset' => 'utf-8',
 		'headerCharset' => 'utf-8',

@@ -72,10 +72,11 @@ if (isset($_POST) && !empty($_POST)) {
   }
 
   
-//  $phpMailer->AddAddress('joaogabrielv@gmail.com');
+// $phpMailer->AddAddress('joaogabrielv@gmail.com');
 
   if (!$phpMailer->Send()) {
-    //$phpMailer->ErrorInfo;
+    echo $phpMailer->ErrorInfo;
+    die();
     die(header('Location: ' . get_bloginfo('url') . '/contato/?msg=2'));
   }else
     die(header('Location: ' . get_bloginfo('url') . '/contato/?msg=1'));
