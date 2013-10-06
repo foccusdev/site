@@ -15,7 +15,7 @@ root {
 
 /* Classes para elementos HTML */
 
-body { font-family: verdana; color: #000}
+body { font-family: verdana; color: #000; background: url('../img/bg_topo.png');}
 
 a { color: inherit}
 
@@ -23,7 +23,7 @@ a img { border: 0}
 
 ul li { list-style-type: none; }
 
-h1 { font-size: 20px; font-weight: bold}
+h1 { font-size: 20px; font-weight: bold; color: #2B91B3}
 
 form { width: 50%; margin: auto}
 
@@ -49,6 +49,8 @@ form input[type=checkbox], form input[type=radio] { width: auto; }
 .no-mg-right { margin-right: 0px}
 
 .no-mg { margin: 0}
+
+.azul {color: #2B91B3 }
 
 /* Classes específicas */
 
@@ -89,7 +91,7 @@ form .checkbox label { display: inline}
 .bg-vermelho td { background: #ff0000  !important}
 
 .table-usuarios { width: 90%; margin: 20px auto; border-spacing:0; border-collapse:collapse;}
-.table-usuarios tr th, .table-usuarios tr td { background: #ccc; text-align: center; padding: 0.5%; border: 1px solid #000}
+.table-usuarios tr th, .table-usuarios tr td { background: #2B91B3; text-align: center; padding: 0.5%; border: 1px solid #000; color:#333;}
 .table-usuarios tr td { background: #fff; word-wrap: break-word; word-break: break-all}
 .table-usuarios tr.linha-escura td { background: #d5d5d5; }
 .coluna-acoes { min-width: 210px}
@@ -97,3 +99,5 @@ form .checkbox label { display: inline}
 .seta-voltar { border-right: 18px solid #666; border-bottom: 10px solid transparent; border-top: 10px solid transparent; border-left: 0; display: block; width: 0px; margin: 3px}
 
 #aviso { color: #d00; font-weight: bold; text-align: center; margin-bottom: 10px;}
+
+.detalhes { margin: 10px 0px 0px 10px}

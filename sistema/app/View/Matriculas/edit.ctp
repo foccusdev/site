@@ -1,11 +1,9 @@
-<a href="javascript:history.back(-1)" class="seta-voltar float-left" title="Clique aqui para voltar para a listagem."></a> 
+<?= $this->Html->link('', array('controller' => 'matriculas', 'action' => 'index'), array('class' => 'seta-voltar float-left', 'title' => 'Clique aqui para voltar para a listagem.')); ?>
 <h1>Editar Matrícula</h1>
 
 <div>
 
   <?
-  var_dump($matriculas);
-  
   echo $this->Form->create('Matricula');
   echo $this->Form->input('plano');
   echo $this->Form->input('nome');
@@ -24,16 +22,16 @@
   <fieldset>
     <legend><strong>Sexo</strong></legend>
     <input type="hidden" name="data[Matricula][sexo]" id="matriculaSexo_" value="" />
-    <input type="radio" name="data[Matricula][sexo]" id="MatriculaSexoM" value="M" <?=$matriculas['Matricula']['sexo']=='M'?' checked="checked" ':'' ?> /> Masculino
-    <input type="radio" name="data[Matricula][sexo]" id="MatriculaSexoF" value="F" <?=$matriculas['Matricula']['sexo']=='F'?' checked="checked" ':'' ?> /> Feminino 
+    <input type="radio" name="data[Matricula][sexo]" id="MatriculaSexoM" value="M" <?= $matriculas['Matricula']['sexo'] == 'M' ? ' checked="checked" ' : '' ?> /> Masculino
+    <input type="radio" name="data[Matricula][sexo]" id="MatriculaSexoF" value="F" <?= $matriculas['Matricula']['sexo'] == 'F' ? ' checked="checked" ' : '' ?> /> Feminino 
   </fieldset>  
-    <?
-    echo $this->Form->input('profissao');
-    echo $this->Form->input('como_conheceu');
-    echo $this->Form->input('proximo_vencimento', array('monthNames' => false, 'dateFormat' => 'DMY', 'selected' => date('Y-m-d', strtotime("+30 days"))));
-    echo $this->Form->input('obs');
-    echo $this->Form->end('Cadastrar');
-    ?>
+  <?
+  echo $this->Form->input('profissao');
+  echo $this->Form->input('como_conheceu');
+  echo $this->Form->input('proximo_vencimento', array('monthNames' => false, 'dateFormat' => 'DMY', 'selected' => date('Y-m-d', strtotime("+30 days"))));
+  echo $this->Form->input('obs');
+  echo $this->Form->end('Cadastrar');
+  ?>
 
 
 </div>

@@ -56,6 +56,7 @@ class UsersController extends AppController {
   }
 
   public function edit($id = null) {
+    $this->set('usuarioId', $id);
     $this->User->id = $id;
     if (!$this->User->exists()) {
       throw new NotFoundException(__('Usuário inválido'));
@@ -88,6 +89,32 @@ class UsersController extends AppController {
     $this->Session->setFlash(__('O usuário não foi deletado!'));
     $this->redirect(array('action' => 'index'));
   }
+  
+  
+  public function alterarSenha($id){
+    
+    $this->set('usuarioId', $id);
+    $this->User->id = $id;
+    if (!$this->User->exists()) {
+      throw new NotFoundException(__('Usuário inválido'));
+    }
+    if ($this->request->is('post') || $this->request->is('put')) {
+      
+      // Salva a nova senha
+      if ($this->User->save($this->request->data)) {
+        $this->Session->setFlash(__('Operação realizada com sucesso!'));
+        $this->redirect(array('action' => 'index'));
+      } else {
+        $this->Session->setFlash(__('Ocorreu um erro. Por favor, tente novamente.'));
+      }
+    } else {
+
+    }    
+    
+    
+  }
+  
+  
 
 }
 

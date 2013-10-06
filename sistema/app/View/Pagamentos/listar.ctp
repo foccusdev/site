@@ -1,4 +1,3 @@
-<?/*<a href="javascript:history.back(-1)" class="seta-voltar float-left" title="Clique aqui para voltar para a listagem."></a> */?>
 <?= $this->Html->link('', array('controller' => 'matriculas', 'action' => 'index'), array('class' => 'seta-voltar float-left', 'title' => 'Clique aqui para voltar para a listagem.')); ?>
 <h1>Pagamentos do Aluno</h1>
 <?= $this->Html->link('Efetuar Pagamento', array('controller' => 'pagamentos', 'action' => 'pagar', $matriculaId), array('class' => 'botao float-right')); ?>

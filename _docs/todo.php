@@ -1,9 +1,12 @@
 Fazer o cálculo automático do valor_especial na criação e edição dos planos
 
-Criar tela para horário de cada aluno:
-Botão "Adicionar treino" (escolha atividade, dia da semana, hora e minuto)
+Edição de horário (exibir opções no sistema: próxima aula, permanente)
 
-Verificar horários já ocupados e não exibir no select
+Integrar Horário com o site
+
+ENviar emails de mudança de horário, pagamentos e "Esqueci a senha"
+
+Estilizar páginas de Detalhamento
 
 sys_horario
 matricula_id
@@ -18,6 +21,7 @@ Criar script para avaliar se algum horário alterado já passou, se sim, apaga o
 e hora_anterior, dia_semana_anterior e coloca o valor de 'alterado' para "0"
 
 
+BONUS:
 Criar rotina para enviar relatórios de pagamentos semanais e mensais
 
 
