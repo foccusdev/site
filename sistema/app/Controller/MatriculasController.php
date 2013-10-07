@@ -28,13 +28,19 @@ class MatriculasController extends AppController {
     return false;
   }
 
-  public function index() {
+  public function index($ordem = null, $direcao = null) {
 
-    $direcao = ' ASC ';
-    $ordem = 'proximo_vencimento ' . $direcao;
+    if (is_null($direcao))
+      $direcao = ' asc ';
+    if (is_null($ordem))
+      $ordem = 'proximo_vencimento ';
+
+    // Passa a ordem e direção para a view
+    $this->set('ordem', $ordem);
+    $this->set('direcao', $direcao);
 
     // Traz todas as matriculas cadastradas
-    $this->set('matriculas', $this->Matricula->find('all', array('order' => $ordem)));
+    $this->set('matriculas', $this->Matricula->find('all', array('order' => $ordem . ' ' . $direcao)));
   }
 
   public function add() {
@@ -183,7 +189,6 @@ class MatriculasController extends AppController {
     $this->redirect(array('action' => 'index'));
   }
 
-  
 }
 
 ?>

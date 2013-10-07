@@ -1,7 +1,4 @@
 
-
-Edição de horário (exibir opções no sistema: próxima aula, permanente)
-
 Integrar Horário com o site
 
 ENviar emails de mudança de horário, pagamentos e "Esqueci a senha".
@@ -25,3 +22,7 @@ BONUS:
 Criar rotina para enviar relatórios de pagamentos semanais e mensais
 
 
+Melhorias não previstas no escopo mas que considerei válidas:
+
+Uma tela para visualização de todas as mensalidades pagas por aluno.
+Uma tela para visualização de todas os horários de um aluno.

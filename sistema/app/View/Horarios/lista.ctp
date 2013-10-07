@@ -5,7 +5,7 @@
 <?= $this->Html->link('Adicionar Horário', array('controller' => 'horarios', 'action' => 'add', $aluno['Matricula']['id']), array('class' => 'botao float-right')); ?>
 <div class="clear"></div>
 
-<h2>Pagamentos referentes ao aluno <?= $aluno['Matricula']['nome'] ?></h2>
+<h2>Horário referente ao aluno <?= $aluno['Matricula']['nome'] ?></h2>
 
 <span><p><?= count($horarios) ?> registros encontrados</p></span>
 <?
@@ -26,8 +26,9 @@ if (count($horarios) < 1) {
     $diaSemana = array('Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado');
     $zebrado = false;
     foreach ($horarios as $horario) {
+      $estilo = ($horario['Horario']['alterado']==TRUE)?' bg-vermelho ':'';
       ?>
-      <tr <?= $zebrado ? 'class="linha-escura"' : '' ?>>
+      <tr class="<?= $zebrado ? 'linha-escura' : '' ?> <?=$estilo?>">
         <td><?= $diaSemana[$horario['Horario']['dia_semana']]; ?></td>
         <td><?= $horario['Horario']['hora']; ?></td>
         <td class="coluna-acoes">
@@ -42,6 +43,7 @@ if (count($horarios) < 1) {
     ?>
 
   </table>
+  * Os horários alterados para o próximo treino aparecem marcados em vermelho.
   <?
 }
 ?>

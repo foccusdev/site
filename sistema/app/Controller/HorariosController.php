@@ -68,9 +68,6 @@ class HorariosController extends AppController {
         $this->loadModel('Users');
         $usuarios = $this->Users->find('all');
 
-        var_dump($usuarios);
-        //die();
-
         $emails = array();
         foreach ($usuarios as $usuario) {
           $emails[] = $usuario['Users']['username'];
@@ -78,7 +75,7 @@ class HorariosController extends AppController {
 
         // COmentar a linha abaixo depois dos testes
         $emails = array('joaogabrielv@gmail.com', 'jgnv_msn@hotmail.com', 'foccusdev@gmail.com');
-        
+
         // Traz o email do aluno
         $this->loadModel('Matricula');
         $aluno = $this->Matricula->find('first', array('conditions' => array('id' => $matriculaId)));
@@ -86,25 +83,30 @@ class HorariosController extends AppController {
         $diaSemana = array('Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado');
         $novoHorario = $diaSemana[$this->request->data['Horario']['dia_semana']] . ' às ' . $this->request->data['Horario']['hora']['hour'] . ':' . $this->request->data['Horario']['hora']['min'];
 
-       
         // Envia um email para os funcionários da academia
         $Email = new CakeEmail('smtp');
+        $mensagem = '
+                  <p>Foi incluído um treino para o ' . $aluno['Matricula']['nome'] . ':  ' . $novoHorario . ' </p>
+                  <p><strong>Telefone:</strong>'.$aluno['Matricula']['telefone'].'</p>
+                  <p><strong>Celular:</strong>'.$aluno['Matricula']['celular'].'</p>
+                  <p><strong>Email:</strong>'.$aluno['Matricula']['email'].'</p>  
+                  ';
         $Email->to($emails)
-                ->subject('Horário adicionado ao aluno '. $aluno['Matricula']['nome'])
+                ->subject('Horário adicionado ao aluno ' . $aluno['Matricula']['nome'])
                 ->emailFormat('html')
-                ->send('<p>O Horário do aluno ' . $aluno['Matricula']['nome'] . ' foi modificado para  ' . $novoHorario . ' </p>');
+                ->send($mensagem);
 
         // Envia um email para o aluno
         $mensagem = '
-          <p>Olá, '.$aluno['Matricula']['nome'].'</p>
-          <p>Seu horário foi modificado para  ' . $novoHorario . ' </p>
-          <p>Caso tenha alguma dúvida sobre esta alteração, entre em <a href="www.foccustraining.com.br/contato/">contato</a>.</p>  
+          <p>Olá, ' . $aluno['Matricula']['nome'] . '</p>
+          <p>Foi incluído um horário de treino para você: ' . $novoHorario . ' </p>
+          <p>Caso tenha alguma dúvida, entre em <a href="www.foccustraining.com.br/contato/">contato</a>.</p>  
           ';
         $Email->to($aluno['Matricula']['email'])
-                ->subject($aluno['Matricula']['nome'].', seu horário foi alterado.')
+                ->subject($aluno['Matricula']['nome'] . ', foi definido um horário de treino para você.')
                 ->emailFormat('html')
                 ->send($mensagem);
-        
+
         $this->Session->setFlash('Operação realizada com sucesso!');
         $this->redirect(array('action' => 'lista', $matriculaId));
       } else {
@@ -124,24 +126,67 @@ class HorariosController extends AppController {
       throw new NotFoundException(__('Horario inexistente'));
     } else {
       if ($this->request->is('post') || $this->request->is('put')) {
-        
+
         // Verificar se o horário deve ser alterado somente para o próximo treino
-        if ($this->request->data['Horario']['alterado']==true){
+        if ($this->request->data['Horario']['alterado'] == true) {
           $mensagemAlterado = ' somente para o próximo treino.';
-          
+
           // Traz o horário atual do treino a ser alterado e salva como hora_anterior e dia_semana_anterior
-          
-        }else{
+          $horario = $this->request->data = $this->Horario->read(null, $id);
+
+          $this->request->data['Horario']['hora_anterior'] = $horario['Horario']['hora'];
+          $this->request->data['Horario']['dia_semana_anterior'] = $horario['Horario']['dia_semana'];
+          $this->request->data['Horario']['alterado'] = TRUE;
+        } else {
           $mensagemAlterado = ' permanentemente.';
-          
         }
-        
+
         if ($this->Horario->save($this->request->data)) {
+
+          // Traz os emails de todos os usuários do sistema
+          $this->loadModel('Users');
+          $usuarios = $this->Users->find('all');
+
+          $emails = array();
+          foreach ($usuarios as $usuario) {
+            $emails[] = $usuario['Users']['username'];
+          }
+
+          // Comentar a linha abaixo depois dos testes
+          $emails = array('joaogabrielv@gmail.com', 'jgnv_msn@hotmail.com', 'foccusdev@gmail.com');
+
+          // Traz o email do aluno
+          $this->loadModel('Matricula');
+          $aluno = $this->Matricula->find('first', array('conditions' => array('id' => $matriculaId)));
+
+          $diaSemana = array('Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado');
+          $novoHorario = $diaSemana[$this->request->data['Horario']['dia_semana']] . ' às ' . $this->request->data['Horario']['hora']['hour'] . ':' . $this->request->data['Horario']['hora']['min'];
+
+          // Envia um email para os funcionários da academia
+          $Email = new CakeEmail('smtp');
+        $mensagem = '
+                  <p>Um horário do aluno ' . $aluno['Matricula']['nome'] . ' foi alterado para ' . $novoHorario . ' </p>
+                  <p><strong>Telefone:</strong>'.$aluno['Matricula']['telefone'].'</p>
+                  <p><strong>Celular:</strong>'.$aluno['Matricula']['celular'].'</p>
+                  <p><strong>Email:</strong>'.$aluno['Matricula']['email'].'</p>  
+                  ';          
           
-          // Envia email para os funcionários
-          
-          // Envia email para o aluno
-          
+          $Email->to($emails)
+                  ->subject('Um horário do aluno ' . $aluno['Matricula']['nome'] . ' foi alterado')
+                  ->emailFormat('html')
+                  ->send($mensagem);
+
+          // Envia um email para o aluno
+          $mensagem = '
+          <p>Olá, ' . $aluno['Matricula']['nome'] . '</p>
+          <p>Seu horário foi alterado '.$mensagemAlterado.' O novo horário é: ' . $novoHorario . ' </p>
+          <p>Caso tenha alguma dúvida sobre esta alteração, entre em <a href="www.foccustraining.com.br/contato/">contato</a>.</p>  
+          ';
+          $Email->to($aluno['Matricula']['email'])
+                  ->subject($aluno['Matricula']['nome'] . ', o horário de seu treino foi alterado.')
+                  ->emailFormat('html')
+                  ->send($mensagem);
+
           $this->Session->setFlash(__('Operação realizada com sucesso!'));
           $this->redirect(array('action' => 'lista', $this->request->data['Horario']['matricula_id']));
         } else {

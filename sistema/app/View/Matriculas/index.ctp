@@ -4,14 +4,24 @@
 
 <span><p><?= count($matriculas) ?> registros encontrados</p></span>
 
+<?
+if (!isset($direcao))
+  $direcao = '';
+$ordemLista = array('nome' => 'asc', 'id' => 'asc', 'proximo_vencimento' => 'asc');
+$ordemListaChar = array('nome' => '', 'id' => '', 'proximo_vencimento' => '');
+$ordemLista[$ordem] = $direcao == 'asc' ? 'desc' : 'asc';
+$ordemListaChar[$ordem] = $direcao == 'asc' ? '↓' : '↑';
+?>
+
+
 <table class="table-usuarios">
   <tr>
-    <th>Nome</th>
+    <th><?= $this->Html->link('Nome ' . $ordemListaChar['nome'], array('controller' => 'matriculas', 'action' => 'index', 'nome', $ordemLista['nome'])); ?></th>
     <th>Email</th>
     <th>Telefone</th>
     <th>Celular</th>
-    <th>Matrícula</th>
-    <th>Data do próximo vencimento</th>
+    <th><?= $this->Html->link('Matrícula ' . $ordemListaChar['id'], array('controller' => 'matriculas', 'action' => 'index', 'id', $ordemLista['id'])); ?></th>
+    <th><?= $this->Html->link('Data do Próximo Vencimento ' . $ordemListaChar['proximo_vencimento'], array('controller' => 'matriculas', 'action' => 'index', 'proximo_vencimento', $ordemLista['proximo_vencimento'])); ?></th>
     <th class="coluna-acoes">Ações</th>
   </tr>
 
@@ -21,7 +31,7 @@
     $proximoVencimentoTimestamp = strtotime($matricula['Matricula']['proximo_vencimento']);
 
     $estilo = '';
-    if ((time()) > ($proximoVencimentoTimestamp - 604800) && (time()) <= $proximoVencimentoTimestamp )
+    if ((time()) > ($proximoVencimentoTimestamp - 604800) && (time()) <= $proximoVencimentoTimestamp)
     // Se faltar uma semana para o próximo vencimento, a linha do aluno fica laranja
       $estilo = ' bg-laranja ';
     else if ($proximoVencimentoTimestamp <= (time()))

@@ -85,11 +85,11 @@ class PlanosController extends AppController {
 
           // Forma o array de atividades selecionadas no formato esperado
           foreach ($this->request->data['Atividade'] as $atividade) {
-            //var_dump($atividade);
+            var_dump($atividade);
 
             if ($atividade != 0)
               $atividadesPlano[] = array(
-                  'Plano' => array('id' => $id), 'Atividade' => array('id' => $atividade['id']));
+                  'Plano' => array('id' => $id), 'Atividade' => array('id' => $atividade));
           }
 
           // Salva todas as atividades do array montado acima
