@@ -40,7 +40,7 @@ $this->Html->scriptBlock('
     if (isNaN(valorEspecial))
       valorEspecial = 0;
 
-    var novoValor = ($(this).checked=="checked") ? valorEspecial + preco : valorEspecial - preco; 
+    var novoValor = ($(this).is(":checked")) ? valorEspecial + preco : valorEspecial - preco; 
     $("#PlanoValorEspecial").val(novoValor.toFixed(2));    
     
   });

@@ -56,7 +56,7 @@
         <p class="text-align-right">Desenvolvido por <a href="mailto:joaogabrielv@gmail.com">João Gabriel</a></p>
       </div>
     </div>
-    <?php echo $this->element('sql_dump'); ?>
+    <?php //echo $this->element('sql_dump'); ?>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <!-- scripts_for_layout -->
     <?php echo $scripts_for_layout; ?>

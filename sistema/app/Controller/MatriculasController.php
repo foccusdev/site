@@ -125,6 +125,7 @@ class MatriculasController extends AppController {
       // Traz os bairros do Rio de Janeiro (7043)
       $this->loadModel('Bairro');
       $args = array(
+           'conditions' => array('Bairro.CodigoCidade' => '7043'),
           'fields' => array('Codigo', 'Descricao')
       );
       $this->set('bairros', $this->Bairro->find('list', $args));

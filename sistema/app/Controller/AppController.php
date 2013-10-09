@@ -41,7 +41,8 @@ class AppController extends Controller {
           'loginRedirect' => array('controller' => 'matriculas', 'action' => 'index'),
           'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
           'authError' => 'A seção que você tentou acessar exige autenticação e nível de acesso compatível.',
-          'authorize' => array('Controller') // Adicionamos essa linha            
+          'authorize' => array('Controller'),
+          'unauthorizedRedirect' => false
       )
   );
 

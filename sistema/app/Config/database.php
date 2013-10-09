@@ -61,6 +61,7 @@
  */
 class DATABASE_CONFIG {
 
+  
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
@@ -71,6 +72,20 @@ class DATABASE_CONFIG {
 		'prefix' => 'sys_',
 		'encoding' => 'utf8',
 	);
+  /*
+  
+	public $default = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' => 'mysql01.site1367448928.hospedagemdesites.ws',
+		'login' => 'site1367448928',
+		'password' => 'f0Ccu5dB',
+		'database' => 'site1367448928',
+		'prefix' => 'sys_',
+		'encoding' => 'utf8',
+	);  
+  
+  */
 
 	public $test = array(
 		'datasource' => 'Database/Mysql',
