@@ -229,4 +229,13 @@ function custom_login_logo() {
 }
 
 add_action('login_head', 'custom_login_logo');
+
+
+  function register_session(){
+        if( !session_id())
+            session_start();
+    }
+
+add_action('init','register_session');
+
 ?>
