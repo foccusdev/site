@@ -1,0 +1,32 @@
+.login-container { background: url('imgs/bg_topo.png') repeat; margin-bottom: 34px; padding-top: 42px; padding-left: 31.35%; }
+
+.login-container h2 { margin-left: 20px}
+
+.login-container form { width: 70%}
+
+.login-container input[type=text] {
+  width: 82%;
+  height: 44px;
+  border: 1px solid #0191b4;
+  margin: 6px 0px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #c2c2c2;
+  padding-left: 3%;
+  font-weight: bold;  
+}
+
+.login-container input[type=submit], .horario-container input[type=submit] { margin: auto; width: 89px; height: 38px; background: #0191b4; color: white; border: none; padding: 2px;  }
+
+.horario-container { width: 46%; margin: auto}
+
+.select-dia_semana { width: 180px; margin: 0px 2%}
+
+.select-horario {width: 88px; margin: 0px 2%}
+
+.texto-horario {font-size: 20px;
+font-weight: normal;
+padding-top: 10px;
+font-family: verdana}
+
+.horario-container input[type=submit] { margin: 0px 180px}

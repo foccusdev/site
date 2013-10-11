@@ -1,4 +1,6 @@
 <?
+//@session_destroy();
+
 /* Template Name: Login */
 require_once ('login.codigo.php');
 get_template_part('incs/head');
