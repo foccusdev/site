@@ -36,7 +36,7 @@
     
   <div class='select-horario float-left' >
     <div class="styled-select ">
-      <select name="hora" id="assunto">
+      <select name="hora" id="assunto"> 
         <option value="">09</option>
         <option value="">10</option>
       </select>

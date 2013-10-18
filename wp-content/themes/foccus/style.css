@@ -1,4 +1,4 @@
-
+﻿
 /*
 Document   : style
 Created on : 29/04/2013, 21:06:49
@@ -45,6 +45,8 @@ a img { border: 0}
 .display-none { display: none}
 
 .no-mg-right { margin-right: 0px}
+
+.no-mg { margin: 0}
 
 .no-mg { margin: 0}
 
@@ -187,7 +189,7 @@ a img { border: 0}
 
 /* Boxes Desktop */
 @media screen and (min-width: 750px) {
-  .box {height: 210px; width: 18.5%;  float: left; /*margin-top: 10px*/}
+  .box {height: 215px; width: 18.5%;  float: left; overflow: hidden; /*margin-top: 10px*/}
   .mg-box-right { margin-right: 6.48%; }
   .conteudo-interno {  margin-top: 10px; width: 68%; margin-bottom: 40px; position: relative}
   .conteudo-interno .box {width: 26.5%; }
@@ -356,12 +358,12 @@ a img { border: 0}
 
 #submit:hover{background: #08677d;}
 
-.topo-contato { height: 235px; width: 100%; background: url('imgs/contato_banner.jpg') no-repeat top right; }
+.topo-contato { height: 235px; width: 100%; background: url('imgs/img_contato.jpg') no-repeat top right; }
 .contato-bloco { width: 84.37%; margin: 55px auto }
 .contato-esquerda { width: 50% }
 .contato-direita { width: 50% }
 .mapa { width: 78.02%; height: 168px; background: url('imgs/bg_mapa.png') right center no-repeat #DE0060; padding: 16px}
-.contato-direita form input, select, textarea { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana;  width: 93.2%; padding: 3.4%; margin-bottom: 20px;}
+.contato-direita form input, select, textarea { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana;  width: 90.2%; padding: 3.4%; margin-bottom: 20px;}
 .contato-direita form input, select {height: 17px; }
 
 .ddd { width: 11.1% !important; margin-right: 0.46%}

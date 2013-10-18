@@ -1,6 +1,6 @@
 <?
-if (!is_user_logged_in())
-  die(header('Location: '.  get_bloginfo('url').'/embreve.php'));
+/* if (!is_user_logged_in())
+  die(header('Location: '.  get_bloginfo('url').'/embreve.php')); */
 get_template_part('incs/head');
 get_template_part('incs/topo');
 ?>
@@ -64,7 +64,7 @@ get_template_part('incs/topo');
           <?
           if (has_post_thumbnail()) {
             ?><div class="img-box"><? the_post_thumbnail(); ?> </div> <?
-      }
+          }
           ?>
           <h2 class="seta-azul fonte-textos"><? the_title() ?></h2>
         </a>
@@ -105,26 +105,31 @@ get_template_part('incs/topo');
 
   <div class="clear"></div>
 
-  <img src="<?= get_bloginfo('template_url') ?>/imgs/arco.png" class="arco">
-  <span class="nome-secao">Depoimentos</span>
-  <span class="linha-azul"></span>
-
   <?
   $wp_query = new WP_Query(array('cat' => _DEPOIMENTOS, 'tag' => 'destaque'));
-//echo '<pre>'; var_dump($wp_query); echo '</pre>';
-  $i = 0;
-  while (have_posts()) {
-    the_post();
-    $classe = $i == 3 ? 'class="no-mg-right box"' : 'class="box mg-box-right"';
+  if (have_posts()) {
     ?>
-    <div <?= $classe ?>>
-      <a href="<? the_permalink() ?>">
-        <h3><? the_title() ?></h3>
-        <p class="fonte-textos"><? the_excerpt() ?> </p>
-      </a>
-    </div>
+
+    <img src="<?= get_bloginfo('template_url') ?>/imgs/arco.png" class="arco">
+    <span class="nome-secao">Depoimentos</span>
+    <span class="linha-azul"></span>
+
     <?
-    $i++;
+//echo '<pre>'; var_dump($wp_query); echo '</pre>';
+    $i = 0;
+    while (have_posts()) {
+      the_post();
+      $classe = $i == 3 ? 'class="no-mg-right box"' : 'class="box mg-box-right"';
+      ?>
+      <div <?= $classe ?>>
+        <a href="<? the_permalink() ?>">
+          <h3><? the_title() ?></h3>
+          <p class="fonte-textos"><? the_excerpt() ?> </p>
+        </a>
+      </div>
+      <?
+      $i++;
+    }
   }
   ?>    
 

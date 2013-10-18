@@ -31,21 +31,28 @@
   <? } ?>
   <div class="clear"></div>
 
-  <div class="secao">
-    Depoimentos
-  </div>
 
   <?
   $wp_query = new WP_Query(array('cat' => _DEPOIMENTOS, 'tag' => 'destaque', 'posts_per_page' => 2));
-  while (have_posts()) {
-    the_post();
+  if (have_posts()) {
     ?>
-    <div class="box">
-      <a href="<? bloginfo('url') ?>/depoimentos/#<? the_ID() ?>">
-        <h4 class="fonte-textos">"<?= substr(get_the_excerpt(), 0, 120) ?>..."</h4>        
-      </a>
+
+    <div class="secao">
+      Depoimentos
     </div>
+
     <?
+    $wp_query = new WP_Query(array('cat' => _DEPOIMENTOS, 'tag' => 'destaque', 'posts_per_page' => 2));
+    while (have_posts()) {
+      the_post();
+      ?>
+      <div class="box">
+        <a href="<? bloginfo('url') ?>/depoimentos/#<? the_ID() ?>">
+          <h4 class="fonte-textos">"<?= substr(get_the_excerpt(), 0, 120) ?>..."</h4>        
+        </a>
+      </div>
+      <?
+    }
   }
   ?>   
 
@@ -80,18 +87,18 @@
 
   <?
   $wp_query = new WP_Query(array('cat' => _ARTIGOS, 'tag' => 'destaque'));
-  
+
   while (have_posts()) {
     the_post();
     ?>  
-  
-  <div class="box">
-    <a href="<?the_permalink()?>">
-      <? if (has_post_thumbnail()) the_post_thumbnail('post-thumbnail', array('class' => 'float-left')) ?>
-      <h4 class="fonte-textos"><?the_title()?></h4>
-      <div class="saiba-mais fonte-textos">Saiba +</div>
-    </a>
-  </div>
+
+    <div class="box">
+      <a href="<? the_permalink() ?>">
+        <? if (has_post_thumbnail()) the_post_thumbnail('post-thumbnail', array('class' => 'float-left')) ?>
+        <h4 class="fonte-textos"><? the_title() ?></h4>
+        <div class="saiba-mais fonte-textos">Saiba +</div>
+      </a>
+    </div>
 
   <? } ?>
 

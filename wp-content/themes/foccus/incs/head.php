@@ -9,10 +9,11 @@ ob_start();
     <meta content="width=device-width, height=420, user-scalable=no" name="viewport"/>
 
     <base href="<?= get_bloginfo('url') ?>/" />
-    <meta name="title" content="<?the_title()?> Foccus Training" />
+    <meta name="title" content="<? the_title() ?> Foccus Training" />
+    <link rel="shortcut icon" href="<?= get_bloginfo('template_url') ?>/favicon.png" />
     <meta name="url" content="http://www.foccustraining.com.br/" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="<?= get_the_title() ?>" />
+    <meta name="keywords" content="foccustraining, foccus, academia, fitness, laranjeiras, zona sul, rio de janeiro" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="company" content="Foccus" />
     <meta name="revisit-after" content="1" />
@@ -23,9 +24,24 @@ ob_start();
     <!-- Metas para compartilhamento no facebook -->
     <meta property="fb:admins" content="1199485757"/>
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="<?the_permalink()?>" />
-    <meta property="og:title" content="<?=get_the_title()?>" />
-    <meta property="og:image" content="http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg" />
+    <meta property="og:url" content="<? the_permalink() ?>" />
+    <meta property="og:title" content="<?= get_the_title() ?>" />
+
+    <?
+    // Verifica se o post exibido tem imagem
+    if (is_single()) {
+      if (has_post_thumbnail($post->ID)) {
+        $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-thumbnail');
+        $thumbUrl = $thumb['0'];
+      }else{
+        $thumbUrl = 'http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg';
+      }
+    }else{
+      $thumbUrl = 'http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg';
+    }
+    ?>
+
+    <meta property="og:image" content="<?=$thumbUrl?>" />
 
   </head>
 
@@ -34,13 +50,21 @@ ob_start();
   <body>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id))
+          return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
     <?
+// Envia formulário de newsletter?
+
     if (!empty($_POST['news_email'])) {
 
 
@@ -73,6 +97,5 @@ ob_start();
       //die(header('Location: '.  get_bloginfo('url').'/'));
 
       echo '<script type="text/javascript">alert("Cadastro efetuado com sucesso!");</script>';
-            
     }
     ?>

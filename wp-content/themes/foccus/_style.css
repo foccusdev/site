@@ -1,0 +1,402 @@
+
+/*
+Document   : style
+Created on : 29/04/2013, 21:06:49
+Author     : joao
+Description:
+Purpose of the stylesheet follows.
+*/
+
+
+root {   display: block; }
+
+* { margin: 0; padding: 0;}
+
+.admin-welcome-wrap { background: #ccc; }
+
+@font-face {
+  font-family: 'Sony Sketch EF';
+  src: url('fonts/Sony_Sketch_EF.ttf');
+  font-weight: regular;
+  font-style: regular;
+}
+
+
+/* Classes para elementos HTML */
+
+body {  font-family: Sony Sketch EF; font-size: 14px; color: #666}
+
+a { text-decoration: none; color: inherit}
+
+a img { border: 0}
+
+
+/* Fim de Classes para elementos HTML */
+
+
+/* Classes de uso geral */
+
+.float-left { float: left; }
+
+.float-right { float: right; }
+
+.clear { clear: both; }
+
+.display-none { display: none}
+
+.no-mg-right { margin-right: 0px}
+
+.no-mg { margin: 0}
+
+.fonte-textos { font-size: 11px; font-family: verdana; font-weight: normal; color: #666; width:93%;}
+
+.laranja { color: #F88716 } 
+.azul {color: #2B91B3 }
+.amarelo {color:#F3C819 }
+.vermelho { color: #DE0060}
+.verde { color: #2EA2AB}
+.branco { color: #fff; }
+
+.seta-azul { background: url('imgs/seta_azul.png') no-repeat top left; padding-left: 16px; height: 18px}
+
+.seta-amarela { background: url('imgs/seta_amarela.png') no-repeat top left; padding-left: 16px; height: 18px }
+
+/* Fim de Classes de uso geral */
+
+
+/* Classes específicas */
+
+.wrapper { max-width: 960px; margin: auto; /*background: #fff; */position: relative}
+@media screen and (min-width: 697px) {
+  .topo { height: 96px; }
+}
+
+/* Logo e social no desktop */
+@media screen and (min-width: 750px) {
+  .logo a img { width: 20.5%; height: auto; z-index:9999; position: absolute; top: 0px; left: 0px}
+  .social-topo { height: 25px; margin-left: 200px; padding-top: 45px;}
+}
+
+/* Logo e social no celular */
+@media screen and (max-width: 749px) {
+  .logo { width: 197px; height: 213px;  }
+  .social-topo { height: 25px; padding-top: 45px; float: right}
+}
+
+.icon-topo a, .logo a {display: block; width: 100%; height: 100%;}
+
+.icon-topo { width: 24px; height: 24px; margin-right: 10px }
+
+.face { background: url('imgs/social.png') 0 0; }
+
+.inst { background: url('imgs/social.png') -30px 0;}
+
+.twitter { background: url('imgs/social.png') -58px 0;}
+
+.topo-interna { background: url('imgs/bg_topo.png') repeat; height: 82px; margin-bottom: 34px; padding-top: 42px; z-index: 1;}
+
+.menu-desktop { position: absolute; right: 0; z-index: 11; }
+
+.menu-item-home { background: #F88716 }
+.menu-item-foccus { background: #2B91B3 }
+.menu-item-noticias { background: #F3C819}
+.menu-item-login { background: #DE0060}
+.menu-item-busca {background: #C2C2C2}
+.menu-item-contato { background: #2EA2AB}
+
+@media screen and (min-width: 750px) {
+  .texto-home-mobile {display: none}
+  .menu-mobile, .menu-mobile-icon { display: none }
+  .menu-desktop ul {float: right;}
+  .menu-desktop ul li { display: block; float: left; width: 77px; height: 33px; list-style-type: none; padding-top: 44px; text-align: center; font-size: 18px; color: #fff }
+  .menu-item-busca {width: 32px !important; }
+  .down-arrow {font-size: 0px; line-height: 0%; width: 0px; border-left: 20px solid transparent; border-right: 20px solid transparent; position: relative; top: 14px; left: 17px; }
+  .menu-item-foccus .down-arrow { border-top: 6px solid #2B91B3; }
+  .menu-item-noticias .down-arrow { border-top: 6px solid #F3C819; }
+
+  .submenu { background: #fff; width: 75%; height: 54px; padding: 1% 0px 0px 2%;}
+  .submenu span { color: #A4A8AB; font-size: 20px}
+  .submenu ul li { display: block; float: left;  list-style-type: none; margin: 6px 27px 0px 0px }
+  .submenu ul li a {font-size: 12px; color: #A4A8AB; display: block; height: 18px; padding-top: 1px}
+
+  #submenu-foccus { border-bottom: 6px solid #2B91B3; }
+  #submenu-noticias { border-bottom: 6px solid #F3C819 }
+
+  #submenu-foccus , #submenu-noticias {top: 77px; right: 0px; position: absolute; z-index: 10}  
+
+}
+
+@media screen and (max-width: 749px) {
+  .texto-home-mobile { width: 90%; margin: 0px auto 10px auto; font-size: 16px;}
+  .texto-home-mobile a { color: #F88716;}
+  .menu-mobile { width: 100%; margin-bottom: 20px;}
+  .menu-mobile a { display: block; width: 100%; height: 100% }
+  .menu-mobile ul li { display: block; width: 100%; list-style-type: none; padding: 10px 0px; text-align: center; font-size: 18px; color: #fff }
+  .submenu { text-align: left;}
+  .submenu span {color: #bbb; font-size: 22px; font-weight: bold;}
+  .submenu ul li { text-align: left}
+  .submenu ul li a { font-size: 14px}
+  #submenu-foccus-mobile,#submenu-noticias-mobile { display: none; position: relative}
+  .menu-desktop, .slideshow, .coluna-direita  { display: none}
+  .menu-mobile-icon { width: 48px; height: 45px; background: url('imgs/menu-mobile-icone.png'); position: absolute; top: 113px; right: 9px;}
+  .menu-mobile-icon a { display: block; width: 100%; height: 100%; }
+}
+
+.slideshow { width: 100%; height: 405px; }
+
+.slideshow img { width: 100%; height: 405px; }
+
+@media screen and (min-width: 750px) {
+  .newsletter { margin: 2.6% 0 3.75% 3.4%;}
+  .newsletter form { width: 71.5%}
+  .newsletter span { font-size: 20px; color: #2C90B7; width: 28.5%; display: block; float: left;}
+  .newsletter label { color: #909195; margin-right: 0.53%; }
+  .newsletter input[type="text"] { border: 1px #909195 solid; margin-right: 2.4%; width: 33.33%; height: 20px}
+  .newsletter input[type="submit"] { border: 0px; border-radius: 4px; width: 11.5%; height:26px; color: #fff; padding-bottom: 4px; background: #2B91B3; position: relative; bottom: 3px; }
+  .newsletter input[type="submit"]:hover {  background: #1F677D }
+  .newsletter .form-campo { display: inline } 
+
+}
+/* Newsletter mobile */
+@media screen and (max-width: 749px) {
+  .newsletter .form-campo { display: block; width: 90%; margin: auto; } 
+  .newsletter { margin: auto; width: 90% }
+  .newsletter form { width: 100%; margin-bottom: 20px}
+  .newsletter span { font-size: 200%; color: #2C90B7; margin-left: 5%; display: block;}
+  .newsletter label { color: #909195; margin-right: 0.53%; display: block}
+  .newsletter input[type="text"] { border: 1px #909195 solid; margin: 10px auto; width: 90%; height: 20px; }
+  .newsletter input[type="submit"] { border: 0px; border-radius: 4px; margin: 10px auto; width: 90%; height:26px; color: #fff; padding-bottom: 4px; background: #2B91B3;  }
+  .newsletter input[type="submit"]:hover { background: #1F677D  }  
+
+}
+
+.nome-secao { font-size: 28px; font-weight: normal; color: #666; position: relative; z-index: 2; padding-right: 20px; display: inline-block; background: #fff; bottom: 4px }
+
+.arco { height: auto; width: 2%; float: left; position: relative; z-index: 2; padding-right: 0.6%; background: #fff}
+
+.linha-azul { border-top-style: solid; border-top-width: 1px; border-top-color: #2B91B3; margin-top: 4px; width: 100%; height: 4px; display: block; position: relative; bottom: 20px; z-index: 0}
+
+/* Boxes Mobile */
+@media screen and (max-width: 749px) {
+  .box {height: auto; width: 75%;  margin: 20px auto;}
+  .mg-box-right { margin-right: auto; }  
+  .conteudo-interno {  margin-top: 10px; width: 98%; margin-bottom: 40px;}
+  .topo-interna { display: none}
+  .arco { height: auto; width: 25px; float: left; position: relative; z-index: 2; padding-right: 0.6%; background: #fff}
+}
+
+/* Boxes Desktop */
+@media screen and (min-width: 750px) {
+  .box {height: 210px; width: 18.5%;  float: left; /*margin-top: 10px*/}
+  .mg-box-right { margin-right: 6.48%; }
+  .conteudo-interno {  margin-top: 10px; width: 68%; margin-bottom: 40px; position: relative}
+  .conteudo-interno .box {width: 26.5%; }
+}
+
+.box img { width: 100%; height: auto; max-width: 100%; border-top: 12px solid #2B91B3;}
+
+.box h2 {  margin-top: 10px; }
+
+.box a:hover h2, .box a:hover p {text-decoration: underline}
+
+.box h3  { background: url('imgs/aspas.png') no-repeat top left; padding-left: 30px; padding-top: 0px; font-size: 13px; color: #DE0060; margin-top: 10px; height: 25px; font-weight: normal }
+
+.box-img { height: auto; width: 100%; overflow: hidden; }
+.box-img div { position: relative; max-width: none; height: auto; }
+
+.separador { background: #f5f5f5; border-top: 1px solid #ccc; height: 5px; width:100%; margin: 0 0 6px 0 }
+
+.parceiros h3 { font-size: 20px; color: #909195;  }
+
+.parceiros .box { height: auto; margin-bottom:25px;}
+
+.parceiros .box img { border: 0; }
+
+.menu-rodape { font-size: 16px; padding-top:15px; margin-left:-20px;  }
+
+.menu-rodape div {  float: left; height: 100px; width:12.50%; margin: 0 0 0 20px}
+
+.menu-rodape .bd-menu-right { border-right: 1px solid #ccc; }
+
+.menu-rodape h3 { margin-bottom: 20px}
+
+.menu-rodape ul li { margin-bottom: 8px}
+
+/* Mobile */
+@media screen and (max-width: 749px) { 
+  .menu-rodape .bd-menu-right { border-right: none }
+  .menu-rodape div { float: none; width: 120px; height: auto; margin: auto; text-align: center; } 
+  .menu-rodape h3 { margin: 10px 0 10px 0;}
+  .menu-rodape ul li { margin-bottom: 8px}  
+
+
+}
+
+.menu-rodape ul { list-style-type: none; list-style-position: inside}
+
+.creditos { background: #2B91B3; color: #fff; height: 60px; margin-top: 40px; padding: 45px 0px}
+
+.conteudo-interno p { margin-bottom: 28px; }
+
+.topo-interna .newsletter { padding-top: 0px; margin: 0 0 0 2.29%; width: 78.12%; float: right; }
+
+.topo-interna .newsletter span { display: block; width: 17.33%; float: left; font-weight: bold; }
+
+.topo-interna form { margin-top: 15px; width: 76%}
+
+.topo-interna .newsletter input[type="submit"] {  width: 8.6%;  }
+
+.nome-secao-linha { margin-left: 150px}
+
+.topo-linha { width: 63%}
+
+.listagem {width: 100%; margin-bottom: 70px;}
+
+.texto-conceito { float: left; width: 51%; line-height: 18px;}
+
+.img-conceito { width: 40.1%; height: auto; margin: 0.6% 5.3% 5.3% 0.76%; }
+
+/* Conceitos mobile */
+@media screen and (max-width: 749px) {
+  .img-conceito { width: 90%; height: auto; margin: 0 5% 5.3% 5%; float: none;}
+  .texto-conceito { float: none; width: 90%; margin: auto; text-justify: distribute}
+  .mensagem_incentivo{ display: none}
+  .texto-conceito2{ width: 90%; font-family: verdana; font-size: 11px; margin:15px auto; line-height: 18px; }
+}
+
+
+.box-depoimentos { background: #FEFFCF; width: 90%; border-left: 30px #FEFFCF solid; border-top: 25px #fff solid; padding: 17px 0px 17px 0px; margin-bottom: 12px }
+
+.box-depoimentos h2 { background: url('imgs/aspas_box.png') no-repeat left center; padding-left: 36px; color: #DD005F; }
+
+.box-depoimentos p { padding-left: 36px; margin: auto;}
+
+.box-equipe { margin-bottom: 35px; }
+
+.img-equipe { width: 34%; }
+
+.img-equipe img { width: 100%; height: auto; margin-top:6px; }
+
+.txt-equipe { width: 60%; margin-left: 3% }
+
+.txt-equipe p { line-height:  20px; margin-bottom: 8px}
+
+/* Equipe Mobile */
+@media screen and (max-width: 749px) {
+  .img-equipe { width: 80%;  float: none; margin: auto; }
+  .img-equipe img { width: 100%; height: auto; margin-top:6px; }
+  .txt-equipe { float: none; width: 80%; margin: auto; }
+}
+
+.coluna-direita {width: 28%; background: #EEF2F8;  float: right; padding-top: 20px; margin-bottom: 10px}
+
+.coluna-direita .secao { background: url('imgs/bg_titulo_coluna_direita.png') 0 0 no-repeat; padding: 5px 0px 0px 20px; color: #DE0060; height: 24px; font-size: 17px;}
+
+.coluna-direita .box {width: 90%; margin: 8px 16px; height: 80px}
+
+.coluna-direita .box img { height: 70px; width: 80px; border: 0; margin-right: 10px }
+
+.coluna-direita .box .saiba-mais { color: #F88716; font-weight: normal; margin-top: 5px}
+
+.erro { display: none; color: #d00; }
+
+.conteudo_busca { padding-left: 31.25%}
+
+.busca-pag {height: 300px }
+
+.busca-pag .topo-interna { height: 90px}
+
+.busca-pag .topo-interna form { margin-left: 31.35%; width: 44.37%; display: block; }
+
+.busca-pag .topo-interna form input[type="text"]{ font-size: 14px; text-transform: uppercase; color: #c2c2c2; padding-left: 3%; font-weight: bold}
+
+/* Busca Mobile */
+@media screen and (max-width: 749px) {
+  .busca-pag .div-form-busca { display: block}
+  .busca-pag .topo-interna form { margin:auto; width: 90%; display: block; }
+}
+
+
+.styled-select select {
+  background: transparent;
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 2;
+  border: 0;
+  border-radius: 0;
+  height:46px;
+  -webkit-appearance: none;
+  text-indent: 3pt;
+}
+
+
+.styled-select {
+  width: 100%;
+  height: 46px;
+  overflow: hidden;
+  background: url('imgs/bnt_select.jpg') no-repeat right #ffffff;
+  border: 1px solid #0191b4;
+  margin-bottom: 20px;
+}
+
+.styled-select:hover {
+  background: url('imgs/bnt_select_bg.jpg') no-repeat right #ffffff;
+}
+
+#submit{
+  width:89px; 
+  height:38px;
+  background: #0191b4;
+  color:white;
+  border: none;
+  padding:2px;
+  float:right;
+}
+
+#submit:hover{background: #08677d;}
+
+.topo-contato { height: 235px; width: 100%; background: url('imgs/contato_banner.jpg') no-repeat top right; }
+.contato-bloco { width: 84.37%; margin: 55px auto }
+.contato-esquerda { width: 50% }
+.contato-direita { width: 50% }
+.mapa { width: 78.02%; height: 168px; background: url('imgs/bg_mapa.png') right center no-repeat #DE0060; padding: 16px}
+.contato-direita form input, select, textarea { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana;  width: 93.2%; padding: 3.4%; margin-bottom: 20px;}
+.contato-direita form input, select {height: 17px; }
+
+.ddd { width: 11.1% !important; margin-right: 0.46%}
+.telefone { width:  72.33% !important}
+.contato-endereco{margin-bottom:45px}
+
+.grupo1{   margin-bottom: 18px; }
+
+
+/* Contato mobile */
+@media screen and (max-width: 749px) {
+  .contato-esquerda, .contato-direita { width: 90%; float: none; margin: 40px auto; }
+  .mapa { width: 90%; margin: auto}
+  /*.topo-contato { display: none}*/
+  .form-contato { width: 100%; margin-top:45px; display: block;}
+  .contato-direita form input, select, textarea { border: 1px solid #2B91B3; color: #A4A8AB; font-size: 16px; font-family: verdana;  width: 93.2%; padding: 3.4%; margin-bottom: 20px;}
+  .contato-direita form input, select {height: 17px; }
+  .ddd { width: 16.33% !important; margin-right: 0.46%}
+  .telefone { width: 66.66% !important;}
+}
+
+
+#bg_rodape{
+  z-index:-2px; 
+  background:#2B91B3 repeat-x; 
+  color: #fff; 
+  padding: 45px 30px 0 30px; 
+  height: 60px;
+  margin-top:-105px;
+}                   
+
+
+
+
+/* Fim de Classes específicas */   
+
+
+.no-border img { border: 0px }
