@@ -8,9 +8,9 @@
     </div>
 
     <div class="social-topo float-left">
-      <div class="icon-topo face float-left"><a href="javascript:alert('Em breve')" title='Em breve'></a></div>
+      <div class="icon-topo face float-left"><a href="https://www.facebook.com/foccus.foccus.7" target='_blank'></a></div>
       <div class="icon-topo inst float-left"><a href="http://instagram.com/foccustraining" target='_blank'></a></div>
-      <div class="icon-topo twitter float-left"><a href="javascript:alert('Em breve')" title='Em breve'></a></div>     
+      <div class="icon-topo twitter float-left"><a href="https://twitter.com/FoccusTraining" target='_blank'></a></div>     
     </div>
 
     <div class="menu-desktop float-right">

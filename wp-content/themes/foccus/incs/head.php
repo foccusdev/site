@@ -4,6 +4,23 @@ ob_start();
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
+
+  <?
+  // Verifica se está sendo visualizado um post para alterar as meta tags de compartilhamento.
+  if (is_single()) {
+    if (has_post_thumbnail($post->ID)) {
+      $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-thumbnail');
+      $thumbUrl = $thumb['0'];
+    } else {
+      $thumbUrl = 'http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg';
+    }
+    $description = get_the_excerpt($post->ID);
+  } else {
+    $thumbUrl = 'http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg';
+    $description = 'Um local inovador, onde o treinamento físico do aluno é realizado de um modo personalizado diariamente, durante sessões de uma hora, com o auxílio profissional integral. Isso tudo em um ambiente acolhedor, com equipamentos modernos e sem distrações, para elevar ao máximo o aproveitamento do tempo.';
+  }
+  ?>  
+
   <head>
 
     <meta content="width=device-width, height=420, user-scalable=no" name="viewport"/>
@@ -12,7 +29,7 @@ ob_start();
     <meta name="title" content="<? the_title() ?> Foccus Training" />
     <link rel="shortcut icon" href="<?= get_bloginfo('template_url') ?>/favicon.png" />
     <meta name="url" content="http://www.foccustraining.com.br/" />
-    <meta name="description" content="<?= get_the_title() ?>" />
+    <meta name="description" content="<?= $description ?>" />
     <meta name="keywords" content="foccustraining, foccus, academia, fitness, laranjeiras, zona sul, rio de janeiro" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="company" content="Foccus" />
@@ -22,26 +39,14 @@ ob_start();
     <link rel="stylesheet" href="<?= get_bloginfo('template_url') ?>/estilos.css" />
     <link rel="stylesheet" href="<?= get_bloginfo('template_url') ?>/login.css" />
     <!-- Metas para compartilhamento no facebook -->
-    <meta property="fb:admins" content="1199485757"/>
+    <meta property="fb:admins" content="1199485757,100003731853550"/>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<? the_permalink() ?>" />
     <meta property="og:title" content="<?= get_the_title() ?>" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="<?= $thumbUrl ?>" />
+    <meta property="og:description" content="<?= $description ?>" />
 
-    <?
-    // Verifica se o post exibido tem imagem
-    if (is_single()) {
-      if (has_post_thumbnail($post->ID)) {
-        $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-thumbnail');
-        $thumbUrl = $thumb['0'];
-      }else{
-        $thumbUrl = 'http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg';
-      }
-    }else{
-      $thumbUrl = 'http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg';
-    }
-    ?>
-
-    <meta property="og:image" content="<?=$thumbUrl?>" />
 
   </head>
 

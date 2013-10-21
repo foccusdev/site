@@ -31,7 +31,7 @@ get_template_part('incs/topo');
         the_post();
         $novaLinha = $i % 3 == 0 ? '<div class="clear"></div>' : '';
         $categorias = get_the_category();
-        if ($categorias[0]->term_id == _ARTIGOS || $categorias[0]->term_id == _NOTICIAS) {
+        if ($categorias[0]->term_id == _ARTIGOS || $categorias[0]->term_id == _NOTICIAS || $categorias[0]->term_id == _ATIVIDADES) {
           ?>
           <div class="box mg-box-right">
             <a href="<? the_permalink() ?>">

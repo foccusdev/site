@@ -27,14 +27,15 @@ the_post();
     <div class="fonte-textos">
       <? the_content() ?>
     </div>
-    
-<div class="fb-like" data-href="<?the_permalink()?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?the_permalink()?>" data-text="<?the_title()?>">Tweet</a>
 
-<br /><br /><br />
+    <div class="fb-like" data-href="<? the_permalink() ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
 
-<div class="fb-comments" data-href="<?the_permalink()?>" data-width="470" data-num-posts="10"></div>    
-    
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="<? the_permalink() ?>" data-text="<? the_title() ?>">Tweet</a>
+
+    <br /><br /><br />
+
+    <div class="fb-comments" data-href="<? the_permalink() ?>" data-width="470" data-num-posts="10"></div>  
+
   </div>
   <? get_template_part('incs/barra-lateral') ?>
 </div>

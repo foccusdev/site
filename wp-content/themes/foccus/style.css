@@ -256,6 +256,8 @@ a img { border: 0}
 
 .texto-conceito { float: left; width: 51%; line-height: 18px;}
 
+.texto-conceito p { margin-bottom: 8px}
+
 .img-conceito { width: 40.1%; height: auto; margin: 0.6% 5.3% 5.3% 0.76%; }
 
 /* Conceitos mobile */
