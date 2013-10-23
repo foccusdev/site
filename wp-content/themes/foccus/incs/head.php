@@ -7,7 +7,7 @@ ob_start();
 
   <?
   // Verifica se está sendo visualizado um post para alterar as meta tags de compartilhamento.
-  if (is_single()) {
+  if (is_single() && !is_home()) {
     if (has_post_thumbnail($post->ID)) {
       $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'post-thumbnail');
       $thumbUrl = $thumb['0'];
@@ -15,9 +15,12 @@ ob_start();
       $thumbUrl = 'http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg';
     }
     $description = get_the_excerpt($post->ID);
+    $title = get_the_title();
   } else {
     $thumbUrl = 'http://www.foccustraining.com.br/wp-content/themes/foccus/imgs/logo.jpeg';
     $description = 'Um local inovador, onde o treinamento físico do aluno é realizado de um modo personalizado diariamente, durante sessões de uma hora, com o auxílio profissional integral. Isso tudo em um ambiente acolhedor, com equipamentos modernos e sem distrações, para elevar ao máximo o aproveitamento do tempo.';
+    $title = 'Foccus Training';
+    
   }
   ?>  
 
@@ -27,7 +30,27 @@ ob_start();
 
     <base href="<?= get_bloginfo('url') ?>/" />
     <meta name="title" content="<? the_title() ?> Foccus Training" />
-    <link rel="shortcut icon" href="<?= get_bloginfo('template_url') ?>/favicon.png" />
+    <link rel="shortcut icon" hreBom dia, Aninha,
+
+Tenho visto que eles nos bloquearam. É muito difícil impedir que o Leandro seja manipulado, aliás, qualquer um de nós já deve ter passado por algo parecido, imagine ele, que tem menos "escudos".
+
+Por isso meu foco é muito mais ele do que qualquer pessoa de fora... porque ele é nossa família, e não as "Beibe Dys" da vida. Tinha certeza de que ele não entenderia se falássemos com ele DELA nesse momento em que ele está 'encantado'. Ela deve representar tudo que ele busca (independência, sensação de maturidade, etc) através dessa sensação de estar apaixonado e estar enxergando um mínimo de 'retorno' nisso, e ele não abriria mão disso facilmente.
+
+Não podemos impedir que ele (nem ninguém) se apaixone e/ou seja feito de idiota, infelizmente. Podemos dar apoio, conversar e tudo, mas tendo sempre em mente que estamos lidando com alguém que enxerga o mundo e as pessoas de uma forma um pouco mais diferente do que a maioria.
+
+Apesar de eu estar extremamente apreensivo com o fato inevitável de que algo assim poderia acontecer um dia (e várias outras vezes depois, talvez com objetivos ainda piores, como "morar no Leblon ganhando pensão"), e ainda convicto da minha opinião sobre a solução para (parte do) assunto, agora aconteceu o que eu não queria: ELA se tornou o foco, e qualquer coisa que tentemos fazer vai soar como algo simplesmente para distanciar os dois. Por isso eu queria primeiro protegê-lo (e alguma outra possível vida que nada tem a ver com esses problemas, gerada pela irresponsabilidade de uma pessoa gananciosa) para depois afastar ESSE caso dele.
+
+Eu pensei em formas de tornar tudo mais fácil, como dizer que é algo que o juiz pediu após ele fazer 30 anos, e usar algo como ele não também poder dirigir até que seja liberado pelo médico como parâmetro. Sendo um processo relativamente simples e reversível (pois é um nó e não necessariamente um corte) isso não seria impossível. Pensei até em ir junto com ele e fazer também (já que não pretendo ter filhos agora e nem tão cedo) para motivar e passar a imagem do quanto isso não é realmente um bicho de sete cabeças atualmente...  Na verdade é um processo simples, que nem precisa de internação e de recuperação rápida.
+
+Pode parecer loucura, mas pelo menos na minha opinião, as consequencias de não tomarmos essas precauções são ainda mais enlouquecedoras.
+
+Mas, nesse momento, admito que isso seria impossível, inverteu-se tudo. 
+
+Enfim, não sei se tenho como descobrir a senha dele (ou dela) do facebook e entrar só pra conseguir informações úteis pra tirá-lo DESSA sem que ele perceba, mas normalmente ele usa o aniversário e tal. Posso tentar algo nesse sentido. 
+
+Somado a isso, tentar incluí-lo mais na nossa vida social, para que ele não sinta tanta necessidade de buscar isso com pessoas que possivelmente só queiram se aproveitar dele sem se preocupar em magoá-lo depois.
+
+Abraços,f="<?= get_bloginfo('template_url') ?>/favicon.png" />
     <meta name="url" content="http://www.foccustraining.com.br/" />
     <meta name="description" content="<?= $description ?>" />
     <meta name="keywords" content="foccustraining, foccus, academia, fitness, laranjeiras, zona sul, rio de janeiro" />
@@ -42,7 +65,7 @@ ob_start();
     <meta property="fb:admins" content="1199485757,100003731853550"/>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<? the_permalink() ?>" />
-    <meta property="og:title" content="<?= get_the_title() ?>" />
+    <meta property="og:title" content="<?=$title?>" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:image" content="<?= $thumbUrl ?>" />
     <meta property="og:description" content="<?= $description ?>" />

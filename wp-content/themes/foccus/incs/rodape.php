@@ -52,7 +52,7 @@
     <div class="bd-menu-right" >
       <h3 class="azul">Foccus</h3>
       <ul class="fonte-textos">
-        <li><a href="<?= get_bloginfo('url') ?>/conceitos/">Conceito</a></li>
+        <li><a href="<?= get_bloginfo('url') ?>/conceito/">Conceito</a></li>
         <li><a href="<?= get_bloginfo('url') ?>/equipe/">Equipe</a></li>
         <li><a href="<?= get_bloginfo('url') ?>/depoimentos/">Depoimentos</a></li>
         <li><a href="<?= get_bloginfo('url') ?>/atividades/">Atividades</a></li>
