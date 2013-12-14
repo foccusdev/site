@@ -13,6 +13,7 @@ function remove_thumbnail_dimensions($html) {
   $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
   return $html;
 }
+
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10);
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10);
 
@@ -49,6 +50,7 @@ if (!current_user_can('manage_options')) {
     // Retira o logo do WP do topo
     $wp_admin_bar->remove_menu('wp-logo');
   }
+
   add_action('wp_before_admin_bar_render', 'customizeTopMenu');
 
 // Personalização do menu lateral no wp-admin para o Editor 
@@ -72,7 +74,7 @@ if (!current_user_can('manage_options')) {
     add_menu_page('Conceito', 'Conceito', 'edit_posts', 'edit.php?cat=' . _CONCEITO, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Equipe', 'Equipe', 'edit_posts', 'edit.php?cat=' . _EQUIPE, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Atividades', 'Atividades', 'edit_posts', 'edit.php?cat=' . _ATIVIDADES, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
-   // add_menu_page('Ambiente', 'Ambiente', 'edit_posts', 'edit.php?cat=' . _AMBIENTE, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
+    // add_menu_page('Ambiente', 'Ambiente', 'edit_posts', 'edit.php?cat=' . _AMBIENTE, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Depoimentos', 'Depoimentos', 'edit_posts', 'edit.php?cat=' . _DEPOIMENTOS, '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Contato', 'Contato', 'edit_posts', 'post.php?post=45&action=edit', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
     add_menu_page('Emails', 'Emails', 'edit_posts', 'post.php?post=' . _EMAILS . '&action=edit', '', get_bloginfo('template_url') . '/imgs/noticias.png', $primeiroItem++);
@@ -86,6 +88,7 @@ if (!current_user_can('manage_options')) {
     add_submenu_page('edit.php?cat=' . _AMBIENTE, 'Ambientes', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _AMBIENTE);
     add_submenu_page('edit.php?cat=' . _DEPOIMENTOS, 'Depoimentos', 'Adicionar Novo', 'edit_posts', 'post-new.php?cat=' . _DEPOIMENTOS);
   }
+
   add_action('admin_menu', 'customizeAdminLeftMenu');
 
   // Manipula o que o editor pode ou não fazer
@@ -100,16 +103,16 @@ if (!current_user_can('manage_options')) {
     // Não pode manipular categorias
     $role->remove_cap('manage_categories');
   }
+
   add_action('admin_init', 'manipulaPapeisDeUsuarios');
 
-  
   // Esconde o aviso de atualização do WP
-  function escondeUpdate(){
+  function escondeUpdate() {
     echo '<style type="text/css">.update-nag{ display: none}</style>';
   }
+
   add_action('admin_head', 'escondeUpdate');
-  
-  
+
 // Esconde os filtros por categoria e a possibilidade de se listar todos os posts na tela de listagem de posts,
 // Retira também o nome da categoria (q já é exibida no topo), a coluna de comentários e o botão "edição rápida"
 // (para evitar que se configure categorias)
@@ -127,10 +130,10 @@ if (!current_user_can('manage_options')) {
     </style>
     ';
   }
+
   add_action('admin_head-edit.php', 'escondeFiltros');
   add_action('admin_head-post-new.php', 'escondeFiltros');
 
-  
   // Retira o link de exclusão e edição de slug se for da categoria Conceito
   function escondeDelLink() {
     $categoria = get_the_category();
@@ -138,9 +141,9 @@ if (!current_user_can('manage_options')) {
       echo '<style type="text/css">.deletion, #edit-slug-box { display: none; }</style>';
     }
   }
+
   add_action('admin_head-post.php', 'escondeDelLink');
 
-  
   // Faz algumas alterações visuais via Javascript (mais detalhes abaixo)
   function customInterface() {
 
@@ -230,12 +233,10 @@ function custom_login_logo() {
 
 add_action('login_head', 'custom_login_logo');
 
+function register_session() {
+  if (!session_id())
+    session_start();
+}
 
-  function register_session(){
-        if( !session_id())
-            session_start();
-    }
-
-add_action('init','register_session');
-
+add_action('init', 'register_session');
 ?>

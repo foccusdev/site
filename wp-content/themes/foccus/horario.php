@@ -1,60 +1,69 @@
 <?php
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-?>
-<div class="conteudo" >
 
-  <div class="conteudo_busca">
+$usuarioId = 8;
+
+// Traz os dados do usuário logado
+$usuarioRs = mysql_query('SELECT * from sys_matriculas WHERE id = '.$usuarioId);
+$usuarioDados = mysql_fetch_array($usuarioRs);
+
+// Traz os horários do usuário
+$horarioRs = mysql_query('SELECT * from sys_horarios WHERE matricula_id = '.$usuarioId);
+
+?>
+<div class="conteudo login-foccus" >
+
+  <div class="topo-interna">
+    <div class="newsletter">
+      <span>Receba nossa newsletter</span>
+      <form action="" method="post" class="float-right">
+        <label for="news_nome">Nome</label>
+        <input type="text" name="news_nome" id="news_nome" />
+        <label for="news_email">email</label>
+        <input type="text" name="news_email" id="news_email" />
+        <input type="submit" value="enviar" />
+      </form>
+    </div>
+  </div>  
+  
+  <div class="conteudo">
   <img src="<?= get_bloginfo('template_url') ?>/imgs/arco.png" class="arco">
   <h2 class="nome-secao">Horário</h2>
   <span class="linha-azul"></span>
   
-  <h3>Olá, Fulano.</h3>
-  <span class='float-right'><a href='#'>Sair X</a></span>
-  <p>Abaixo você pode alterar o horário de seu próximo treino.</p>  
+  <h3>Olá, <?=$usuarioDados['nome']?>.</h3>
+  <span class='float-right'><a href="<?bloginfo('url')?>/login/?sair=true">Sair X</a></span>
+  
+  <table class="table-usuarios">
+    <tr>
+      <th>Dia da Semana</th>
+      <th>Hora</th>
+      <th class="coluna-acoes">Ações</th>
+    </tr>
+
+    <?
+    $diaSemana = array('Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado');
+    $zebrado = false;
+    while ($horario = mysql_fetch_array($horarioRs)) {
+      ?>
+      <tr class="<?= $zebrado ? 'linha-escura' : '' ?> <?=$estilo?>">
+        <td><?= $diaSemana[$horario['dia_semana']]; ?></td>
+        <td><?= $horario['hora']; ?></td>
+        <td class="coluna-acoes">
+          <a href="<?bloginfo('url');?>/alterar-horario/?id=<?=$horario['id']?>">Alterar</a>
+        </td>
+
+      </tr>
+      <?
+      $zebrado = !$zebrado;
+    }
+    ?>
+
+  </table>  
   
 </div>
 
 
-  <div class='horario-container'>
-  <div class='select-dia_semana float-left'>
-    <div class="styled-select">
-      <select name="dia_semana" id="assunto">
-        <option value="">Domingo</option>
-        <option value="">Segunda-feira</option>
-        <option value="">Terça-feira</option>
-        <option value="">Quarta-feira</option>
-        <option value="">Quinta-feira</option>
-        <option value="">Sexta-feira</option>
-        <option value="">Sábado</option>
-      </select>
-    </div>
-  </div>
-    <div class='texto-horario float-left'>às</div>
-    
-  <div class='select-horario float-left' >
-    <div class="styled-select ">
-      <select name="hora" id="assunto"> 
-        <option value="">09</option>
-        <option value="">10</option>
-      </select>
-    </div>          
-  </div>   
-    <div class='texto-horario float-left'>:</div>
-  <div class='select-horario float-left' >
-    <div class="styled-select ">
-      <select name="hora" id="assunto">
-        <option value="">00</option>
-        <option value="">30</option>
-      </select>
-    </div>          
-  </div>  
-    <div class='clear'></div>
-    
-   <input type="submit"  value="Alterar">    
-</div>
+ 
   
 <div class='clear'></div>
 </div>
