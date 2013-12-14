@@ -2,6 +2,7 @@
 
 .login-container h2 { margin-left: 20px}
 
+
 .login-container form { width: 70%}
 
 .login-container input[type=text],.login-container input[type=password], .login-container label {
@@ -51,3 +52,5 @@
   -webkit-appearance: none;
 }
 .botao-styled-select { background:  url('imgs/bnt_select.jpg') center; width: 46px; height: 40px}
+
+.login-foccus h3 { margin-bottom: 20px}

@@ -23,6 +23,30 @@ if ($horario['matricula_id'] != $_SESSION['usuarioId']) {
   die(header('Location: ' . get_bloginfo('url')));
 }
 
+
+// Verifica se o horário foi alterado
+if (isset($_POST['hora'])){
+  
+  $hora = addslashes(strip_tags($_POST['hora']));
+  $min = addslashes(strip_tags($_POST['min']));
+  $dia = addslashes(strip_tags($_POST['dia_semana']));
+  
+  $query = 'UPDATE sys_horarios SET alterado = 1, hora = "'.$hora.':'.$min.':00", dia_semana = "'.$dia.'" ';
+  
+  // Se o horário atual já estava alterado, não salva o horário anterior para que não se perca o horário original do usuário
+  if ($horario['alterado']==FALSE)
+    $query .= ', hora_anterior = "'.$horario['hora'].'", dia_semana_anterior = "'.$horario['dia_semana'].'" ';
+  
+  $query .= 'WHERE id = '.$horarioId; 
+  mysql_query($query);
+  
+  die(header("Location: ".get_bloginfo('url').'/login/?erro=ok'));
+  
+}
+
+
+
+
 // Como os treinos não ocorrem em até 4 horas depois da meia noite, 
 // é seguro comparar o dia da semana do horário com o dia da semana atual
 if ($horario['dia_semana'] == date('w')) {
@@ -46,12 +70,31 @@ if ($horario['dia_semana'] == date('w')) {
   // Se o treino não for hoje, certamente o usuário poderá alterar seu horário
   $permitido = TRUE;
 }
-var_dump($permitido);
-var_dump($dataDoTreinoAlterado);
 
 // Verifica se o usuário tem permissão para alterar este horário
 if (!$permitido){
   die(header('Location: '.get_bloginfo('url').'/login/?erro=nao-permitido'));
 }
+
+
+// Monta as opções de dia da semana, pré-selecionando a do horário
+$diasDaSemana = array('Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado');
+$diaSemanaOpt = '';
+for ($i=0; $i<7; $i++){
+  $selecionar = $i==$horario['dia_semana']?'selected="selected"':'';
+  $diaSemanaOpt.='<option value="'.$i.'" '.$selecionar.'>'.$diasDaSemana[$i].'</option>';
+}
+
+// Monta as opções de hora
+$horarioTreino = explode(':', $horario['hora']);
+$horaOpt = '';
+for ($i=6; $i<23; $i++){
+  $hora = str_pad($i, 2, '0', STR_PAD_LEFT);
+  $selecionar = $hora==$horarioTreino[0]?'selected="selected"':'';
+  $horaOpt.='<option value="'.$hora.'" '.$selecionar.'>'.$hora.'</option>';
+}
+
+// Verifica se é meia hora ou não
+$emeia = $horarioTreino[1]=='30'?'selected="selected"':'';
 
 ?>

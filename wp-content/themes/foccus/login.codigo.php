@@ -12,11 +12,15 @@ if (isset($_GET['erro'])){
   switch($msg){
     
     case 'login':
-      $texto = 'Login ou Senha incorretos';
+      $texto = 'Login ou Senha incorretos.';
       break;
     
     case 'nao-permitido':
       $texto = 'Desculpe, este horário não pode ser modificado.\nÉ necessária uma antecedência mínima de quatro horas para modificar um horário.';
+      break;
+    
+    case 'ok':
+      $texto = 'Horário alterado com sucesso.';
       break;
     
     default:
