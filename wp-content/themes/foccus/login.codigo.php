@@ -5,9 +5,27 @@ if (isset($_GET['sair']) && $_GET['sair']=='true'){
   die(header('Location: '.get_bloginfo('url').'/login/'));
 }
 
-// Veridica se houve erro de login
-if (isset($_GET['erro']) && $_GET['erro']=='true'){
-  echo '<script>alert("Login ou Senha incorretos")</script>';
+// Veridica se houve erro 
+if (isset($_GET['erro'])){
+  
+  $msg = strip_tags($_GET['erro']);
+  switch($msg){
+    
+    case 'login':
+      $texto = 'Login ou Senha incorretos';
+      break;
+    
+    case 'nao-permitido':
+      $texto = 'Desculpe, este horário não pode ser modificado.\nÉ necessária uma antecedência mínima de quatro horas para modificar um horário.';
+      break;
+    
+    default:
+      $texto = 'Ops! Algo deu errado, tente novamente mais tarde ou entre em contato informando este erro.';
+      break;
+    
+  }  
+  
+  echo '<script>alert("'.$texto.'")</script>';
 }
 
 // Configura a conexão com o banco de dados
@@ -23,10 +41,12 @@ if (!empty($_POST['login'])){
   $query = 'SELECT * FROM sys_matriculas WHERE email = "'.$login.'" && senha = "'.$senha.'"';
   $result = mysql_query($query);
   if (mysql_num_rows($result)>0){
+    $dados = mysql_fetch_array($result);
     $_SESSION['logado'] = TRUE;
+    $_SESSION['usuarioId'] = $dados['id'];
   }else{
     $_SESSION['logado'] = FALSE;
-    die(header('Location: '.get_bloginfo('url').'/login/?erro=true'));
+    die(header('Location: '.get_bloginfo('url').'/login/?erro=login'));
   }
 }
 ?>

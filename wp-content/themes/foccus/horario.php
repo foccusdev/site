@@ -1,6 +1,11 @@
 <?php
 
-$usuarioId = 8;
+if (!isset($_SESSION['usuarioId']))
+  die(header('Location: '.get_bloginfo ('url')));
+
+$usuarioId = $_SESSION['usuarioId'];
+
+
 
 // Traz os dados do usuário logado
 $usuarioRs = mysql_query('SELECT * from sys_matriculas WHERE id = '.$usuarioId);

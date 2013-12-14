@@ -25,13 +25,18 @@
 .login-foccus table tr td { text-align: center; border: 1px solid #ccc}
 .login-foccus table tr td a { display: block; width:auto; height: 100%; background: #2B91B3; color: #fff; border-radius: 2px}
 
-.horario-container { width: 46%; margin: 20px 0px 20px 30.2%;}
+.horario-container { width: 448px; margin: 20px auto 20px auto;}
 
-.select-dia_semana { width: 40.72%; margin: 0px 2.03%}
+@media (max-width: 480){
+  .horario-container { width: 221px}
+  .texto-horario:first-child { float: none; display: block; clear: both}
+}
 
-.select-horario {width: 19.9%; margin: 0px 2.03%}
+.select-dia_semana { width: 194px; margin: 0px 2.03%}
 
-.texto-horario {font-size: 20px;font-weight: normal;padding-top: 10px;font-family: verdana}
+.select-horario {width: 88px; margin: 0px 2.03%}
+
+.texto-horario {font-size: 20px;font-weight: normal;padding-top: 10px;font-family: verdana; }
 
 .horario-container input[type=submit] { margin: 0px 180px}
 
