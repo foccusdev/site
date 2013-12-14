@@ -7,11 +7,11 @@ $usuarioId = $_SESSION['usuarioId'];
 
 
 
-// Traz os dados do usuário logado
+// Traz os dados do aluno logado
 $usuarioRs = mysql_query('SELECT * from sys_matriculas WHERE id = '.$usuarioId);
 $usuarioDados = mysql_fetch_array($usuarioRs);
 
-// Traz os horários do usuário
+// Traz os horários do aluno
 $horarioRs = mysql_query('SELECT * from sys_horarios WHERE matricula_id = '.$usuarioId);
 
 ?>
@@ -37,7 +37,7 @@ $horarioRs = mysql_query('SELECT * from sys_horarios WHERE matricula_id = '.$usu
   
   <h3>Olá, <?=$usuarioDados['nome']?>.</h3>
   <span class='float-right'><a href="<?bloginfo('url')?>/login/?sair=true">Sair X</a></span>
-  
+  <div class="clear"></div>
   <table class="table-usuarios">
     <tr>
       <th>Dia da Semana</th>

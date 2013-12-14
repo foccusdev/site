@@ -1,5 +1,5 @@
 <?php
-// Verifica se o usuário saiu da sessão
+// Verifica se o aluno saiu da sessão
 if (isset($_GET['sair']) && $_GET['sair']=='true'){
   @session_destroy();
   die(header('Location: '.get_bloginfo('url').'/login/'));
