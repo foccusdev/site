@@ -4,9 +4,10 @@
   <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW" />
+    <link rel="shortcut icon" href="http://www.foccustraining.com.br/wp-content/themes/foccus/favicon.png" />
     <title>Foccus Training - Sistema Interno</title>
-
+    
     <? echo $this->Html->css('estilo'); ?>
     <?php echo $this->fetch('script'); ?>
     <?php echo $this->fetch('css'); ?>
@@ -16,9 +17,9 @@
     <div id="container">
 
       <div id="header">
-        
 
-        
+
+
         <div class="menu-sistema float-left">
 
           <ul>
