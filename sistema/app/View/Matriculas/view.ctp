@@ -65,7 +65,7 @@
   
   <div class="dado-form">
     <label>Data de Nascimento:</label>
-    <span><?= $matricula['Matricula']['data_nascimento'] ?></span>
+    <span><?= date('d/m/Y', strtotime($matricula['Matricula']['data_nascimento'])) ?></span>
   </div>   
   
   <div class="dado-form">
@@ -83,10 +83,7 @@
     <span><?= $matricula['Matricula']['como_conheceu'] ?></span>
   </div>   
   
-  <div class="dado-form">
-    <label>OBS:</label>
-    <span><?= $matricula['Matricula']['obs'] ?></span>
-  </div>   
+
   
   <div class="dado-form">
     <label>Data e Hora da Matrícula:</label>
@@ -102,6 +99,12 @@
     <label>Plano escolhido:</label>
     <span><?= $planos['Plano']['nome'] ?></span>
   </div>   
+  
+  <div class="dado-form">
+    <label>OBS:</label>
+    
+    <div><?= $matricula['Matricula']['obs'] ?></div>
+  </div>     
   
   
 </form>

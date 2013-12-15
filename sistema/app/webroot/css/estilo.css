@@ -79,8 +79,8 @@ form input[type=checkbox], form input[type=radio] { width: auto; }
 .botao {display: block; border: 1px solid #000; border-radius: 4px; background: #ccc; padding: 0.5%; text-decoration: none; }
 .botao:hover { background: #bbb}
 
-.dado-form label { font-weight: bold}
-
+.dado-form label { font-weight: bold; display: inline; margin-right: 10px}
+.dado-form label:after { content: &nbsp;}
 form .input { margin: 10px 0px 10px 0px}
 
 form .select select { width: 100%}
@@ -103,3 +103,6 @@ form .checkbox label { display: inline}
 #aviso { color: #d00; font-weight: bold; text-align: center; margin-bottom: 10px;}
 
 .detalhes { margin: 10px 0px 0px 10px}
+
+.dado-form { margin-bottom: 20px}
+
