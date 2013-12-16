@@ -34,7 +34,11 @@ if (isset($_POST['hora'])) {
   $dia = addslashes(strip_tags($_POST['dia_semana']));
 
   /* Verifica quantos treinos existem no horário selecionado (o máximo é 4) */
-  
+  $query = 'SELECT * FROM sys_hoarios WHERE hora = "' . $hora . ':' . $min . ':00", dia_semana = "' . $dia . '"';
+  $result = mysql_query($query);
+  if (mysql_num_rows($result)>4){
+    die(header('Location: '.get_bloginfo('url') . '/login/?erro=limite'));
+  }
   
   
   $query = 'UPDATE sys_horarios SET alterado = 1, hora = "' . $hora . ':' . $min . ':00", dia_semana = "' . $dia . '" ';
