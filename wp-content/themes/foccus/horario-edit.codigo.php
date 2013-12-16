@@ -33,6 +33,10 @@ if (isset($_POST['hora'])) {
   $min = addslashes(strip_tags($_POST['min']));
   $dia = addslashes(strip_tags($_POST['dia_semana']));
 
+  /* Verifica quantos treinos existem no horário selecionado (o máximo é 4) */
+  
+  
+  
   $query = 'UPDATE sys_horarios SET alterado = 1, hora = "' . $hora . ':' . $min . ':00", dia_semana = "' . $dia . '" ';
 
   // Se o horário atual já estava alterado, não salva o horário anterior para que não se perca o horário original do aluno

@@ -41,7 +41,7 @@ mysql_select_db(DB_NAME, $conexao);
 date_default_timezone_set('America/Sao_Paulo');
 // Traz todos os horários alterados do dia da semana de hoje que já passaram
 $query = 'SELECT * FROM sys_horarios WHERE alterado = 1 && dia_semana = "' . date('w') . '" && hora < "' . date('H:i') . ':00"';
-var_dump($query);
+//var_dump($query);
 $result = mysql_query($query);
 if (mysql_num_rows($result) > 0) {
   while ($horario = mysql_fetch_array($result)) {
@@ -52,11 +52,11 @@ if (mysql_num_rows($result) > 0) {
     // Traz os dados do aluno
     $usuarioRs = mysql_query('SELECT * from sys_matriculas WHERE id = ' . $horario['matricula_id']);
     $aluno = mysql_fetch_array($usuarioRs);
-    
+
     $horaTreino = explode(':', $horario['hora_anterior']);
     var_dump($horaTreino);
     $mensagem = '
-    <p>Um horário do aluno ' . $aluno['nome'] . ' foi alterado de volta para <strong>' . $diasDaSemana[$horario['dia_semana_anterior']] . ' às ' . $horaTreino[0] . ':' . $horaTreino[1]  . '</strong> </p>
+    <p>Um horário do aluno ' . $aluno['nome'] . ' foi alterado de volta para <strong>' . $diasDaSemana[$horario['dia_semana_anterior']] . ' às ' . $horaTreino[0] . ':' . $horaTreino[1] . '</strong> </p>
     <p><strong>Telefone:</strong>' . $aluno['telefone'] . '</p>
     <p><strong>Celular:</strong>' . $aluno['celular'] . '</p>
     <p><strong>Email:</strong>' . $aluno['email'] . '</p>  
@@ -88,21 +88,21 @@ if (mysql_num_rows($result) > 0) {
     while ($usuario = mysql_fetch_array($result)) {
       $emailsArray[] = $usuario['username'];
     }
-    /*
-      $phpMailer->AddAddress(trim($emailsArray[0]));
 
-      for ($i = 1; $i < count($emailsArray); $i++) {
+    $phpMailer->AddAddress(trim($emailsArray[0]));
+
+    for ($i = 1; $i < count($emailsArray); $i++) {
       $phpMailer->AddCC(trim($emailsArray[$i]));
-      }
-     */
+    }
+
 
     $phpMailer->AddAddress('joaogabrielv@gmail.com');
-    $enviou = $phpMailer->Send();   
-    
+    $enviou = $phpMailer->Send();
+
     // Altera a mensagem e assunto e envia para o aluno:
     $mensagem = '
     <p>Olá, ' . $aluno['nome'] . ' </p>
-    <p>Seu treino foi alterado de volta para <strong>' . $diasDaSemana[$horario['dia_semana_anterior']] . ' às ' . $horaTreino[0] . ':' . $horaTreino[1]  . '</strong> </p>
+    <p>Seu treino foi alterado de volta para <strong>' . $diasDaSemana[$horario['dia_semana_anterior']] . ' às ' . $horaTreino[0] . ':' . $horaTreino[1] . '</strong> </p>
     <p>
       <small>
         Este é um email automático gerado pelo sistema. <br />
@@ -110,8 +110,8 @@ if (mysql_num_rows($result) > 0) {
         em caso de dúvidas ou maiores informações entre em <a href="http://www.foccustraining.com.br/contato/">contato pelo site</a>.
       </small>
     </p>
-    ';       
-    
+    ';
+
     $phpMailer = new PHPMailer();
     $phpMailer->CharSet = 'utf-8';
     $phpMailer->IsHTML();
@@ -126,11 +126,10 @@ if (mysql_num_rows($result) > 0) {
     $phpMailer->Host = 'smtp.site1367448928.provisorio.ws';
     $phpMailer->Username = 'nao_responda@site1367448928.provisorio.ws';
     $phpMailer->Password = 'f0ccu5M@a1l';
-    $phpMailer->Port = 587;    
-    
+    $phpMailer->Port = 587;
+
     $phpMailer->AddAddress('joaogabrielv@gmail.com');
-    $enviou = $phpMailer->Send();    
-    
+    $enviou = $phpMailer->Send();
   }
 }
 ?>

@@ -74,7 +74,7 @@ class HorariosController extends AppController {
         }
 
         // COmentar a linha abaixo depois dos testes
-        $emails = array('joaogabrielv@gmail.com', 'jgnv_msn@hotmail.com', 'foccusdev@gmail.com');
+       // $emails = array('joaogabrielv@gmail.com', 'jgnv_msn@hotmail.com', 'foccusdev@gmail.com');
 
         // Traz o email do aluno
         $this->loadModel('Matricula');
@@ -153,7 +153,7 @@ class HorariosController extends AppController {
           }
 
           // Comentar a linha abaixo depois dos testes
-          $emails = array('joaogabrielv@gmail.com', 'jgnv_msn@hotmail.com', 'foccusdev@gmail.com');
+          //$emails = array('joaogabrielv@gmail.com', 'jgnv_msn@hotmail.com', 'foccusdev@gmail.com');
 
           // Traz o email do aluno
           $this->loadModel('Matricula');
